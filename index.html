@@ -394,19 +394,27 @@
         
           
             <p>流状态共有两种：</p>
-<pre><code>- connected
-- disconnected
-</code></pre><p>回调：</p>
-<pre><code>- 流状态发生改变都会回调
-- http raw post data 发送到回调服务器
-- 在直播空间设置中可以填写回调服务器地址
-</code></pre><p>关于推流状态判断：</p>
-<pre><code>- 客户端可以发送 stopStreaming 给服务端，主动断开连接
-- 如果因为网络或者其他原因，客户端未能发送断开请求
-    - 服务端有一个 status() 方法，查询流状态
-    - 如果在超时时间内还未能收到断开请求，服务端就会主动将 status 置为 disconnected
-    - 超时时间在直播空间设置中可以选择，默认 15s
-</code></pre>
+<ul>
+<li>connected</li>
+<li>disconnected</li>
+</ul>
+<p>回调：</p>
+<ul>
+<li>流状态发生改变都会回调</li>
+<li>http raw post data 发送到回调服务器</li>
+<li>在直播空间设置中可以填写回调服务器地址</li>
+</ul>
+<p>关于推流状态判断：</p>
+<ul>
+<li>客户端可以发送 stopStreaming 给服务端，主动断开连接</li>
+<li>如果因为网络或者其他原因，客户端未能发送断开请求<ul>
+<li>服务端有一个 status() 方法，查询流状态</li>
+<li>如果在超时时间内还未能收到断开请求，服务端就会主动将 status 置为 disconnected</li>
+<li>超时时间在直播空间设置中可以选择，默认 15s</li>
+</ul>
+</li>
+</ul>
+
           
         
       
