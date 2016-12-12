@@ -5,7 +5,7 @@
     <entry>
       <title><![CDATA[七牛直播流--streamJson]]></title>
       <url>%2F%E4%B8%83%E7%89%9B%E7%9B%B4%E6%92%AD%E6%B5%81-streamJson.html</url>
-      <content type="text"><![CDATA[关于七牛streamJson注释，七牛的 Android 和 ios 推流可以使用streamJson或者七牛推流地址进行推流。1234567891011121314151617181920212223242526&#123;"id": "z1.tron.baozijian", //流 id"createdAt": "2016-12-12T06:08:51.365Z", //创建时间"updatedAt": "2016-12-12T06:08:51.365Z", //更新时间"title": "baozijian", //流名称"hub": "tron", //直播空间名"disabled": true, //是否禁播流"publishKey": "baozijian", //流秘钥"publishSecurity": "static", //鉴权方式"hosts": &#123;"publish": &#123;"rtmp": "pili-publish.baozijian.cc" //rtmp 推流域名&#125;,"live": &#123;"hdl": "pili-live-hdl.baozijian.cc", //flv 播放域名"hls": "pili-live-hls.baozijian.cc", //hls 播放域名"http": "pili-live-hls.baozijian.cc", //hls 播放域名"rtmp": "pili-live-rtmp.baozijian.cc", //rtmp 播放域名"snapshot": "pili-live-snapshot.baozijian.cc" //实时截图域名&#125;,"playback": &#123;"hls": "10005x3.playback1.z1.pili.qiniucdn.com", //playback 回看域名"http": "10005x3.playback1.z1.pili.qiniucdn.com" //playback 回看域名&#125;&#125;&#125;]]></content>
+      <content type="text"><![CDATA[关于七牛streamJson注释，七牛的 Android 和 ios 推流可以使用streamJson或者七牛推流地址(url)进行推流。 服务端 V1 版本的 sdk 同时支持生成 url 和 streamJson 服务端 V2 版本的 sdk 不支持生成 streamJson1234567891011121314151617181920212223242526&#123;"id": "z1.tron.baozijian", //流 id"createdAt": "2016-12-12T06:08:51.365Z", //创建时间"updatedAt": "2016-12-12T06:08:51.365Z", //更新时间"title": "baozijian", //流名称"hub": "tron", //直播空间名"disabled": true, //是否禁播流"publishKey": "baozijian", //流秘钥"publishSecurity": "static", //鉴权方式"hosts": &#123;"publish": &#123;"rtmp": "pili-publish.baozijian.cc" //rtmp 推流域名&#125;,"live": &#123;"hdl": "pili-live-hdl.baozijian.cc", //flv 播放域名"hls": "pili-live-hls.baozijian.cc", //hls 播放域名"http": "pili-live-hls.baozijian.cc", //hls 播放域名"rtmp": "pili-live-rtmp.baozijian.cc", //rtmp 播放域名"snapshot": "pili-live-snapshot.baozijian.cc" //实时截图域名&#125;,"playback": &#123;"hls": "10005x3.playback1.z1.pili.qiniucdn.com", //playback 回看域名"http": "10005x3.playback1.z1.pili.qiniucdn.com" //playback 回看域名&#125;&#125;&#125;]]></content>
     </entry>
 
     
@@ -108,16 +108,16 @@
 
     
     <entry>
-      <title><![CDATA[imageMogr2将gif转为web并且缩放时报错]]></title>
-      <url>%2FimageMogr2-qiniu.html</url>
-      <content type="text"><![CDATA[报错：error: “The original image abnormal” imageMogr2将gif转为web并且缩放时，使用imageMogr2/format/webp|imageMogr2/thumbnail/100x报错 报错链接：http://photo.bz1.me/cat.gif?imageMogr2/format/webp|imageMogr2/thumbnail/100x 报错原因：由于 imageMagick 对 animated webp 进行缩放处理不支持，导致在imageMogr2将.gif转成.webp格式的文件时缩放报错 解决方法：2种。 1）使用管道符，使用imageMogr2缩放.gif图片后再转成.webp格式文件，如：http://photo.bz1.me/cat.gif?imageMogr2/thumbnail/100x|imageMogr2/format/webp 2）不使用管道符，在缩放.gif图片时直接指定目标格式为.webp，如：http://photo.bz1.me/cat.gif?imageMogr2/thumbnail/100x/format/webp 参考： http://developer.qiniu.com/code/v6/api/kodo-api/image/imagemogr2.html 高级图片处理imageMogr2 http://upliu.net/image-magick-tool-identify.html 查看图片大小色度等信息的命令 identify]]></content>
+      <title><![CDATA[vim]]></title>
+      <url>%2Fvim.html</url>
+      <content type="text"><![CDATA[vim的学习笔记，这些是vim常用的一些操作按键。 光标移动 查找与替换 删除、复制与粘贴 其他 光标移动1234567891011121314151617n&lt;space&gt;：n代表数字，按下光标再按空格键，光标会移动到这一行的n个字符0：移动到这一行第一个字符$：移动到这一行的最后一个字符H：移动到屏幕最上方那行L：移动到屏幕最下方那行G：移动到这个文件最后一行nG：移动到n行gg：移动到文件第一行n&lt;Enter&gt;：向下移动n行 查找与替换1234567/word：查找word:n1,n2s/word1/word2/g：n1到n2行之间查找word1，全部替换为word2:1,$s/word1/word2/g：从第一行到最后一行查找word1，全部替换为word2:1,$s/word1/word2/gc：从第一行到最后一行查找word1，全部替换为word2，替换前确认 删除、复制和粘贴12345678910111213x：向后删一个字符X：向前删一个字符dd：删除一整行ndd：向下删除n行yy：复制光标所在那一行p：复制的数据在光标下一行粘贴P：复制的数据在光标上一行粘贴 其他12345u：复原前一个动作:!command：暂时命令行模式执行command:set nu：显示行号]]></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[vim]]></title>
-      <url>%2Fvim.html</url>
-      <content type="text"><![CDATA[vim的学习笔记，这些是vim常用的一些操作按键。 光标移动 查找与替换 删除、复制与粘贴 其他 光标移动1234567891011121314151617n&lt;space&gt;：n代表数字，按下光标再按空格键，光标会移动到这一行的n个字符0：移动到这一行第一个字符$：移动到这一行的最后一个字符H：移动到屏幕最上方那行L：移动到屏幕最下方那行G：移动到这个文件最后一行nG：移动到n行gg：移动到文件第一行n&lt;Enter&gt;：向下移动n行 查找与替换1234567/word：查找word:n1,n2s/word1/word2/g：n1到n2行之间查找word1，全部替换为word2:1,$s/word1/word2/g：从第一行到最后一行查找word1，全部替换为word2:1,$s/word1/word2/gc：从第一行到最后一行查找word1，全部替换为word2，替换前确认 删除、复制和粘贴12345678910111213x：向后删一个字符X：向前删一个字符dd：删除一整行ndd：向下删除n行yy：复制光标所在那一行p：复制的数据在光标下一行粘贴P：复制的数据在光标上一行粘贴 其他12345u：复原前一个动作:!command：暂时命令行模式执行command:set nu：显示行号]]></content>
+      <title><![CDATA[imageMogr2将gif转为web并且缩放时报错]]></title>
+      <url>%2FimageMogr2-qiniu.html</url>
+      <content type="text"><![CDATA[报错：error: “The original image abnormal” imageMogr2将gif转为web并且缩放时，使用imageMogr2/format/webp|imageMogr2/thumbnail/100x报错 报错链接：http://photo.bz1.me/cat.gif?imageMogr2/format/webp|imageMogr2/thumbnail/100x 报错原因：由于 imageMagick 对 animated webp 进行缩放处理不支持，导致在imageMogr2将.gif转成.webp格式的文件时缩放报错 解决方法：2种。 1）使用管道符，使用imageMogr2缩放.gif图片后再转成.webp格式文件，如：http://photo.bz1.me/cat.gif?imageMogr2/thumbnail/100x|imageMogr2/format/webp 2）不使用管道符，在缩放.gif图片时直接指定目标格式为.webp，如：http://photo.bz1.me/cat.gif?imageMogr2/thumbnail/100x/format/webp 参考： http://developer.qiniu.com/code/v6/api/kodo-api/image/imagemogr2.html 高级图片处理imageMogr2 http://upliu.net/image-magick-tool-identify.html 查看图片大小色度等信息的命令 identify]]></content>
     </entry>
 
     

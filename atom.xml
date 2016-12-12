@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://note.bz1.me/"/>
-  <updated>2016-12-12T06:26:52.000Z</updated>
+  <updated>2016-12-12T06:49:33.000Z</updated>
   <id>http://note.bz1.me/</id>
   
   <author>
@@ -20,14 +20,20 @@
     <link href="http://note.bz1.me/%E4%B8%83%E7%89%9B%E7%9B%B4%E6%92%AD%E6%B5%81-streamJson.html"/>
     <id>http://note.bz1.me/七牛直播流-streamJson.html</id>
     <published>2016-12-12T06:19:47.000Z</published>
-    <updated>2016-12-12T06:26:52.000Z</updated>
+    <updated>2016-12-12T06:49:33.000Z</updated>
     
-    <content type="html"><![CDATA[<p>关于七牛<code>streamJson</code>注释，七牛的 Android 和 ios 推流可以使用<code>streamJson</code>或者<code>七牛推流地址</code>进行推流。<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line"><span class="string">"id"</span>: <span class="string">"z1.tron.baozijian"</span>, <span class="comment">//流 id</span></div><div class="line"><span class="string">"createdAt"</span>: <span class="string">"2016-12-12T06:08:51.365Z"</span>, <span class="comment">//创建时间</span></div><div class="line"><span class="string">"updatedAt"</span>: <span class="string">"2016-12-12T06:08:51.365Z"</span>, <span class="comment">//更新时间</span></div><div class="line"><span class="string">"title"</span>: <span class="string">"baozijian"</span>, <span class="comment">//流名称</span></div><div class="line"><span class="string">"hub"</span>: <span class="string">"tron"</span>, <span class="comment">//直播空间名</span></div><div class="line"><span class="string">"disabled"</span>: <span class="literal">true</span>, <span class="comment">//是否禁播流</span></div><div class="line"><span class="string">"publishKey"</span>: <span class="string">"baozijian"</span>, <span class="comment">//流秘钥</span></div><div class="line"><span class="string">"publishSecurity"</span>: <span class="string">"static"</span>, <span class="comment">//鉴权方式</span></div><div class="line"><span class="string">"hosts"</span>: &#123;</div><div class="line"><span class="string">"publish"</span>: &#123;</div><div class="line"><span class="string">"rtmp"</span>: <span class="string">"pili-publish.baozijian.cc"</span> <span class="comment">//rtmp 推流域名</span></div><div class="line">&#125;,</div><div class="line"><span class="string">"live"</span>: &#123;</div><div class="line"><span class="string">"hdl"</span>: <span class="string">"pili-live-hdl.baozijian.cc"</span>, <span class="comment">//flv 播放域名</span></div><div class="line"><span class="string">"hls"</span>: <span class="string">"pili-live-hls.baozijian.cc"</span>, <span class="comment">//hls 播放域名</span></div><div class="line"><span class="string">"http"</span>: <span class="string">"pili-live-hls.baozijian.cc"</span>, <span class="comment">//hls 播放域名</span></div><div class="line"><span class="string">"rtmp"</span>: <span class="string">"pili-live-rtmp.baozijian.cc"</span>, <span class="comment">//rtmp 播放域名</span></div><div class="line"><span class="string">"snapshot"</span>: <span class="string">"pili-live-snapshot.baozijian.cc"</span> <span class="comment">//实时截图域名</span></div><div class="line">&#125;,</div><div class="line"><span class="string">"playback"</span>: &#123;</div><div class="line"><span class="string">"hls"</span>: <span class="string">"10005x3.playback1.z1.pili.qiniucdn.com"</span>, <span class="comment">//playback 回看域名</span></div><div class="line"><span class="string">"http"</span>: <span class="string">"10005x3.playback1.z1.pili.qiniucdn.com"</span> <span class="comment">//playback 回看域名</span></div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+    <content type="html"><![CDATA[<p>关于七牛<code>streamJson</code>注释，七牛的 Android 和 ios 推流可以使用<code>streamJson</code>或者<code>七牛推流地址(url)</code>进行推流。</p>
+<ul>
+<li>服务端 V1 版本的 sdk 同时支持生成 url 和 streamJson</li>
+<li>服务端 V2 版本的 sdk 不支持生成 streamJson<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line"><span class="string">"id"</span>: <span class="string">"z1.tron.baozijian"</span>, <span class="comment">//流 id</span></div><div class="line"><span class="string">"createdAt"</span>: <span class="string">"2016-12-12T06:08:51.365Z"</span>, <span class="comment">//创建时间</span></div><div class="line"><span class="string">"updatedAt"</span>: <span class="string">"2016-12-12T06:08:51.365Z"</span>, <span class="comment">//更新时间</span></div><div class="line"><span class="string">"title"</span>: <span class="string">"baozijian"</span>, <span class="comment">//流名称</span></div><div class="line"><span class="string">"hub"</span>: <span class="string">"tron"</span>, <span class="comment">//直播空间名</span></div><div class="line"><span class="string">"disabled"</span>: <span class="literal">true</span>, <span class="comment">//是否禁播流</span></div><div class="line"><span class="string">"publishKey"</span>: <span class="string">"baozijian"</span>, <span class="comment">//流秘钥</span></div><div class="line"><span class="string">"publishSecurity"</span>: <span class="string">"static"</span>, <span class="comment">//鉴权方式</span></div><div class="line"><span class="string">"hosts"</span>: &#123;</div><div class="line"><span class="string">"publish"</span>: &#123;</div><div class="line"><span class="string">"rtmp"</span>: <span class="string">"pili-publish.baozijian.cc"</span> <span class="comment">//rtmp 推流域名</span></div><div class="line">&#125;,</div><div class="line"><span class="string">"live"</span>: &#123;</div><div class="line"><span class="string">"hdl"</span>: <span class="string">"pili-live-hdl.baozijian.cc"</span>, <span class="comment">//flv 播放域名</span></div><div class="line"><span class="string">"hls"</span>: <span class="string">"pili-live-hls.baozijian.cc"</span>, <span class="comment">//hls 播放域名</span></div><div class="line"><span class="string">"http"</span>: <span class="string">"pili-live-hls.baozijian.cc"</span>, <span class="comment">//hls 播放域名</span></div><div class="line"><span class="string">"rtmp"</span>: <span class="string">"pili-live-rtmp.baozijian.cc"</span>, <span class="comment">//rtmp 播放域名</span></div><div class="line"><span class="string">"snapshot"</span>: <span class="string">"pili-live-snapshot.baozijian.cc"</span> <span class="comment">//实时截图域名</span></div><div class="line">&#125;,</div><div class="line"><span class="string">"playback"</span>: &#123;</div><div class="line"><span class="string">"hls"</span>: <span class="string">"10005x3.playback1.z1.pili.qiniucdn.com"</span>, <span class="comment">//playback 回看域名</span></div><div class="line"><span class="string">"http"</span>: <span class="string">"10005x3.playback1.z1.pili.qiniucdn.com"</span> <span class="comment">//playback 回看域名</span></div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></li>
+</ul>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;关于七牛&lt;code&gt;streamJson&lt;/code&gt;注释，七牛的 Android 和 ios 推流可以使用&lt;code&gt;streamJson&lt;/code&gt;或者&lt;code&gt;七牛推流地址&lt;/code&gt;进行推流。&lt;br&gt;&lt;figure class=&quot;highlight actio
+      &lt;p&gt;关于七牛&lt;code&gt;streamJson&lt;/code&gt;注释，七牛的 Android 和 ios 推流可以使用&lt;code&gt;streamJson&lt;/code&gt;或者&lt;code&gt;七牛推流地址(url)&lt;/code&gt;进行推流。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;服务端 V1 版本的 sdk 
     
     </summary>
     
@@ -724,39 +730,6 @@
   </entry>
   
   <entry>
-    <title>imageMogr2将gif转为web并且缩放时报错</title>
-    <link href="http://note.bz1.me/imageMogr2-qiniu.html"/>
-    <id>http://note.bz1.me/imageMogr2-qiniu.html</id>
-    <published>2016-06-27T14:42:00.000Z</published>
-    <updated>2016-12-08T14:34:28.000Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="报错：error-“The-original-image-abnormal”"><a href="#报错：error-“The-original-image-abnormal”" class="headerlink" title="报错：error: “The original image abnormal”"></a>报错：error: “The original image abnormal”</h4><blockquote>
-<p>imageMogr2将gif转为web并且缩放时，使用imageMogr2/format/webp|imageMogr2/thumbnail/100x报错</p>
-</blockquote>
-<p><strong>报错链接</strong>：<a href="http://photo.bz1.me/cat.gif?imageMogr2/format/webp|imageMogr2/thumbnail/100x" target="_blank" rel="external">http://photo.bz1.me/cat.gif?imageMogr2/format/webp|imageMogr2/thumbnail/100x</a></p>
-<p><strong>报错原因</strong>：由于 imageMagick 对 animated webp 进行缩放处理不支持，导致在imageMogr2将.gif转成.webp格式的文件时缩放报错</p>
-<p><strong>解决方法</strong>：2种。</p>
-<p>1）使用管道符，使用imageMogr2缩放.gif图片后再转成.webp格式文件，如：<a href="http://photo.bz1.me/cat.gif?imageMogr2/thumbnail/100x|imageMogr2/format/webp" target="_blank" rel="external">http://photo.bz1.me/cat.gif?imageMogr2/thumbnail/100x|imageMogr2/format/webp</a></p>
-<p>2）不使用管道符，在缩放.gif图片时直接指定目标格式为.webp，如：<a href="http://photo.bz1.me/cat.gif?imageMogr2/thumbnail/100x/format/webp" target="_blank" rel="external">http://photo.bz1.me/cat.gif?imageMogr2/thumbnail/100x/format/webp</a></p>
-<p>参考：</p>
-<p><a href="http://developer.qiniu.com/code/v6/api/kodo-api/image/imagemogr2.html" target="_blank" rel="external">http://developer.qiniu.com/code/v6/api/kodo-api/image/imagemogr2.html</a>  高级图片处理imageMogr2</p>
-<p><a href="http://upliu.net/image-magick-tool-identify.html" target="_blank" rel="external">http://upliu.net/image-magick-tool-identify.html</a>   查看图片大小色度等信息的命令 identify</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h4 id=&quot;报错：error-“The-original-image-abnormal”&quot;&gt;&lt;a href=&quot;#报错：error-“The-original-image-abnormal”&quot; class=&quot;headerlink&quot; title=&quot;报错：error: “The o
-    
-    </summary>
-    
-      <category term="qiniu" scheme="http://note.bz1.me/categories/qiniu/"/>
-    
-    
-      <category term="ufop" scheme="http://note.bz1.me/tags/ufop/"/>
-    
-  </entry>
-  
-  <entry>
     <title>vim</title>
     <link href="http://note.bz1.me/vim.html"/>
     <id>http://note.bz1.me/vim.html</id>
@@ -794,6 +767,39 @@
     
     
       <category term="vim" scheme="http://note.bz1.me/tags/vim/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>imageMogr2将gif转为web并且缩放时报错</title>
+    <link href="http://note.bz1.me/imageMogr2-qiniu.html"/>
+    <id>http://note.bz1.me/imageMogr2-qiniu.html</id>
+    <published>2016-06-27T14:42:00.000Z</published>
+    <updated>2016-12-08T14:34:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="报错：error-“The-original-image-abnormal”"><a href="#报错：error-“The-original-image-abnormal”" class="headerlink" title="报错：error: “The original image abnormal”"></a>报错：error: “The original image abnormal”</h4><blockquote>
+<p>imageMogr2将gif转为web并且缩放时，使用imageMogr2/format/webp|imageMogr2/thumbnail/100x报错</p>
+</blockquote>
+<p><strong>报错链接</strong>：<a href="http://photo.bz1.me/cat.gif?imageMogr2/format/webp|imageMogr2/thumbnail/100x" target="_blank" rel="external">http://photo.bz1.me/cat.gif?imageMogr2/format/webp|imageMogr2/thumbnail/100x</a></p>
+<p><strong>报错原因</strong>：由于 imageMagick 对 animated webp 进行缩放处理不支持，导致在imageMogr2将.gif转成.webp格式的文件时缩放报错</p>
+<p><strong>解决方法</strong>：2种。</p>
+<p>1）使用管道符，使用imageMogr2缩放.gif图片后再转成.webp格式文件，如：<a href="http://photo.bz1.me/cat.gif?imageMogr2/thumbnail/100x|imageMogr2/format/webp" target="_blank" rel="external">http://photo.bz1.me/cat.gif?imageMogr2/thumbnail/100x|imageMogr2/format/webp</a></p>
+<p>2）不使用管道符，在缩放.gif图片时直接指定目标格式为.webp，如：<a href="http://photo.bz1.me/cat.gif?imageMogr2/thumbnail/100x/format/webp" target="_blank" rel="external">http://photo.bz1.me/cat.gif?imageMogr2/thumbnail/100x/format/webp</a></p>
+<p>参考：</p>
+<p><a href="http://developer.qiniu.com/code/v6/api/kodo-api/image/imagemogr2.html" target="_blank" rel="external">http://developer.qiniu.com/code/v6/api/kodo-api/image/imagemogr2.html</a>  高级图片处理imageMogr2</p>
+<p><a href="http://upliu.net/image-magick-tool-identify.html" target="_blank" rel="external">http://upliu.net/image-magick-tool-identify.html</a>   查看图片大小色度等信息的命令 identify</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;报错：error-“The-original-image-abnormal”&quot;&gt;&lt;a href=&quot;#报错：error-“The-original-image-abnormal”&quot; class=&quot;headerlink&quot; title=&quot;报错：error: “The o
+    
+    </summary>
+    
+      <category term="qiniu" scheme="http://note.bz1.me/categories/qiniu/"/>
+    
+    
+      <category term="ufop" scheme="http://note.bz1.me/tags/ufop/"/>
     
   </entry>
   
