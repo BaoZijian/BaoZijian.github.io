@@ -46,7 +46,7 @@
     
     <entry>
       <title><![CDATA[关于 m3u8]]></title>
-      <url>%2Faboutm3u8.html</url>
+      <url>%2Fm3u8.html</url>
       <content type="text"><![CDATA[关于 m3u8M3U8是Unicode版本的M3U，用UTF-8编码。”M3U”和”M3U8”文件都是苹果公司使用的HTTP Live Streaming格式的基础，这种格式可以在iPhone和Macbook等设备播放。m3u8 其实是一个文本文件，是一个 playlist，用来索引 ts 文件，真正的流媒体文件其实是ts 文件⭐️参考 wiki (https://zh.wikipedia.org/wiki/M3U#M3U8) 举个例子：http://sc.sc.bz1.me/123123123.m3u8 1234567891011121314#EXTM3U#EXT-X-VERSION:3#EXT-X-ALLOW-CACHE:NO#EXT-X-TARGETDURATION:10#EXT-X-MEDIA-SEQUENCE:1#EXT-X-DISCONTINUITY#EXTINF:5.133,/fragments/z1.Newhub.5784a9645e77b0372002e792/1468570587846-1468570592979.ts#EXTINF:5.333,/fragments/z1.Newhub.5784a9645e77b0372002e792/1468570592238-1468570597571.ts#EXTINF:5.334,/fragments/z1.Newhub.5784a9645e77b0372002e792/1468570597278-1468570602612.ts&lt;此处省略部分&gt;#EXT-X-ENDLIST 七牛的avthumb 切片或者直播的转码服务，生成的 m3u8 文件格式大体如上，有的 m3u8 文件可能是在文本中是 http://domain/key.ts 的格式。 标准的 m3u8 文件遵循了 apple 公司的官方标准，可以用官方工具( mediastreamvalidator )检测看下，此处不赘述。1$ mediastreamvalidator http://sc.sc.bz1.me/123123123.m3u8 有一些可能就不是很标准，本文脚本可以拆分出每个 ts 的物理时间戳，走北京时间，并且计算出每个 ts 的时长和视频总时长，简单实用。实用脚本前需要先在本地下载七牛的 qshell 工具(http://developer.qiniu.com/code/v6/tool/qshell.html)，并且加入环境变量(全局可以运行 qshell) 脚本如下：1234567891011121314curl $1 | grep ts | awk -F '/z1.' '&#123;print $2&#125;' | awk -F '/' '&#123;print $2&#125;' | awk -F "." '&#123;print $1&#125;' | awk -F '-' '&#123;"qshell tms2d "$1|getline a; close("qshell tms2d "$1);"qshell tms2d "$2|getline b;close("qshell tms2d "$2);print a," ",b;&#125;' &gt;test11curl $1 | grep ts | awk -F '/z1.' '&#123;print $2&#125;' | awk -F '/' '&#123;print $2&#125;' | awk -F "." '&#123;print $1&#125;' | awk -F "-" '&#123;print ($2 - $1)/1000 " s"&#125;' &gt;test22cat test22 | awk '&#123;sum+=$1&#125; END &#123;print "Total = ", sum&#125;' &gt;test33paste test11 test22echo ""echo "m3u8中的ts文件总时长(分钟为单位)"cat test33 | awk '&#123;print $3/60 " min"&#125;'rm test11rm test22rm test33 测试输出如下：]]></content>
     </entry>
 
@@ -81,7 +81,7 @@
     
     <entry>
       <title><![CDATA[配置CDN加速域名时CNAME与A记录冲突原因及解决方式]]></title>
-      <url>%2FCNAME.html</url>
+      <url>%2F%E5%9F%9F%E5%90%8Da%E8%AE%B0%E5%BD%95%E5%92%8Ccname%E5%86%B2%E7%AA%81.html</url>
       <content type="text"><![CDATA[问题描述假如用户的主页为www.xxx.com，为了使用CDN加速，在七牛也绑定了加速域名为www.xxx.com，绑定好了之后，七牛返回给用户一个CNAME的地址，此时用户去域名提供商那边去配置CNAME，然后提示 “CNAME记录与主机记录的A记录冲突，无法保存成功” 问题原因A记录就是把一个域名解析到一个IP地址（Address，特制数字IP地址），而CNAME记录就是把域名解析到另外一个域名。其功能是差不多，CNAME将几个主机名指向一个别名，其实跟指向IP地址是一样的，因为这个别名也要做一个A记录的。这两个都是将您的当前域名（www.xxx.com）去解析到一个IP或者一个服务器，当访问您当前域名的时候会解析过去，但是一个域名不可以解析到两个服务器。 规避方式本文提供两种方式来解决既想使用CDN加速，又想使用www的域名。 方式一：直接使用CDN加速，不使用对象存储1.在七牛绑定了www.xxx.com的域名2.源站配置中选择IP地址，并且提供一下源站可访问的一个文件名（通过http:///文件名 可访问），然后点击测试，测试通过变为绿色字样即可。3.等候七牛处理完毕，并返回CNAME地址4.到域名提供上那边进行CNAME配置完毕，www.xxx.com开启了CDN加速 方式二：使用七牛镜像存储1.删除您域名提供商那边主机记录为www的A记录和CNAME2.配置test.xxx.com，配置A记录主机记录www，记录值为您的服务器IP3.在七牛绑定www.xxx.com的域名4.源站配置中选择七牛云存储，选定一个bucket，选择创建5.等候七牛处理完毕，并返回CNAME地址6.到域名提供上那边进行CNAME7.进入对应的bucket，选择镜像存储8.镜像源填写您的源站域名 test.xxx.com配置完毕，通过www.xxx.com便可访问您的源站（服务器）]]></content>
     </entry>
 
@@ -115,16 +115,16 @@
 
     
     <entry>
-      <title><![CDATA[imageMogr2将gif转为web并且缩放时报错]]></title>
-      <url>%2FimageMogr2-qiniu.html</url>
-      <content type="text"><![CDATA[报错：error: “The original image abnormal” imageMogr2将gif转为web并且缩放时，使用imageMogr2/format/webp|imageMogr2/thumbnail/100x报错 报错链接：http://photo.bz1.me/cat.gif?imageMogr2/format/webp|imageMogr2/thumbnail/100x 报错原因：由于 imageMagick 对 animated webp 进行缩放处理不支持，导致在imageMogr2将.gif转成.webp格式的文件时缩放报错 解决方法：2种。 1）使用管道符，使用imageMogr2缩放.gif图片后再转成.webp格式文件，如：http://photo.bz1.me/cat.gif?imageMogr2/thumbnail/100x|imageMogr2/format/webp 2）不使用管道符，在缩放.gif图片时直接指定目标格式为.webp，如：http://photo.bz1.me/cat.gif?imageMogr2/thumbnail/100x/format/webp 参考： http://developer.qiniu.com/code/v6/api/kodo-api/image/imagemogr2.html 高级图片处理imageMogr2 http://upliu.net/image-magick-tool-identify.html 查看图片大小色度等信息的命令 identify]]></content>
+      <title><![CDATA[vim]]></title>
+      <url>%2Fvim.html</url>
+      <content type="text"><![CDATA[vim的学习笔记，这些是vim常用的一些操作按键。 光标移动 查找与替换 删除、复制与粘贴 其他 光标移动1234567891011121314151617n&lt;space&gt;：n代表数字，按下光标再按空格键，光标会移动到这一行的n个字符0：移动到这一行第一个字符$：移动到这一行的最后一个字符H：移动到屏幕最上方那行L：移动到屏幕最下方那行G：移动到这个文件最后一行nG：移动到n行gg：移动到文件第一行n&lt;Enter&gt;：向下移动n行 查找与替换1234567/word：查找word:n1,n2s/word1/word2/g：n1到n2行之间查找word1，全部替换为word2:1,$s/word1/word2/g：从第一行到最后一行查找word1，全部替换为word2:1,$s/word1/word2/gc：从第一行到最后一行查找word1，全部替换为word2，替换前确认 删除、复制和粘贴12345678910111213x：向后删一个字符X：向前删一个字符dd：删除一整行ndd：向下删除n行yy：复制光标所在那一行p：复制的数据在光标下一行粘贴P：复制的数据在光标上一行粘贴 其他12345u：复原前一个动作:!command：暂时命令行模式执行command:set nu：显示行号]]></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[vim]]></title>
-      <url>%2Fvim.html</url>
-      <content type="text"><![CDATA[vim的学习笔记，这些是vim常用的一些操作按键。 光标移动 查找与替换 删除、复制与粘贴 其他 光标移动1234567891011121314151617n&lt;space&gt;：n代表数字，按下光标再按空格键，光标会移动到这一行的n个字符0：移动到这一行第一个字符$：移动到这一行的最后一个字符H：移动到屏幕最上方那行L：移动到屏幕最下方那行G：移动到这个文件最后一行nG：移动到n行gg：移动到文件第一行n&lt;Enter&gt;：向下移动n行 查找与替换1234567/word：查找word:n1,n2s/word1/word2/g：n1到n2行之间查找word1，全部替换为word2:1,$s/word1/word2/g：从第一行到最后一行查找word1，全部替换为word2:1,$s/word1/word2/gc：从第一行到最后一行查找word1，全部替换为word2，替换前确认 删除、复制和粘贴12345678910111213x：向后删一个字符X：向前删一个字符dd：删除一整行ndd：向下删除n行yy：复制光标所在那一行p：复制的数据在光标下一行粘贴P：复制的数据在光标上一行粘贴 其他12345u：复原前一个动作:!command：暂时命令行模式执行command:set nu：显示行号]]></content>
+      <title><![CDATA[imageMogr2将gif转为web并且缩放时报错]]></title>
+      <url>%2FimageMogr2-qiniu.html</url>
+      <content type="text"><![CDATA[报错：error: “The original image abnormal” imageMogr2将gif转为web并且缩放时，使用imageMogr2/format/webp|imageMogr2/thumbnail/100x报错 报错链接：http://photo.bz1.me/cat.gif?imageMogr2/format/webp|imageMogr2/thumbnail/100x 报错原因：由于 imageMagick 对 animated webp 进行缩放处理不支持，导致在imageMogr2将.gif转成.webp格式的文件时缩放报错 解决方法：2种。 1）使用管道符，使用imageMogr2缩放.gif图片后再转成.webp格式文件，如：http://photo.bz1.me/cat.gif?imageMogr2/thumbnail/100x|imageMogr2/format/webp 2）不使用管道符，在缩放.gif图片时直接指定目标格式为.webp，如：http://photo.bz1.me/cat.gif?imageMogr2/thumbnail/100x/format/webp 参考： http://developer.qiniu.com/code/v6/api/kodo-api/image/imagemogr2.html 高级图片处理imageMogr2 http://upliu.net/image-magick-tool-identify.html 查看图片大小色度等信息的命令 identify]]></content>
     </entry>
 
     

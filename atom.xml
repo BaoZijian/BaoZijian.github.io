@@ -245,8 +245,8 @@
   
   <entry>
     <title>关于 m3u8</title>
-    <link href="http://note.bz1.me/aboutm3u8.html"/>
-    <id>http://note.bz1.me/aboutm3u8.html</id>
+    <link href="http://note.bz1.me/m3u8.html"/>
+    <id>http://note.bz1.me/m3u8.html</id>
     <published>2016-12-08T14:21:02.000Z</published>
     <updated>2016-12-08T14:56:14.000Z</updated>
     
@@ -515,8 +515,8 @@
   
   <entry>
     <title>配置CDN加速域名时CNAME与A记录冲突原因及解决方式</title>
-    <link href="http://note.bz1.me/CNAME.html"/>
-    <id>http://note.bz1.me/CNAME.html</id>
+    <link href="http://note.bz1.me/%E5%9F%9F%E5%90%8Da%E8%AE%B0%E5%BD%95%E5%92%8Ccname%E5%86%B2%E7%AA%81.html"/>
+    <id>http://note.bz1.me/域名a记录和cname冲突.html</id>
     <published>2016-07-25T08:45:07.000Z</published>
     <updated>2016-12-08T14:34:28.000Z</updated>
     
@@ -799,39 +799,6 @@
   </entry>
   
   <entry>
-    <title>imageMogr2将gif转为web并且缩放时报错</title>
-    <link href="http://note.bz1.me/imageMogr2-qiniu.html"/>
-    <id>http://note.bz1.me/imageMogr2-qiniu.html</id>
-    <published>2016-06-27T14:42:00.000Z</published>
-    <updated>2016-12-08T14:34:28.000Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="报错：error-“The-original-image-abnormal”"><a href="#报错：error-“The-original-image-abnormal”" class="headerlink" title="报错：error: “The original image abnormal”"></a>报错：error: “The original image abnormal”</h4><blockquote>
-<p>imageMogr2将gif转为web并且缩放时，使用imageMogr2/format/webp|imageMogr2/thumbnail/100x报错</p>
-</blockquote>
-<p><strong>报错链接</strong>：<a href="http://photo.bz1.me/cat.gif?imageMogr2/format/webp|imageMogr2/thumbnail/100x" target="_blank" rel="external">http://photo.bz1.me/cat.gif?imageMogr2/format/webp|imageMogr2/thumbnail/100x</a></p>
-<p><strong>报错原因</strong>：由于 imageMagick 对 animated webp 进行缩放处理不支持，导致在imageMogr2将.gif转成.webp格式的文件时缩放报错</p>
-<p><strong>解决方法</strong>：2种。</p>
-<p>1）使用管道符，使用imageMogr2缩放.gif图片后再转成.webp格式文件，如：<a href="http://photo.bz1.me/cat.gif?imageMogr2/thumbnail/100x|imageMogr2/format/webp" target="_blank" rel="external">http://photo.bz1.me/cat.gif?imageMogr2/thumbnail/100x|imageMogr2/format/webp</a></p>
-<p>2）不使用管道符，在缩放.gif图片时直接指定目标格式为.webp，如：<a href="http://photo.bz1.me/cat.gif?imageMogr2/thumbnail/100x/format/webp" target="_blank" rel="external">http://photo.bz1.me/cat.gif?imageMogr2/thumbnail/100x/format/webp</a></p>
-<p>参考：</p>
-<p><a href="http://developer.qiniu.com/code/v6/api/kodo-api/image/imagemogr2.html" target="_blank" rel="external">http://developer.qiniu.com/code/v6/api/kodo-api/image/imagemogr2.html</a>  高级图片处理imageMogr2</p>
-<p><a href="http://upliu.net/image-magick-tool-identify.html" target="_blank" rel="external">http://upliu.net/image-magick-tool-identify.html</a>   查看图片大小色度等信息的命令 identify</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h4 id=&quot;报错：error-“The-original-image-abnormal”&quot;&gt;&lt;a href=&quot;#报错：error-“The-original-image-abnormal”&quot; class=&quot;headerlink&quot; title=&quot;报错：error: “The o
-    
-    </summary>
-    
-      <category term="qiniu" scheme="http://note.bz1.me/categories/qiniu/"/>
-    
-    
-      <category term="ufop" scheme="http://note.bz1.me/tags/ufop/"/>
-    
-  </entry>
-  
-  <entry>
     <title>vim</title>
     <link href="http://note.bz1.me/vim.html"/>
     <id>http://note.bz1.me/vim.html</id>
@@ -869,6 +836,39 @@
     
     
       <category term="vim" scheme="http://note.bz1.me/tags/vim/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>imageMogr2将gif转为web并且缩放时报错</title>
+    <link href="http://note.bz1.me/imageMogr2-qiniu.html"/>
+    <id>http://note.bz1.me/imageMogr2-qiniu.html</id>
+    <published>2016-06-27T14:42:00.000Z</published>
+    <updated>2016-12-08T14:34:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="报错：error-“The-original-image-abnormal”"><a href="#报错：error-“The-original-image-abnormal”" class="headerlink" title="报错：error: “The original image abnormal”"></a>报错：error: “The original image abnormal”</h4><blockquote>
+<p>imageMogr2将gif转为web并且缩放时，使用imageMogr2/format/webp|imageMogr2/thumbnail/100x报错</p>
+</blockquote>
+<p><strong>报错链接</strong>：<a href="http://photo.bz1.me/cat.gif?imageMogr2/format/webp|imageMogr2/thumbnail/100x" target="_blank" rel="external">http://photo.bz1.me/cat.gif?imageMogr2/format/webp|imageMogr2/thumbnail/100x</a></p>
+<p><strong>报错原因</strong>：由于 imageMagick 对 animated webp 进行缩放处理不支持，导致在imageMogr2将.gif转成.webp格式的文件时缩放报错</p>
+<p><strong>解决方法</strong>：2种。</p>
+<p>1）使用管道符，使用imageMogr2缩放.gif图片后再转成.webp格式文件，如：<a href="http://photo.bz1.me/cat.gif?imageMogr2/thumbnail/100x|imageMogr2/format/webp" target="_blank" rel="external">http://photo.bz1.me/cat.gif?imageMogr2/thumbnail/100x|imageMogr2/format/webp</a></p>
+<p>2）不使用管道符，在缩放.gif图片时直接指定目标格式为.webp，如：<a href="http://photo.bz1.me/cat.gif?imageMogr2/thumbnail/100x/format/webp" target="_blank" rel="external">http://photo.bz1.me/cat.gif?imageMogr2/thumbnail/100x/format/webp</a></p>
+<p>参考：</p>
+<p><a href="http://developer.qiniu.com/code/v6/api/kodo-api/image/imagemogr2.html" target="_blank" rel="external">http://developer.qiniu.com/code/v6/api/kodo-api/image/imagemogr2.html</a>  高级图片处理imageMogr2</p>
+<p><a href="http://upliu.net/image-magick-tool-identify.html" target="_blank" rel="external">http://upliu.net/image-magick-tool-identify.html</a>   查看图片大小色度等信息的命令 identify</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;报错：error-“The-original-image-abnormal”&quot;&gt;&lt;a href=&quot;#报错：error-“The-original-image-abnormal”&quot; class=&quot;headerlink&quot; title=&quot;报错：error: “The o
+    
+    </summary>
+    
+      <category term="qiniu" scheme="http://note.bz1.me/categories/qiniu/"/>
+    
+    
+      <category term="ufop" scheme="http://note.bz1.me/tags/ufop/"/>
     
   </entry>
   
