@@ -411,23 +411,13 @@
       
         
           
-            <h3 id="四种鉴权方式"><a href="#四种鉴权方式" class="headerlink" title="四种鉴权方式"></a>四种鉴权方式</h3><ol>
-<li>static 静态校验（弱鉴权）</li>
-</ol>
-<p>rtmp://domain/hub/title?key={可以更改的key}</p>
+            <h3 id="四种鉴权方式"><a href="#四种鉴权方式" class="headerlink" title="四种鉴权方式"></a>四种鉴权方式</h3><h4 id="1-static-静态校验（弱鉴权）"><a href="#1-static-静态校验（弱鉴权）" class="headerlink" title="1. static 静态校验（弱鉴权）"></a>1. static 静态校验（弱鉴权）</h4><figure class="highlight maxima"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rtmp://<span class="built_in">domain</span>/hub/<span class="built_in">title</span>?<span class="built_in">key</span>=&#123;可以更改的<span class="built_in">key</span>&#125;</div></pre></td></tr></table></figure>
 <p>可以针对某个流来设置这类鉴权</p>
-<ol>
-<li>dynamic 动态校验（强鉴权）</li>
-</ol>
-<p>rtmp://domain/hub/title?nonce={自定义某个时间戳}&amp;token={publishToken}</p>
+<h4 id="2-dynamic-动态校验（强鉴权）"><a href="#2-dynamic-动态校验（强鉴权）" class="headerlink" title="2. dynamic 动态校验（强鉴权）"></a>2. dynamic 动态校验（强鉴权）</h4><figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rtmp:<span class="regexp">//</span>domain<span class="regexp">/hub/</span>title?nonce=&#123;自定义某个时间戳&#125;&amp;token=&#123;publishToken&#125;</div></pre></td></tr></table></figure>
 <p>这种鉴权，推流地址只能用一次，如果使用过了一次后，需要重新签算，可以针对某个流来设置</p>
-<ol>
-<li>expiry 时间戳鉴权</li>
-</ol>
-<p>rtmp://domain/hub/title?expire={自定义某个时间戳}&amp;token={publishToken}</p>
+<h4 id="3-expiry-时间戳鉴权"><a href="#3-expiry-时间戳鉴权" class="headerlink" title="3. expiry 时间戳鉴权"></a>3. expiry 时间戳鉴权</h4><figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rtmp:<span class="regexp">//</span>domain<span class="regexp">/hub/</span>title?expire=&#123;自定义某个时间戳&#125;&amp;token=&#123;publishToken&#125;</div></pre></td></tr></table></figure>
 <p>这种是在指定的时间戳内，可以推流。需要针对hub来设置此类鉴权，即hub内所有流都是expire鉴权。</p>
-<p>4.none 鉴权</p>
-<p>rtmp://<push_domain>/<hub>/<title></title></hub></push_domain></p>
+<h4 id="4-none-鉴权"><a href="#4-none-鉴权" class="headerlink" title="4.none 鉴权"></a>4.none 鉴权</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rtmp://<span class="tag">&lt;<span class="name">push_domain</span>&gt;</span>/<span class="tag">&lt;<span class="name">hub</span>&gt;</span>/<span class="tag">&lt;<span class="name">title</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>这种鉴权方式称为无校验鉴权，不限时间也无校验</p>
 <p>⭐️注意：目前手机端推流 支持 static 和 dynamic 两种鉴权</p>
 <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><ul>

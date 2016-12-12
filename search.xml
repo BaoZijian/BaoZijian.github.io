@@ -5,7 +5,7 @@
     <entry>
       <title><![CDATA[七牛直播推流鉴权]]></title>
       <url>%2F%E4%B8%83%E7%89%9B%E7%9B%B4%E6%92%AD%E6%8E%A8%E6%B5%81%E9%89%B4%E6%9D%83.html</url>
-      <content type="text"><![CDATA[四种鉴权方式 static 静态校验（弱鉴权） rtmp://domain/hub/title?key={可以更改的key} 可以针对某个流来设置这类鉴权 dynamic 动态校验（强鉴权） rtmp://domain/hub/title?nonce={自定义某个时间戳}&amp;token={publishToken} 这种鉴权，推流地址只能用一次，如果使用过了一次后，需要重新签算，可以针对某个流来设置 expiry 时间戳鉴权 rtmp://domain/hub/title?expire={自定义某个时间戳}&amp;token={publishToken} 这种是在指定的时间戳内，可以推流。需要针对hub来设置此类鉴权，即hub内所有流都是expire鉴权。 4.none 鉴权 rtmp://// 这种鉴权方式称为无校验鉴权，不限时间也无校验 ⭐️注意：目前手机端推流 支持 static 和 dynamic 两种鉴权 概念 title: 流名，title 是 1-200 个字符，英文+数字组成，title 格式要求：^[a-zA-Z0-9_-]{4,100}$ ，title不能重复 publishKey：流密钥，1-200 个字符，英文+数字组成，publishKey 格式要求：^[a-zA-Z0-9_-]{4,100}$ ，可以重复 publishSecurity： 鉴权方式，如上四种，目前手机端推流，仅支持 static dynamic PublishSecurity 鉴权方式：即鉴权方式。决定了推流地址的有效性和合法性。是应用(Hub)的属性,可以在控制台应用属性中进行修改。推流时，使用rtmp://&lt;HubPublishDomain&gt;/&lt;StreamKey&gt;?&lt;鉴权方式中的publishKey或token&gt;这样带有鉴权参数的地址，可获得推流能力。包括四种鉴权方式，static 静态推流地址/expiry限时推流地址/dynamic动态推流地址/none无鉴权方式。]]></content>
+      <content type="text"><![CDATA[四种鉴权方式1. static 静态校验（弱鉴权）1rtmp://domain/hub/title?key=&#123;可以更改的key&#125; 可以针对某个流来设置这类鉴权 2. dynamic 动态校验（强鉴权）1rtmp://domain/hub/title?nonce=&#123;自定义某个时间戳&#125;&amp;token=&#123;publishToken&#125; 这种鉴权，推流地址只能用一次，如果使用过了一次后，需要重新签算，可以针对某个流来设置 3. expiry 时间戳鉴权1rtmp://domain/hub/title?expire=&#123;自定义某个时间戳&#125;&amp;token=&#123;publishToken&#125; 这种是在指定的时间戳内，可以推流。需要针对hub来设置此类鉴权，即hub内所有流都是expire鉴权。 4.none 鉴权1rtmp://&lt;push_domain&gt;/&lt;hub&gt;/&lt;title&gt; 这种鉴权方式称为无校验鉴权，不限时间也无校验 ⭐️注意：目前手机端推流 支持 static 和 dynamic 两种鉴权 概念 title: 流名，title 是 1-200 个字符，英文+数字组成，title 格式要求：^[a-zA-Z0-9_-]{4,100}$ ，title不能重复 publishKey：流密钥，1-200 个字符，英文+数字组成，publishKey 格式要求：^[a-zA-Z0-9_-]{4,100}$ ，可以重复 publishSecurity： 鉴权方式，如上四种，目前手机端推流，仅支持 static dynamic PublishSecurity 鉴权方式：即鉴权方式。决定了推流地址的有效性和合法性。是应用(Hub)的属性,可以在控制台应用属性中进行修改。推流时，使用rtmp://&lt;HubPublishDomain&gt;/&lt;StreamKey&gt;?&lt;鉴权方式中的publishKey或token&gt;这样带有鉴权参数的地址，可获得推流能力。包括四种鉴权方式，static 静态推流地址/expiry限时推流地址/dynamic动态推流地址/none无鉴权方式。]]></content>
     </entry>
 
     
@@ -115,16 +115,16 @@
 
     
     <entry>
-      <title><![CDATA[vim]]></title>
-      <url>%2Fvim.html</url>
-      <content type="text"><![CDATA[vim的学习笔记，这些是vim常用的一些操作按键。 光标移动 查找与替换 删除、复制与粘贴 其他 光标移动1234567891011121314151617n&lt;space&gt;：n代表数字，按下光标再按空格键，光标会移动到这一行的n个字符0：移动到这一行第一个字符$：移动到这一行的最后一个字符H：移动到屏幕最上方那行L：移动到屏幕最下方那行G：移动到这个文件最后一行nG：移动到n行gg：移动到文件第一行n&lt;Enter&gt;：向下移动n行 查找与替换1234567/word：查找word:n1,n2s/word1/word2/g：n1到n2行之间查找word1，全部替换为word2:1,$s/word1/word2/g：从第一行到最后一行查找word1，全部替换为word2:1,$s/word1/word2/gc：从第一行到最后一行查找word1，全部替换为word2，替换前确认 删除、复制和粘贴12345678910111213x：向后删一个字符X：向前删一个字符dd：删除一整行ndd：向下删除n行yy：复制光标所在那一行p：复制的数据在光标下一行粘贴P：复制的数据在光标上一行粘贴 其他12345u：复原前一个动作:!command：暂时命令行模式执行command:set nu：显示行号]]></content>
+      <title><![CDATA[imageMogr2将gif转为web并且缩放时报错]]></title>
+      <url>%2FimageMogr2-qiniu.html</url>
+      <content type="text"><![CDATA[报错：error: “The original image abnormal” imageMogr2将gif转为web并且缩放时，使用imageMogr2/format/webp|imageMogr2/thumbnail/100x报错 报错链接：http://photo.bz1.me/cat.gif?imageMogr2/format/webp|imageMogr2/thumbnail/100x 报错原因：由于 imageMagick 对 animated webp 进行缩放处理不支持，导致在imageMogr2将.gif转成.webp格式的文件时缩放报错 解决方法：2种。 1）使用管道符，使用imageMogr2缩放.gif图片后再转成.webp格式文件，如：http://photo.bz1.me/cat.gif?imageMogr2/thumbnail/100x|imageMogr2/format/webp 2）不使用管道符，在缩放.gif图片时直接指定目标格式为.webp，如：http://photo.bz1.me/cat.gif?imageMogr2/thumbnail/100x/format/webp 参考： http://developer.qiniu.com/code/v6/api/kodo-api/image/imagemogr2.html 高级图片处理imageMogr2 http://upliu.net/image-magick-tool-identify.html 查看图片大小色度等信息的命令 identify]]></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[imageMogr2将gif转为web并且缩放时报错]]></title>
-      <url>%2FimageMogr2-qiniu.html</url>
-      <content type="text"><![CDATA[报错：error: “The original image abnormal” imageMogr2将gif转为web并且缩放时，使用imageMogr2/format/webp|imageMogr2/thumbnail/100x报错 报错链接：http://photo.bz1.me/cat.gif?imageMogr2/format/webp|imageMogr2/thumbnail/100x 报错原因：由于 imageMagick 对 animated webp 进行缩放处理不支持，导致在imageMogr2将.gif转成.webp格式的文件时缩放报错 解决方法：2种。 1）使用管道符，使用imageMogr2缩放.gif图片后再转成.webp格式文件，如：http://photo.bz1.me/cat.gif?imageMogr2/thumbnail/100x|imageMogr2/format/webp 2）不使用管道符，在缩放.gif图片时直接指定目标格式为.webp，如：http://photo.bz1.me/cat.gif?imageMogr2/thumbnail/100x/format/webp 参考： http://developer.qiniu.com/code/v6/api/kodo-api/image/imagemogr2.html 高级图片处理imageMogr2 http://upliu.net/image-magick-tool-identify.html 查看图片大小色度等信息的命令 identify]]></content>
+      <title><![CDATA[vim]]></title>
+      <url>%2Fvim.html</url>
+      <content type="text"><![CDATA[vim的学习笔记，这些是vim常用的一些操作按键。 光标移动 查找与替换 删除、复制与粘贴 其他 光标移动1234567891011121314151617n&lt;space&gt;：n代表数字，按下光标再按空格键，光标会移动到这一行的n个字符0：移动到这一行第一个字符$：移动到这一行的最后一个字符H：移动到屏幕最上方那行L：移动到屏幕最下方那行G：移动到这个文件最后一行nG：移动到n行gg：移动到文件第一行n&lt;Enter&gt;：向下移动n行 查找与替换1234567/word：查找word:n1,n2s/word1/word2/g：n1到n2行之间查找word1，全部替换为word2:1,$s/word1/word2/g：从第一行到最后一行查找word1，全部替换为word2:1,$s/word1/word2/gc：从第一行到最后一行查找word1，全部替换为word2，替换前确认 删除、复制和粘贴12345678910111213x：向后删一个字符X：向前删一个字符dd：删除一整行ndd：向下删除n行yy：复制光标所在那一行p：复制的数据在光标下一行粘贴P：复制的数据在光标上一行粘贴 其他12345u：复原前一个动作:!command：暂时命令行模式执行command:set nu：显示行号]]></content>
     </entry>
 
     
