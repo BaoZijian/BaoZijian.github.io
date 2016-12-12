@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://note.bz1.me/"/>
-  <updated>2016-12-11T15:49:31.000Z</updated>
+  <updated>2016-12-12T06:24:05.000Z</updated>
   <id>http://note.bz1.me/</id>
   
   <author>
@@ -16,11 +16,33 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>七牛直播流--streamJson</title>
+    <link href="http://note.bz1.me/%E4%B8%83%E7%89%9B%E7%9B%B4%E6%92%AD%E6%B5%81-streamJson.html"/>
+    <id>http://note.bz1.me/七牛直播流-streamJson.html</id>
+    <published>2016-12-12T06:19:47.000Z</published>
+    <updated>2016-12-12T06:24:05.000Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line"><span class="string">"id"</span>: <span class="string">"z1.tron.baozijian"</span>, <span class="comment">//流 id</span></div><div class="line"><span class="string">"createdAt"</span>: <span class="string">"2016-12-12T06:08:51.365Z"</span>, <span class="comment">//创建时间</span></div><div class="line"><span class="string">"updatedAt"</span>: <span class="string">"2016-12-12T06:08:51.365Z"</span>, <span class="comment">//更新时间</span></div><div class="line"><span class="string">"title"</span>: <span class="string">"baozijian"</span>, <span class="comment">//流名称</span></div><div class="line"><span class="string">"hub"</span>: <span class="string">"tron"</span>, <span class="comment">//直播空间名</span></div><div class="line"><span class="string">"disabled"</span>: <span class="literal">true</span>, <span class="comment">//是否禁播流</span></div><div class="line"><span class="string">"publishKey"</span>: <span class="string">"baozijian"</span>, <span class="comment">//流秘钥</span></div><div class="line"><span class="string">"publishSecurity"</span>: <span class="string">"static"</span>, <span class="comment">//鉴权方式</span></div><div class="line"><span class="string">"hosts"</span>: &#123;</div><div class="line"><span class="string">"publish"</span>: &#123;</div><div class="line"><span class="string">"rtmp"</span>: <span class="string">"pili-publish.baozijian.cc"</span> <span class="comment">//rtmp 推流域名</span></div><div class="line">&#125;,</div><div class="line"><span class="string">"live"</span>: &#123;</div><div class="line"><span class="string">"hdl"</span>: <span class="string">"pili-live-hdl.baozijian.cc"</span>, <span class="comment">//flv 播放域名</span></div><div class="line"><span class="string">"hls"</span>: <span class="string">"pili-live-hls.baozijian.cc"</span>, <span class="comment">//hls 播放域名</span></div><div class="line"><span class="string">"http"</span>: <span class="string">"pili-live-hls.baozijian.cc"</span>, <span class="comment">//hls 播放域名</span></div><div class="line"><span class="string">"rtmp"</span>: <span class="string">"pili-live-rtmp.baozijian.cc"</span>, <span class="comment">//rtmp 播放域名</span></div><div class="line"><span class="string">"snapshot"</span>: <span class="string">"pili-live-snapshot.baozijian.cc"</span> <span class="comment">//实时截图域名</span></div><div class="line">&#125;,</div><div class="line"><span class="string">"playback"</span>: &#123;</div><div class="line"><span class="string">"hls"</span>: <span class="string">"10005x3.playback1.z1.pili.qiniucdn.com"</span>, <span class="comment">//playback 回看域名</span></div><div class="line"><span class="string">"http"</span>: <span class="string">"10005x3.playback1.z1.pili.qiniucdn.com"</span> <span class="comment">//playback 回看域名</span></div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;highlight actionscript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line
+    
+    </summary>
+    
+      <category term="qiniu" scheme="http://note.bz1.me/categories/qiniu/"/>
+    
+    
+      <category term="pili" scheme="http://note.bz1.me/tags/pili/"/>
+    
+  </entry>
+  
+  <entry>
     <title>关于七牛直播流状态</title>
     <link href="http://note.bz1.me/%E5%85%B3%E4%BA%8E%E4%B8%83%E7%89%9B%E7%9B%B4%E6%92%AD%E6%B5%81%E7%8A%B6%E6%80%81.html"/>
     <id>http://note.bz1.me/关于七牛直播流状态.html</id>
     <published>2016-12-09T15:12:38.000Z</published>
-    <updated>2016-12-11T15:49:31.000Z</updated>
+    <updated>2016-12-12T06:24:02.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="流状态共有两种："><a href="#流状态共有两种：" class="headerlink" title="流状态共有两种："></a>流状态共有两种：</h3><ul>
 <li>connected</li>
@@ -50,6 +72,8 @@
 &lt;/u
     
     </summary>
+    
+      <category term="qiniu" scheme="http://note.bz1.me/categories/qiniu/"/>
     
     
       <category term="pili" scheme="http://note.bz1.me/tags/pili/"/>
@@ -777,7 +801,7 @@
     <link href="http://note.bz1.me/cloudcomputing.html"/>
     <id>http://note.bz1.me/cloudcomputing.html</id>
     <published>2016-04-24T08:10:43.000Z</published>
-    <updated>2016-12-08T14:34:28.000Z</updated>
+    <updated>2016-12-12T06:24:04.000Z</updated>
     
     <content type="html"><![CDATA[<p>李开复（现任 Google 全球副总裁、中国区总裁）打了一个很形象的比喻：钱庄。最早人们只是把钱放在枕头底下，后来有了钱庄，很安全，不过兑现起来比较麻烦。现在发展到银行可以到任何一个网点取钱，甚至通过 ATM，或者国外的渠道。就像用电不需要家家装备发电机，直接从电力公司购买一样。“云计算”带来的就是这样一种变革——由谷歌、IBM 这样的专业网络公司来搭建计算机存储、运算中心，用户通过一根网线借助浏览器就可以很方便的访问，把“云”做为资料存储以及应用服务的中心。</p>
 <p>GOOGLE<br>（一）原理:<br> 云计算(Cloud Computing)是分布式处理(Distributed Computing)、并行处理(Parallel Comput、ing)和网格计算(Grid Computing)的发展，或者说是这些计算机科学概念的商业实现。<br>云计算的基本原理是，通过使计算分布在大量的分布式计算机上，而非本地计算机或远程服务器中，企业数据中心的运行将更与互联网相似。这使得企业能够将资源切换到需要的应用上，根据需求访问计算机和存储系统。这可是一种革命性的举措，打个比方，这就好比是从古老的单台发电机模式转向了电厂集中供电的模式。它意味着计算能力也可以作为一种商品进行流通，就像煤气、水电一样，取用方便，费用低廉。最大的不同在于，它是通过互联网进行传输的。<br><a id="more"></a></p>
@@ -881,28 +905,6 @@
     
     
       <category term="nginx" scheme="http://note.bz1.me/tags/nginx/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>我的第一篇文章</title>
-    <link href="http://note.bz1.me/myfirstarticle.html"/>
-    <id>http://note.bz1.me/myfirstarticle.html</id>
-    <published>2016-04-14T08:17:45.000Z</published>
-    <updated>2016-12-08T14:34:28.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>我只是测试一下，看到我说明成功了</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;我只是测试一下，看到我说明成功了&lt;/p&gt;
-
-    
-    </summary>
-    
-    
-      <category term="test" scheme="http://note.bz1.me/tags/test/"/>
     
   </entry>
   
