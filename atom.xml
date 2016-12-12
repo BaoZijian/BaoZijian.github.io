@@ -70,7 +70,7 @@
     <link href="http://note.bz1.me/%E4%B8%83%E7%89%9B%E7%9B%B4%E6%92%AD%E6%B5%81-streamJson.html"/>
     <id>http://note.bz1.me/七牛直播流-streamJson.html</id>
     <published>2016-12-12T06:19:47.000Z</published>
-    <updated>2016-12-12T08:12:43.000Z</updated>
+    <updated>2016-12-12T08:16:14.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="关于七牛-streamJson-注释"><a href="#关于七牛-streamJson-注释" class="headerlink" title="关于七牛 streamJson 注释"></a>关于七牛 streamJson 注释</h3><p>七牛的 Android 和 ios 推流可以使用<code>streamJson</code>或者<code>七牛推流地址(url)</code>进行推流。</p>
 <ul>
@@ -97,7 +97,8 @@
 <li>创建时间：2016-12-12 14:08:51</li>
 <li>更新时间：2016-12-12 14:21:32<br><img src="http://inbox.bz1.me/bloghub2.png" alt=""></li>
 </ul>
-<h3 id="七牛直播空间设置"><a href="#七牛直播空间设置" class="headerlink" title="七牛直播空间设置"></a>七牛直播空间设置</h3><ul>
+<h3 id="七牛直播空间设置"><a href="#七牛直播空间设置" class="headerlink" title="七牛直播空间设置"></a>七牛直播空间设置</h3><p>七牛 portal.qiniu.com 控制台的直播空间设置中有如下属性可以设置：</p>
+<ul>
 <li>直播空间名称：tron『这个就是 hub 名』</li>
 <li>存储空间名称：直播内容会切片落存储到该空间，直播转存，或者手动请求 snapshot() 都会保存在该空间</li>
 <li>存储过期时间：直播内容会在直播后指定的时间内被自动删除，如果希望永久存储，需要调用 saveas() 接口进行转存</li>
@@ -106,7 +107,7 @@
 </ul>
 </li>
 <li>直播状态通知：当直播的状态有变化时，发送通知到指定的 URL 地址</li>
-<li>直播中断超时：当一个流正在推的时候，status() 可以获取到流的状态为 connected,当pili持续 n 秒内没有收到推流端推送来的数据后，流会由 connected 变为 disconnected n 秒即为该 hub 的 timeout ，n 秒的值可以 在此处设置。</li>
+<li>直播中断超时：当一个流正在推的时候，status() 可以获取到流的状态为 connected,当pili持续 n 秒内没有收到推流端推送来的数据后，流会由 connected 变为 disconnected n 秒即为该 hub 的 timeout ，n 秒的值可以在此处设置。</li>
 <li>直播鉴权：此处手动设置只有三种，实际有四种直播鉴权『static、dynamic、expire、none』<a href="http://note.bz1.me/七牛直播推流鉴权.html">详细参考</a></li>
 <li>删除直播空间：删除直播空间<br><img src="http://inbox.bz1.me/bloghub3.png" alt=""></li>
 </ul>
@@ -811,39 +812,6 @@
   </entry>
   
   <entry>
-    <title>imageMogr2将gif转为web并且缩放时报错</title>
-    <link href="http://note.bz1.me/imageMogr2-qiniu.html"/>
-    <id>http://note.bz1.me/imageMogr2-qiniu.html</id>
-    <published>2016-06-27T14:42:00.000Z</published>
-    <updated>2016-12-08T14:34:28.000Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="报错：error-“The-original-image-abnormal”"><a href="#报错：error-“The-original-image-abnormal”" class="headerlink" title="报错：error: “The original image abnormal”"></a>报错：error: “The original image abnormal”</h4><blockquote>
-<p>imageMogr2将gif转为web并且缩放时，使用imageMogr2/format/webp|imageMogr2/thumbnail/100x报错</p>
-</blockquote>
-<p><strong>报错链接</strong>：<a href="http://photo.bz1.me/cat.gif?imageMogr2/format/webp|imageMogr2/thumbnail/100x" target="_blank" rel="external">http://photo.bz1.me/cat.gif?imageMogr2/format/webp|imageMogr2/thumbnail/100x</a></p>
-<p><strong>报错原因</strong>：由于 imageMagick 对 animated webp 进行缩放处理不支持，导致在imageMogr2将.gif转成.webp格式的文件时缩放报错</p>
-<p><strong>解决方法</strong>：2种。</p>
-<p>1）使用管道符，使用imageMogr2缩放.gif图片后再转成.webp格式文件，如：<a href="http://photo.bz1.me/cat.gif?imageMogr2/thumbnail/100x|imageMogr2/format/webp" target="_blank" rel="external">http://photo.bz1.me/cat.gif?imageMogr2/thumbnail/100x|imageMogr2/format/webp</a></p>
-<p>2）不使用管道符，在缩放.gif图片时直接指定目标格式为.webp，如：<a href="http://photo.bz1.me/cat.gif?imageMogr2/thumbnail/100x/format/webp" target="_blank" rel="external">http://photo.bz1.me/cat.gif?imageMogr2/thumbnail/100x/format/webp</a></p>
-<p>参考：</p>
-<p><a href="http://developer.qiniu.com/code/v6/api/kodo-api/image/imagemogr2.html" target="_blank" rel="external">http://developer.qiniu.com/code/v6/api/kodo-api/image/imagemogr2.html</a>  高级图片处理imageMogr2</p>
-<p><a href="http://upliu.net/image-magick-tool-identify.html" target="_blank" rel="external">http://upliu.net/image-magick-tool-identify.html</a>   查看图片大小色度等信息的命令 identify</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h4 id=&quot;报错：error-“The-original-image-abnormal”&quot;&gt;&lt;a href=&quot;#报错：error-“The-original-image-abnormal”&quot; class=&quot;headerlink&quot; title=&quot;报错：error: “The o
-    
-    </summary>
-    
-      <category term="qiniu" scheme="http://note.bz1.me/categories/qiniu/"/>
-    
-    
-      <category term="ufop" scheme="http://note.bz1.me/tags/ufop/"/>
-    
-  </entry>
-  
-  <entry>
     <title>vim</title>
     <link href="http://note.bz1.me/vim.html"/>
     <id>http://note.bz1.me/vim.html</id>
@@ -881,6 +849,39 @@
     
     
       <category term="vim" scheme="http://note.bz1.me/tags/vim/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>imageMogr2将gif转为web并且缩放时报错</title>
+    <link href="http://note.bz1.me/imageMogr2-qiniu.html"/>
+    <id>http://note.bz1.me/imageMogr2-qiniu.html</id>
+    <published>2016-06-27T14:42:00.000Z</published>
+    <updated>2016-12-08T14:34:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="报错：error-“The-original-image-abnormal”"><a href="#报错：error-“The-original-image-abnormal”" class="headerlink" title="报错：error: “The original image abnormal”"></a>报错：error: “The original image abnormal”</h4><blockquote>
+<p>imageMogr2将gif转为web并且缩放时，使用imageMogr2/format/webp|imageMogr2/thumbnail/100x报错</p>
+</blockquote>
+<p><strong>报错链接</strong>：<a href="http://photo.bz1.me/cat.gif?imageMogr2/format/webp|imageMogr2/thumbnail/100x" target="_blank" rel="external">http://photo.bz1.me/cat.gif?imageMogr2/format/webp|imageMogr2/thumbnail/100x</a></p>
+<p><strong>报错原因</strong>：由于 imageMagick 对 animated webp 进行缩放处理不支持，导致在imageMogr2将.gif转成.webp格式的文件时缩放报错</p>
+<p><strong>解决方法</strong>：2种。</p>
+<p>1）使用管道符，使用imageMogr2缩放.gif图片后再转成.webp格式文件，如：<a href="http://photo.bz1.me/cat.gif?imageMogr2/thumbnail/100x|imageMogr2/format/webp" target="_blank" rel="external">http://photo.bz1.me/cat.gif?imageMogr2/thumbnail/100x|imageMogr2/format/webp</a></p>
+<p>2）不使用管道符，在缩放.gif图片时直接指定目标格式为.webp，如：<a href="http://photo.bz1.me/cat.gif?imageMogr2/thumbnail/100x/format/webp" target="_blank" rel="external">http://photo.bz1.me/cat.gif?imageMogr2/thumbnail/100x/format/webp</a></p>
+<p>参考：</p>
+<p><a href="http://developer.qiniu.com/code/v6/api/kodo-api/image/imagemogr2.html" target="_blank" rel="external">http://developer.qiniu.com/code/v6/api/kodo-api/image/imagemogr2.html</a>  高级图片处理imageMogr2</p>
+<p><a href="http://upliu.net/image-magick-tool-identify.html" target="_blank" rel="external">http://upliu.net/image-magick-tool-identify.html</a>   查看图片大小色度等信息的命令 identify</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;报错：error-“The-original-image-abnormal”&quot;&gt;&lt;a href=&quot;#报错：error-“The-original-image-abnormal”&quot; class=&quot;headerlink&quot; title=&quot;报错：error: “The o
+    
+    </summary>
+    
+      <category term="qiniu" scheme="http://note.bz1.me/categories/qiniu/"/>
+    
+    
+      <category term="ufop" scheme="http://note.bz1.me/tags/ufop/"/>
     
   </entry>
   
