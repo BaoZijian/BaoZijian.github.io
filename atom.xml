@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://note.bz1.me/"/>
-  <updated>2016-12-12T07:00:01.000Z</updated>
+  <updated>2016-12-12T07:44:19.000Z</updated>
   <id>http://note.bz1.me/</id>
   
   <author>
@@ -16,11 +16,61 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>七牛直播推流鉴权</title>
+    <link href="http://note.bz1.me/%E4%B8%83%E7%89%9B%E7%9B%B4%E6%92%AD%E6%8E%A8%E6%B5%81%E9%89%B4%E6%9D%83.html"/>
+    <id>http://note.bz1.me/七牛直播推流鉴权.html</id>
+    <published>2016-12-12T07:41:13.000Z</published>
+    <updated>2016-12-12T07:44:19.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="四种鉴权方式"><a href="#四种鉴权方式" class="headerlink" title="四种鉴权方式"></a>四种鉴权方式</h3><ol>
+<li>static 静态校验（弱鉴权）</li>
+</ol>
+<p>rtmp://domain/hub/title?key={可以更改的key}</p>
+<p>可以针对某个流来设置这类鉴权</p>
+<ol>
+<li>dynamic 动态校验（强鉴权）</li>
+</ol>
+<p>rtmp://domain/hub/title?nonce={自定义某个时间戳}&amp;token={publishToken}</p>
+<p>这种鉴权，推流地址只能用一次，如果使用过了一次后，需要重新签算，可以针对某个流来设置</p>
+<ol>
+<li>expiry 时间戳鉴权</li>
+</ol>
+<p>rtmp://domain/hub/title?expire={自定义某个时间戳}&amp;token={publishToken}</p>
+<p>这种是在指定的时间戳内，可以推流。需要针对hub来设置此类鉴权，即hub内所有流都是expire鉴权。</p>
+<p>4.none 鉴权</p>
+<p>rtmp://<push_domain>/<hub>/<title></title></hub></push_domain></p>
+<p>这种鉴权方式称为无校验鉴权，不限时间也无校验</p>
+<p>⭐️注意：目前手机端推流 支持 static 和 dynamic 两种鉴权</p>
+<h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><ul>
+<li>title: 流名，title 是 1-200 个字符，英文+数字组成，title 格式要求：^[a-zA-Z0-9_-]{4,100}$ ，title不能重复</li>
+<li>publishKey：流密钥，1-200 个字符，英文+数字组成，publishKey 格式要求：^[a-zA-Z0-9_-]{4,100}$ ，可以重复</li>
+<li>publishSecurity： 鉴权方式，如上四种，目前手机端推流，仅支持 static dynamic </li>
+<li>PublishSecurity 鉴权方式：即鉴权方式。决定了推流地址的有效性和合法性。是应用(Hub)的属性,可以在控制台应用属性中进行修改。推流时，使用<code>rtmp://&lt;HubPublishDomain&gt;/&lt;StreamKey&gt;?&lt;鉴权方式中的publishKey或token&gt;</code>这样带有鉴权参数的地址，可获得推流能力。包括四种鉴权方式，static 静态推流地址/expiry限时推流地址/dynamic动态推流地址/none无鉴权方式。</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;四种鉴权方式&quot;&gt;&lt;a href=&quot;#四种鉴权方式&quot; class=&quot;headerlink&quot; title=&quot;四种鉴权方式&quot;&gt;&lt;/a&gt;四种鉴权方式&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;static 静态校验（弱鉴权）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;rtmp://domain/hub
+    
+    </summary>
+    
+      <category term="qiniu" scheme="http://note.bz1.me/categories/qiniu/"/>
+    
+    
+      <category term="pili" scheme="http://note.bz1.me/tags/pili/"/>
+    
+  </entry>
+  
+  <entry>
     <title>七牛直播流--streamJson</title>
     <link href="http://note.bz1.me/%E4%B8%83%E7%89%9B%E7%9B%B4%E6%92%AD%E6%B5%81-streamJson.html"/>
     <id>http://note.bz1.me/七牛直播流-streamJson.html</id>
     <published>2016-12-12T06:19:47.000Z</published>
-    <updated>2016-12-12T07:00:01.000Z</updated>
+    <updated>2016-12-12T08:11:07.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="关于七牛-streamJson-注释"><a href="#关于七牛-streamJson-注释" class="headerlink" title="关于七牛 streamJson 注释"></a>关于七牛 streamJson 注释</h3><p>七牛的 Android 和 ios 推流可以使用<code>streamJson</code>或者<code>七牛推流地址(url)</code>进行推流。</p>
 <ul>
@@ -46,6 +96,19 @@
 <li>禁播状态：true</li>
 <li>创建时间：2016-12-12 14:08:51</li>
 <li>更新时间：2016-12-12 14:21:32<br><img src="http://inbox.bz1.me/bloghub2.png" alt=""></li>
+</ul>
+<h3 id="七牛直播空间设置"><a href="#七牛直播空间设置" class="headerlink" title="七牛直播空间设置"></a>七牛直播空间设置</h3><ul>
+<li>直播空间名称：tron『这个就是 hub 名』</li>
+<li>存储空间名称：直播内容会切片落存储到该空间，直播转存，或者手动请求 snapshot() 都会保存在该空间</li>
+<li>存储过期时间：直播内容会在直播后指定的时间内被自动删除，如果希望永久存储，需要调用 saveas() 接口进行转存</li>
+<li>直播封面：开启后，可以根据<code>http://&lt;domain&gt;/&lt;hub&gt;/&lt;title&gt;.jpg</code>，进行访问，会实时刷新<ul>
+<li>e.g. <a href="http://pili-live-snapshot.baozijian.cc/tron/baozijian.jpg" target="_blank" rel="external">http://pili-live-snapshot.baozijian.cc/tron/baozijian.jpg</a></li>
+</ul>
+</li>
+<li>直播状态通知：当直播的状态有变化时，发送通知到指定的 URL 地址</li>
+<li>直播中断超时：当一个流正在推的时候，status() 可以获取到流的状态为 connected,当pili持续 n 秒内没有收到推流端推送来的数据后，流会由 connected 变为 disconnected n 秒即为该 hub 的 timeout ，n 秒的值可以 在此处设置。</li>
+<li>直播鉴权：此处手动设置只有三种，实际有四种直播鉴权『static、dynamic、expire、none』(详细参考)[<a href="http://note.bz1.me/七牛直播推流鉴权.html">http://note.bz1.me/七牛直播推流鉴权.html</a>]</li>
+<li>删除直播空间：删除直播空间<br><img src="http://inbox.bz1.me/bloghub3.png" alt=""></li>
 </ul>
 ]]></content>
     
@@ -748,39 +811,6 @@
   </entry>
   
   <entry>
-    <title>imageMogr2将gif转为web并且缩放时报错</title>
-    <link href="http://note.bz1.me/imageMogr2-qiniu.html"/>
-    <id>http://note.bz1.me/imageMogr2-qiniu.html</id>
-    <published>2016-06-27T14:42:00.000Z</published>
-    <updated>2016-12-08T14:34:28.000Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="报错：error-“The-original-image-abnormal”"><a href="#报错：error-“The-original-image-abnormal”" class="headerlink" title="报错：error: “The original image abnormal”"></a>报错：error: “The original image abnormal”</h4><blockquote>
-<p>imageMogr2将gif转为web并且缩放时，使用imageMogr2/format/webp|imageMogr2/thumbnail/100x报错</p>
-</blockquote>
-<p><strong>报错链接</strong>：<a href="http://photo.bz1.me/cat.gif?imageMogr2/format/webp|imageMogr2/thumbnail/100x" target="_blank" rel="external">http://photo.bz1.me/cat.gif?imageMogr2/format/webp|imageMogr2/thumbnail/100x</a></p>
-<p><strong>报错原因</strong>：由于 imageMagick 对 animated webp 进行缩放处理不支持，导致在imageMogr2将.gif转成.webp格式的文件时缩放报错</p>
-<p><strong>解决方法</strong>：2种。</p>
-<p>1）使用管道符，使用imageMogr2缩放.gif图片后再转成.webp格式文件，如：<a href="http://photo.bz1.me/cat.gif?imageMogr2/thumbnail/100x|imageMogr2/format/webp" target="_blank" rel="external">http://photo.bz1.me/cat.gif?imageMogr2/thumbnail/100x|imageMogr2/format/webp</a></p>
-<p>2）不使用管道符，在缩放.gif图片时直接指定目标格式为.webp，如：<a href="http://photo.bz1.me/cat.gif?imageMogr2/thumbnail/100x/format/webp" target="_blank" rel="external">http://photo.bz1.me/cat.gif?imageMogr2/thumbnail/100x/format/webp</a></p>
-<p>参考：</p>
-<p><a href="http://developer.qiniu.com/code/v6/api/kodo-api/image/imagemogr2.html" target="_blank" rel="external">http://developer.qiniu.com/code/v6/api/kodo-api/image/imagemogr2.html</a>  高级图片处理imageMogr2</p>
-<p><a href="http://upliu.net/image-magick-tool-identify.html" target="_blank" rel="external">http://upliu.net/image-magick-tool-identify.html</a>   查看图片大小色度等信息的命令 identify</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h4 id=&quot;报错：error-“The-original-image-abnormal”&quot;&gt;&lt;a href=&quot;#报错：error-“The-original-image-abnormal”&quot; class=&quot;headerlink&quot; title=&quot;报错：error: “The o
-    
-    </summary>
-    
-      <category term="qiniu" scheme="http://note.bz1.me/categories/qiniu/"/>
-    
-    
-      <category term="ufop" scheme="http://note.bz1.me/tags/ufop/"/>
-    
-  </entry>
-  
-  <entry>
     <title>vim</title>
     <link href="http://note.bz1.me/vim.html"/>
     <id>http://note.bz1.me/vim.html</id>
@@ -818,6 +848,39 @@
     
     
       <category term="vim" scheme="http://note.bz1.me/tags/vim/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>imageMogr2将gif转为web并且缩放时报错</title>
+    <link href="http://note.bz1.me/imageMogr2-qiniu.html"/>
+    <id>http://note.bz1.me/imageMogr2-qiniu.html</id>
+    <published>2016-06-27T14:42:00.000Z</published>
+    <updated>2016-12-08T14:34:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="报错：error-“The-original-image-abnormal”"><a href="#报错：error-“The-original-image-abnormal”" class="headerlink" title="报错：error: “The original image abnormal”"></a>报错：error: “The original image abnormal”</h4><blockquote>
+<p>imageMogr2将gif转为web并且缩放时，使用imageMogr2/format/webp|imageMogr2/thumbnail/100x报错</p>
+</blockquote>
+<p><strong>报错链接</strong>：<a href="http://photo.bz1.me/cat.gif?imageMogr2/format/webp|imageMogr2/thumbnail/100x" target="_blank" rel="external">http://photo.bz1.me/cat.gif?imageMogr2/format/webp|imageMogr2/thumbnail/100x</a></p>
+<p><strong>报错原因</strong>：由于 imageMagick 对 animated webp 进行缩放处理不支持，导致在imageMogr2将.gif转成.webp格式的文件时缩放报错</p>
+<p><strong>解决方法</strong>：2种。</p>
+<p>1）使用管道符，使用imageMogr2缩放.gif图片后再转成.webp格式文件，如：<a href="http://photo.bz1.me/cat.gif?imageMogr2/thumbnail/100x|imageMogr2/format/webp" target="_blank" rel="external">http://photo.bz1.me/cat.gif?imageMogr2/thumbnail/100x|imageMogr2/format/webp</a></p>
+<p>2）不使用管道符，在缩放.gif图片时直接指定目标格式为.webp，如：<a href="http://photo.bz1.me/cat.gif?imageMogr2/thumbnail/100x/format/webp" target="_blank" rel="external">http://photo.bz1.me/cat.gif?imageMogr2/thumbnail/100x/format/webp</a></p>
+<p>参考：</p>
+<p><a href="http://developer.qiniu.com/code/v6/api/kodo-api/image/imagemogr2.html" target="_blank" rel="external">http://developer.qiniu.com/code/v6/api/kodo-api/image/imagemogr2.html</a>  高级图片处理imageMogr2</p>
+<p><a href="http://upliu.net/image-magick-tool-identify.html" target="_blank" rel="external">http://upliu.net/image-magick-tool-identify.html</a>   查看图片大小色度等信息的命令 identify</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;报错：error-“The-original-image-abnormal”&quot;&gt;&lt;a href=&quot;#报错：error-“The-original-image-abnormal”&quot; class=&quot;headerlink&quot; title=&quot;报错：error: “The o
+    
+    </summary>
+    
+      <category term="qiniu" scheme="http://note.bz1.me/categories/qiniu/"/>
+    
+    
+      <category term="ufop" scheme="http://note.bz1.me/tags/ufop/"/>
     
   </entry>
   
@@ -889,47 +952,6 @@
     
     
       <category term="公众号运营" scheme="http://note.bz1.me/tags/%E5%85%AC%E4%BC%97%E5%8F%B7%E8%BF%90%E8%90%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>centos6.5-配置yum安装nginx</title>
-    <link href="http://note.bz1.me/nginx-centos6-5-yum.html"/>
-    <id>http://note.bz1.me/nginx-centos6-5-yum.html</id>
-    <published>2016-04-18T06:25:34.000Z</published>
-    <updated>2016-12-08T14:34:28.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>在<code>/etc/yum.repos.d/</code>目录下创建一个源配置文件<code>nginx.repo</code>：</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cd /etc/yum<span class="selector-class">.repos</span><span class="selector-class">.d</span>/</div><div class="line"> </div><div class="line">vim nginx.repo</div></pre></td></tr></table></figure>
-<p>填写如下内容：</p>
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="section">[nginx]</span></div><div class="line"><span class="attr">name</span>=nginx repo</div><div class="line"><span class="attr">baseurl</span>=http://nginx.org/packages/centos/<span class="variable">$releasever</span>/<span class="variable">$basearch</span>/</div><div class="line"><span class="attr">gpgcheck</span>=<span class="number">0</span></div><div class="line"><span class="attr">enabled</span>=<span class="number">1</span></div></pre></td></tr></table></figure>
-<a id="more"></a>
-<p>wq以后会产生一个文件为：/etc/yum.repos.d/nginx.repo</p>
-<p>下面直接执行如下指令即可自动安装好Nginx：</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum <span class="keyword">install</span> nginx -y</div></pre></td></tr></table></figure>
-<p>安装完成，下面直接就可以启动Nginx了：</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="regexp">/etc/i</span>nit.d<span class="regexp">/nginx start</span></div></pre></td></tr></table></figure>
-<p>现在Nginx已经启动了，直接访问服务器就能看到Nginx欢迎页面了的。</p>
-<p>如果还无法访问，则需配置一下Linux防火墙</p>
-<figure class="highlight pf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">iptables -I INPUT <span class="number">5</span> -i eth0 -p tcp --dport <span class="number">80</span> -m <span class="keyword">state</span> --state NEW,ESTABLISHED -j ACCEPT</div><div class="line"> </div><div class="line">service iptables save</div><div class="line"> </div><div class="line">service iptables restart</div></pre></td></tr></table></figure>
-<p>Nginx的命令以及配置文件位置：</p>
-<figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta-keyword">/etc/</span>init.d/nginx start	        <span class="meta"># 启动Nginx服务</span></div><div class="line"> </div><div class="line"><span class="meta-keyword">/etc/</span>init.d/nginx stop 		<span class="meta"># 停止Nginx服务</span></div><div class="line"> </div><div class="line"><span class="meta-keyword">/etc/</span>nginx/nginx.conf 		<span class="meta"># Nginx配置文件位置</span></div></pre></td></tr></table></figure>
-<p>至此，Nginx已经全部配置安装完成。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;在&lt;code&gt;/etc/yum.repos.d/&lt;/code&gt;目录下创建一个源配置文件&lt;code&gt;nginx.repo&lt;/code&gt;：&lt;/p&gt;
-&lt;figure class=&quot;highlight stylus&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;cd /etc/yum&lt;span class=&quot;selector-class&quot;&gt;.repos&lt;/span&gt;&lt;span class=&quot;selector-class&quot;&gt;.d&lt;/span&gt;/&lt;/div&gt;&lt;div class=&quot;line&quot;&gt; &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;vim nginx.repo&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;填写如下内容：&lt;/p&gt;
-&lt;figure class=&quot;highlight ini&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;section&quot;&gt;[nginx]&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;name&lt;/span&gt;=nginx repo&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;baseurl&lt;/span&gt;=http://nginx.org/packages/centos/&lt;span class=&quot;variable&quot;&gt;$releasever&lt;/span&gt;/&lt;span class=&quot;variable&quot;&gt;$basearch&lt;/span&gt;/&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;gpgcheck&lt;/span&gt;=&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;enabled&lt;/span&gt;=&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="linux" scheme="http://note.bz1.me/categories/linux/"/>
-    
-    
-      <category term="nginx" scheme="http://note.bz1.me/tags/nginx/"/>
     
   </entry>
   
