@@ -4,9 +4,9 @@
   <subtitle>CCIE#48983 | 七牛云存储 | 打羽毛球喜欢勾对角 | 淡口味的小清新，嗜甜 | 对麻将和三国杀有不可逾越的认知障碍</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://note.bz1.me/"/>
+  <link href="https://www.bz1.me/"/>
   <updated>2016-12-12T08:19:36.000Z</updated>
-  <id>http://note.bz1.me/</id>
+  <id>https://www.bz1.me/</id>
   
   <author>
     <name>BaoZijian</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>七牛直播推流鉴权</title>
-    <link href="http://note.bz1.me/%E4%B8%83%E7%89%9B%E7%9B%B4%E6%92%AD%E6%8E%A8%E6%B5%81%E9%89%B4%E6%9D%83.html"/>
-    <id>http://note.bz1.me/七牛直播推流鉴权.html</id>
+    <link href="https://www.bz1.me/%E4%B8%83%E7%89%9B%E7%9B%B4%E6%92%AD%E6%8E%A8%E6%B5%81%E9%89%B4%E6%9D%83.html"/>
+    <id>https://www.bz1.me/七牛直播推流鉴权.html</id>
     <published>2016-12-12T07:41:13.000Z</published>
     <updated>2016-12-12T08:19:36.000Z</updated>
     
@@ -45,17 +45,17 @@
     
     </summary>
     
-      <category term="qiniu" scheme="http://note.bz1.me/categories/qiniu/"/>
+      <category term="qiniu" scheme="https://www.bz1.me/categories/qiniu/"/>
     
     
-      <category term="pili" scheme="http://note.bz1.me/tags/pili/"/>
+      <category term="pili" scheme="https://www.bz1.me/tags/pili/"/>
     
   </entry>
   
   <entry>
     <title>七牛直播流 streamJson&amp;直播空间</title>
-    <link href="http://note.bz1.me/%E4%B8%83%E7%89%9B%E7%9B%B4%E6%92%AD%E6%B5%81-streamJson.html"/>
-    <id>http://note.bz1.me/七牛直播流-streamJson.html</id>
+    <link href="https://www.bz1.me/%E4%B8%83%E7%89%9B%E7%9B%B4%E6%92%AD%E6%B5%81-streamJson.html"/>
+    <id>https://www.bz1.me/七牛直播流-streamJson.html</id>
     <published>2016-12-12T06:19:47.000Z</published>
     <updated>2016-12-14T05:51:21.000Z</updated>
     
@@ -95,7 +95,7 @@
 </li>
 <li>直播状态通知：当直播的状态有变化时，发送通知到指定的 URL 地址</li>
 <li>直播中断超时：当一个流正在推的时候，status() 可以获取到流的状态为 connected,当pili持续 n 秒内没有收到推流端推送来的数据后，流会由 connected 变为 disconnected n 秒即为该 hub 的 timeout ，n 秒的值可以在此处设置。</li>
-<li>直播鉴权：此处手动设置只有三种，实际有四种直播鉴权『static、dynamic、expire、none』<a href="https://note.bz1.me/七牛直播推流鉴权.html">详细参考</a></li>
+<li>直播鉴权：此处手动设置只有三种，实际有四种直播鉴权『static、dynamic、expire、none』<a href="https://note.bz1.me/七牛直播推流鉴权.html" target="_blank" rel="external">详细参考</a></li>
 <li>删除直播空间：删除直播空间<br><img src="https://upload.bz1.me/bloghub3.png" alt=""></li>
 </ul>
 ]]></content>
@@ -106,17 +106,17 @@
     
     </summary>
     
-      <category term="qiniu" scheme="http://note.bz1.me/categories/qiniu/"/>
+      <category term="qiniu" scheme="https://www.bz1.me/categories/qiniu/"/>
     
     
-      <category term="pili" scheme="http://note.bz1.me/tags/pili/"/>
+      <category term="pili" scheme="https://www.bz1.me/tags/pili/"/>
     
   </entry>
   
   <entry>
     <title>关于七牛直播流状态</title>
-    <link href="http://note.bz1.me/%E5%85%B3%E4%BA%8E%E4%B8%83%E7%89%9B%E7%9B%B4%E6%92%AD%E6%B5%81%E7%8A%B6%E6%80%81.html"/>
-    <id>http://note.bz1.me/关于七牛直播流状态.html</id>
+    <link href="https://www.bz1.me/%E5%85%B3%E4%BA%8E%E4%B8%83%E7%89%9B%E7%9B%B4%E6%92%AD%E6%B5%81%E7%8A%B6%E6%80%81.html"/>
+    <id>https://www.bz1.me/关于七牛直播流状态.html</id>
     <published>2016-12-09T15:12:38.000Z</published>
     <updated>2016-12-12T06:24:02.000Z</updated>
     
@@ -149,17 +149,17 @@
     
     </summary>
     
-      <category term="qiniu" scheme="http://note.bz1.me/categories/qiniu/"/>
+      <category term="qiniu" scheme="https://www.bz1.me/categories/qiniu/"/>
     
     
-      <category term="pili" scheme="http://note.bz1.me/tags/pili/"/>
+      <category term="pili" scheme="https://www.bz1.me/tags/pili/"/>
     
   </entry>
   
   <entry>
     <title>qshell 批量删除操作</title>
-    <link href="http://note.bz1.me/%E6%89%B9%E9%87%8F%E5%88%A0%E9%99%A4%E6%93%8D%E4%BD%9C.html"/>
-    <id>http://note.bz1.me/批量删除操作.html</id>
+    <link href="https://www.bz1.me/%E6%89%B9%E9%87%8F%E5%88%A0%E9%99%A4%E6%93%8D%E4%BD%9C.html"/>
+    <id>https://www.bz1.me/批量删除操作.html</id>
     <published>2016-12-09T15:11:02.000Z</published>
     <updated>2016-12-09T15:11:39.000Z</updated>
     
@@ -182,14 +182,14 @@
     </summary>
     
     
-      <category term="qiniu;shell" scheme="http://note.bz1.me/tags/qiniu-shell/"/>
+      <category term="qiniu;shell" scheme="https://www.bz1.me/tags/qiniu-shell/"/>
     
   </entry>
   
   <entry>
     <title>[bash shell]采用表单/分片上传文件至七牛云</title>
-    <link href="http://note.bz1.me/shell-%E9%87%87%E7%94%A8%E8%A1%A8%E5%8D%95-%E5%88%86%E7%89%87%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E8%87%B3%E4%B8%83%E7%89%9B%E4%BA%91.html"/>
-    <id>http://note.bz1.me/shell-采用表单-分片上传文件至七牛云.html</id>
+    <link href="https://www.bz1.me/shell-%E9%87%87%E7%94%A8%E8%A1%A8%E5%8D%95-%E5%88%86%E7%89%87%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E8%87%B3%E4%B8%83%E7%89%9B%E4%BA%91.html"/>
+    <id>https://www.bz1.me/shell-采用表单-分片上传文件至七牛云.html</id>
     <published>2016-12-09T15:09:46.000Z</published>
     <updated>2016-12-14T06:00:28.000Z</updated>
     
@@ -212,14 +212,14 @@
     </summary>
     
     
-      <category term="qiniu" scheme="http://note.bz1.me/tags/qiniu/"/>
+      <category term="qiniu" scheme="https://www.bz1.me/tags/qiniu/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://note.bz1.me/hello-world.html"/>
-    <id>http://note.bz1.me/hello-world.html</id>
+    <link href="https://www.bz1.me/hello-world.html"/>
+    <id>https://www.bz1.me/hello-world.html</id>
     <published>2016-12-08T14:22:18.000Z</published>
     <updated>2016-12-08T14:22:18.000Z</updated>
     
@@ -245,8 +245,8 @@
   
   <entry>
     <title>关于 m3u8</title>
-    <link href="http://note.bz1.me/m3u8.html"/>
-    <id>http://note.bz1.me/m3u8.html</id>
+    <link href="https://www.bz1.me/m3u8.html"/>
+    <id>https://www.bz1.me/m3u8.html</id>
     <published>2016-12-08T14:21:02.000Z</published>
     <updated>2016-12-14T05:58:26.000Z</updated>
     
@@ -266,17 +266,17 @@
     
     </summary>
     
-      <category term="qiniu" scheme="http://note.bz1.me/categories/qiniu/"/>
+      <category term="qiniu" scheme="https://www.bz1.me/categories/qiniu/"/>
     
     
-      <category term="qiniu" scheme="http://note.bz1.me/tags/qiniu/"/>
+      <category term="qiniu" scheme="https://www.bz1.me/tags/qiniu/"/>
     
   </entry>
   
   <entry>
     <title>PortSentry 保护云主机禁止被恶意扫描</title>
-    <link href="http://note.bz1.me/portsentry.html"/>
-    <id>http://note.bz1.me/portsentry.html</id>
+    <link href="https://www.bz1.me/portsentry.html"/>
+    <id>https://www.bz1.me/portsentry.html</id>
     <published>2016-09-27T14:21:02.000Z</published>
     <updated>2016-12-14T05:59:59.000Z</updated>
     
@@ -365,17 +365,17 @@
     
     </summary>
     
-      <category term="linux" scheme="http://note.bz1.me/categories/linux/"/>
+      <category term="linux" scheme="https://www.bz1.me/categories/linux/"/>
     
     
-      <category term="安全" scheme="http://note.bz1.me/tags/%E5%AE%89%E5%85%A8/"/>
+      <category term="安全" scheme="https://www.bz1.me/tags/%E5%AE%89%E5%85%A8/"/>
     
   </entry>
   
   <entry>
     <title>实现 socks5 转换为 http 代理科学上网 (shadowsocks + polipo + pac)</title>
-    <link href="http://note.bz1.me/ss-polipo-pac.html"/>
-    <id>http://note.bz1.me/ss-polipo-pac.html</id>
+    <link href="https://www.bz1.me/ss-polipo-pac.html"/>
+    <id>https://www.bz1.me/ss-polipo-pac.html</id>
     <published>2016-09-26T14:35:32.000Z</published>
     <updated>2016-12-14T06:01:20.000Z</updated>
     
@@ -423,7 +423,7 @@
 <h3 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h3><h2 id="PAC-文件"><a href="#PAC-文件" class="headerlink" title="PAC 文件"></a>PAC 文件</h2><p>类似绑定 host 去访问国外的网站，通过FindProxyForURL(url, host)这个函数去实现。<br>参数 url：网站 or 链接<br>参数 host：对应的主机名</p>
 <h4 id="举例："><a href="#举例：" class="headerlink" title="举例："></a>举例：</h4><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">FindProxyForURL</span><span class="params">(url, host)</span> </span>&#123; <span class="keyword">return</span> <span class="string">"PROXY proxy.example.com:&lt;端口4&gt;; DIRECT"</span>; &#125;</div></pre></td></tr></table></figure>
 <p>指定所有通过所有的流量都通过<code>proxy.example.com</code>的<code>端口4</code>代理出去</p>
-<h4 id="下载："><a href="#下载：" class="headerlink" title="下载："></a>下载：</h4><p><a href="https://www.bz1.me/a.pac?attname=" target="_blank" rel="external">点击下载</a></p>
+<h4 id="下载："><a href="#下载：" class="headerlink" title="下载："></a>下载：</h4><p><a href="https://www.bz1.me/a.pac?attname=">点击下载</a></p>
 <h4 id="配置："><a href="#配置：" class="headerlink" title="配置："></a>配置：</h4><p><code>PAC</code>文件需要可以被访问，建议放在<a href="portal.qiniu.com">七牛</a>或者<a href="aliyun.com">阿里OSS</a>这样的云存储上</p>
 <p>假如是七牛，可以参考七牛的<a href="http://developer.qiniu.com/article/kodo/kodo-first/quickstart.html" target="_blank" rel="external">官方文档</a>进行上传和访问</p>
 <p>生成的模板如下：<br><code>http://domain/a.pac</code></p>
@@ -456,17 +456,17 @@
     
     </summary>
     
-      <category term="linux" scheme="http://note.bz1.me/categories/linux/"/>
+      <category term="linux" scheme="https://www.bz1.me/categories/linux/"/>
     
     
-      <category term="proxy" scheme="http://note.bz1.me/tags/proxy/"/>
+      <category term="proxy" scheme="https://www.bz1.me/tags/proxy/"/>
     
   </entry>
   
   <entry>
     <title>tlock</title>
-    <link href="http://note.bz1.me/tlock.html"/>
-    <id>http://note.bz1.me/tlock.html</id>
+    <link href="https://www.bz1.me/tlock.html"/>
+    <id>https://www.bz1.me/tlock.html</id>
     <published>2016-08-30T03:23:34.000Z</published>
     <updated>2016-12-08T14:34:28.000Z</updated>
     
@@ -479,8 +479,8 @@
   
   <entry>
     <title>七牛直播域名图解</title>
-    <link href="http://note.bz1.me/livedomain.html"/>
-    <id>http://note.bz1.me/livedomain.html</id>
+    <link href="https://www.bz1.me/livedomain.html"/>
+    <id>https://www.bz1.me/livedomain.html</id>
     <published>2016-08-18T13:56:25.000Z</published>
     <updated>2016-12-14T05:56:18.000Z</updated>
     
@@ -506,17 +506,17 @@
     
     </summary>
     
-      <category term="qiniu" scheme="http://note.bz1.me/categories/qiniu/"/>
+      <category term="qiniu" scheme="https://www.bz1.me/categories/qiniu/"/>
     
     
-      <category term="pili" scheme="http://note.bz1.me/tags/pili/"/>
+      <category term="pili" scheme="https://www.bz1.me/tags/pili/"/>
     
   </entry>
   
   <entry>
     <title>配置CDN加速域名时CNAME与A记录冲突原因及解决方式</title>
-    <link href="http://note.bz1.me/%E5%9F%9F%E5%90%8Da%E8%AE%B0%E5%BD%95%E5%92%8Ccname%E5%86%B2%E7%AA%81.html"/>
-    <id>http://note.bz1.me/域名a记录和cname冲突.html</id>
+    <link href="https://www.bz1.me/%E5%9F%9F%E5%90%8Da%E8%AE%B0%E5%BD%95%E5%92%8Ccname%E5%86%B2%E7%AA%81.html"/>
+    <id>https://www.bz1.me/域名a记录和cname冲突.html</id>
     <published>2016-07-25T08:45:07.000Z</published>
     <updated>2016-12-14T05:53:21.000Z</updated>
     
@@ -534,17 +534,17 @@
     
     </summary>
     
-      <category term="qiniu" scheme="http://note.bz1.me/categories/qiniu/"/>
+      <category term="qiniu" scheme="https://www.bz1.me/categories/qiniu/"/>
     
     
-      <category term="portal" scheme="http://note.bz1.me/tags/portal/"/>
+      <category term="portal" scheme="https://www.bz1.me/tags/portal/"/>
     
   </entry>
   
   <entry>
     <title>RTMP可以播放，但是HLS不可以播放</title>
-    <link href="http://note.bz1.me/hlscannotplay.html"/>
-    <id>http://note.bz1.me/hlscannotplay.html</id>
+    <link href="https://www.bz1.me/hlscannotplay.html"/>
+    <id>https://www.bz1.me/hlscannotplay.html</id>
     <published>2016-07-14T03:32:20.000Z</published>
     <updated>2016-12-14T05:55:04.000Z</updated>
     
@@ -572,17 +572,17 @@
     
     </summary>
     
-      <category term="qiniu" scheme="http://note.bz1.me/categories/qiniu/"/>
+      <category term="qiniu" scheme="https://www.bz1.me/categories/qiniu/"/>
     
     
-      <category term="PILI" scheme="http://note.bz1.me/tags/PILI/"/>
+      <category term="PILI" scheme="https://www.bz1.me/tags/PILI/"/>
     
   </entry>
   
   <entry>
     <title>配置CDN的资源访问流程</title>
-    <link href="http://note.bz1.me/CDN%E7%AE%80%E5%8D%95%E5%8E%9F%E7%90%86.html"/>
-    <id>http://note.bz1.me/CDN简单原理.html</id>
+    <link href="https://www.bz1.me/CDN%E7%AE%80%E5%8D%95%E5%8E%9F%E7%90%86.html"/>
+    <id>https://www.bz1.me/CDN简单原理.html</id>
     <published>2016-07-13T14:17:52.000Z</published>
     <updated>2016-12-08T14:34:28.000Z</updated>
     
@@ -596,17 +596,17 @@
     
     </summary>
     
-      <category term="qiniu" scheme="http://note.bz1.me/categories/qiniu/"/>
+      <category term="qiniu" scheme="https://www.bz1.me/categories/qiniu/"/>
     
     
-      <category term="CDN" scheme="http://note.bz1.me/tags/CDN/"/>
+      <category term="CDN" scheme="https://www.bz1.me/tags/CDN/"/>
     
   </entry>
   
   <entry>
     <title>七牛直播云常见FAQ</title>
-    <link href="http://note.bz1.me/pili%E7%9B%B4%E6%92%ADFAQ.html"/>
-    <id>http://note.bz1.me/pili直播FAQ.html</id>
+    <link href="https://www.bz1.me/pili%E7%9B%B4%E6%92%ADFAQ.html"/>
+    <id>https://www.bz1.me/pili直播FAQ.html</id>
     <published>2016-07-13T01:09:00.000Z</published>
     <updated>2016-12-08T14:34:28.000Z</updated>
     
@@ -693,17 +693,17 @@
     
     </summary>
     
-      <category term="qiniu" scheme="http://note.bz1.me/categories/qiniu/"/>
+      <category term="qiniu" scheme="https://www.bz1.me/categories/qiniu/"/>
     
     
-      <category term="pili" scheme="http://note.bz1.me/tags/pili/"/>
+      <category term="pili" scheme="https://www.bz1.me/tags/pili/"/>
     
   </entry>
   
   <entry>
     <title>关于七牛多媒体处理预设格式的小节</title>
-    <link href="http://note.bz1.me/videoaudio.html"/>
-    <id>http://note.bz1.me/videoaudio.html</id>
+    <link href="https://www.bz1.me/videoaudio.html"/>
+    <id>https://www.bz1.me/videoaudio.html</id>
     <published>2016-07-06T01:35:00.000Z</published>
     <updated>2016-12-08T14:34:28.000Z</updated>
     
@@ -791,17 +791,17 @@
     
     </summary>
     
-      <category term="qiniu" scheme="http://note.bz1.me/categories/qiniu/"/>
+      <category term="qiniu" scheme="https://www.bz1.me/categories/qiniu/"/>
     
     
-      <category term="ufop" scheme="http://note.bz1.me/tags/ufop/"/>
+      <category term="ufop" scheme="https://www.bz1.me/tags/ufop/"/>
     
   </entry>
   
   <entry>
     <title>vim</title>
-    <link href="http://note.bz1.me/vim.html"/>
-    <id>http://note.bz1.me/vim.html</id>
+    <link href="https://www.bz1.me/vim.html"/>
+    <id>https://www.bz1.me/vim.html</id>
     <published>2016-06-27T14:42:00.000Z</published>
     <updated>2016-12-08T14:34:28.000Z</updated>
     
@@ -832,17 +832,17 @@
     
     </summary>
     
-      <category term="linux" scheme="http://note.bz1.me/categories/linux/"/>
+      <category term="linux" scheme="https://www.bz1.me/categories/linux/"/>
     
     
-      <category term="vim" scheme="http://note.bz1.me/tags/vim/"/>
+      <category term="vim" scheme="https://www.bz1.me/tags/vim/"/>
     
   </entry>
   
   <entry>
     <title>cloudcomputing</title>
-    <link href="http://note.bz1.me/cloudcomputing.html"/>
-    <id>http://note.bz1.me/cloudcomputing.html</id>
+    <link href="https://www.bz1.me/cloudcomputing.html"/>
+    <id>https://www.bz1.me/cloudcomputing.html</id>
     <published>2016-04-24T08:10:43.000Z</published>
     <updated>2016-12-12T06:24:04.000Z</updated>
     
@@ -863,14 +863,14 @@
     </summary>
     
     
-      <category term="cloud" scheme="http://note.bz1.me/tags/cloud/"/>
+      <category term="cloud" scheme="https://www.bz1.me/tags/cloud/"/>
     
   </entry>
   
   <entry>
     <title>推广策划 by LJ</title>
-    <link href="http://note.bz1.me/gongzhonghao.html"/>
-    <id>http://note.bz1.me/gongzhonghao.html</id>
+    <link href="https://www.bz1.me/gongzhonghao.html"/>
+    <id>https://www.bz1.me/gongzhonghao.html</id>
     <published>2016-04-20T14:32:32.000Z</published>
     <updated>2016-12-08T14:34:28.000Z</updated>
     
@@ -906,14 +906,14 @@
     </summary>
     
     
-      <category term="公众号运营" scheme="http://note.bz1.me/tags/%E5%85%AC%E4%BC%97%E5%8F%B7%E8%BF%90%E8%90%A5/"/>
+      <category term="公众号运营" scheme="https://www.bz1.me/tags/%E5%85%AC%E4%BC%97%E5%8F%B7%E8%BF%90%E8%90%A5/"/>
     
   </entry>
   
   <entry>
     <title>centos6.5-配置yum安装nginx</title>
-    <link href="http://note.bz1.me/nginx-centos6-5-yum.html"/>
-    <id>http://note.bz1.me/nginx-centos6-5-yum.html</id>
+    <link href="https://www.bz1.me/nginx-centos6-5-yum.html"/>
+    <id>https://www.bz1.me/nginx-centos6-5-yum.html</id>
     <published>2016-04-18T06:25:34.000Z</published>
     <updated>2016-12-08T14:34:28.000Z</updated>
     
@@ -944,10 +944,10 @@
     
     </summary>
     
-      <category term="linux" scheme="http://note.bz1.me/categories/linux/"/>
+      <category term="linux" scheme="https://www.bz1.me/categories/linux/"/>
     
     
-      <category term="nginx" scheme="http://note.bz1.me/tags/nginx/"/>
+      <category term="nginx" scheme="https://www.bz1.me/tags/nginx/"/>
     
   </entry>
   
