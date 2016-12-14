@@ -120,15 +120,15 @@ http://developer.qiniu.com/code/v6/tool/qshell.html
 <meta property="og:description" content="注意1：需要将 qshell 加入环境变量1mv qshell /usr/local/bin/qshell
 http://developer.qiniu.com/code/v6/tool/qshell.html
 注意2：此脚本需要注册七牛云账号，获取 ak 和 sk，以及创建 bucket 用于存储快速入门：http://developer.qiniu.com/article/kodo/kodo-">
-<meta property="og:image" content="http://inbox.bz1.me/qsuptest.png">
-<meta property="og:image" content="http://inbox.bz1.me/qsuptest2.png">
-<meta property="og:updated_time" content="2016-12-09T15:18:37.000Z">
+<meta property="og:image" content="https://upload.bz1.me/qsuptest.png">
+<meta property="og:image" content="https://upload.bz1.me/qsuptest2.png">
+<meta property="og:updated_time" content="2016-12-14T06:00:28.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[bash shell]采用表单/分片上传文件至七牛云">
 <meta name="twitter:description" content="注意1：需要将 qshell 加入环境变量1mv qshell /usr/local/bin/qshell
 http://developer.qiniu.com/code/v6/tool/qshell.html
 注意2：此脚本需要注册七牛云账号，获取 ak 和 sk，以及创建 bucket 用于存储快速入门：http://developer.qiniu.com/article/kodo/kodo-">
-<meta name="twitter:image" content="http://inbox.bz1.me/qsuptest.png">
+<meta name="twitter:image" content="https://upload.bz1.me/qsuptest.png">
 
 
 
@@ -405,7 +405,7 @@ http://developer.qiniu.com/code/v6/tool/qshell.html
 <li>domain</li>
 </ol>
 <h3 id="shell-脚本如下："><a href="#shell-脚本如下：" class="headerlink" title="shell 脚本如下："></a>shell 脚本如下：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#!/usr/bin/env bash</span></div><div class="line">ii=<span class="variable">$1</span></div><div class="line">qshell account &lt;ak&gt; &lt;sk&gt;</div><div class="line">jj=$(ls <span class="_">-l</span> | grep <span class="variable">$ii</span> | awk <span class="string">'&#123;print $5&#125;'</span>)</div><div class="line"></div><div class="line"><span class="keyword">if</span> [[ <span class="variable">$jj</span> <span class="_">-lt</span> <span class="string">'100000000'</span> ]];</div><div class="line">	<span class="keyword">then</span></div><div class="line">	<span class="built_in">echo</span> <span class="string">""</span></div><div class="line">	<span class="built_in">echo</span> <span class="string">"文件大小：<span class="variable">$bb</span>"</span></div><div class="line">	<span class="built_in">echo</span> <span class="string">"此文件小于100M，将采用表单上传"</span></div><div class="line">	<span class="built_in">echo</span> <span class="string">""</span></div><div class="line">	qshell fput &lt;bucket&gt; <span class="variable">$ii</span> <span class="variable">$1</span> | tee <span class="_">-a</span> <span class="built_in">test</span>1111</div><div class="line"></div><div class="line">	xx=$(cat <span class="built_in">test</span>1111 | grep <span class="string">"Put"</span> | awk -F <span class="string">')'</span> <span class="string">'&#123;print $2&#125;'</span>)</div><div class="line">	rm <span class="built_in">test</span>1111</div><div class="line">	<span class="keyword">if</span> [[ <span class="variable">$xx</span> = <span class="string">' success!'</span> ]];</div><div class="line">		<span class="keyword">then</span></div><div class="line">		<span class="built_in">echo</span> <span class="string">""</span></div><div class="line">		<span class="built_in">echo</span> <span class="string">"访问链接："</span></div><div class="line">		<span class="built_in">echo</span> <span class="string">"http://&lt;domain&gt;/<span class="variable">$ii</span>"</span></div><div class="line">		<span class="built_in">echo</span> <span class="string">""</span></div><div class="line">	<span class="keyword">else</span></div><div class="line">		<span class="built_in">echo</span> <span class="string">"Fail, please try again!"</span></div><div class="line">	<span class="keyword">fi</span></div><div class="line"></div><div class="line"><span class="keyword">elif</span> [[ <span class="variable">$jj</span> -ge <span class="string">'100000000'</span> ]];</div><div class="line">	<span class="keyword">then</span></div><div class="line">	<span class="built_in">echo</span> <span class="string">""</span></div><div class="line">	<span class="built_in">echo</span> <span class="string">"文件大小：<span class="variable">$bb</span>"</span></div><div class="line">	<span class="built_in">echo</span> <span class="string">"此文件大于100M，将采用分片上传"</span></div><div class="line">	<span class="built_in">echo</span> <span class="string">""</span></div><div class="line">	qshell rput &lt;bucket&gt; <span class="variable">$ii</span> <span class="variable">$1</span> | tee <span class="_">-a</span> <span class="built_in">test</span>1111</div><div class="line"></div><div class="line">	xx=$(cat <span class="built_in">test</span>1111 | grep <span class="string">"Put"</span> | awk -F <span class="string">')'</span> <span class="string">'&#123;print $2&#125;'</span>)</div><div class="line">	rm <span class="built_in">test</span>1111</div><div class="line">	<span class="keyword">if</span> [[ <span class="variable">$xx</span> = <span class="string">' success!'</span> ]];</div><div class="line">		<span class="keyword">then</span></div><div class="line">		<span class="built_in">echo</span> <span class="string">""</span></div><div class="line">		<span class="built_in">echo</span> <span class="string">"访问链接："</span></div><div class="line">		<span class="built_in">echo</span> <span class="string">"http://&lt;domain&gt;/<span class="variable">$ii</span>"</span></div><div class="line">		<span class="built_in">echo</span> <span class="string">""</span></div><div class="line">	<span class="keyword">else</span></div><div class="line">		<span class="built_in">echo</span> <span class="string">"Fail, please try again!"</span></div><div class="line">	<span class="keyword">fi</span></div><div class="line"><span class="keyword">else</span></div><div class="line">	<span class="built_in">echo</span> <span class="string">"File error~ 卧槽日了狗"</span></div><div class="line"><span class="keyword">fi</span></div></pre></td></tr></table></figure>
-<h3 id="测试截图："><a href="#测试截图：" class="headerlink" title="测试截图："></a>测试截图：</h3><p><img src="http://inbox.bz1.me/qsuptest.png" alt="qsup1"><br><img src="http://inbox.bz1.me/qsuptest2.png" alt="qsup2"></p>
+<h3 id="测试截图："><a href="#测试截图：" class="headerlink" title="测试截图："></a>测试截图：</h3><p><img src="https://upload.bz1.me/qsuptest.png" alt="qsup1"><br><img src="https://upload.bz1.me/qsuptest2.png" alt="qsup2"></p>
 
       
     </div>
@@ -557,7 +557,7 @@ http://developer.qiniu.com/code/v6/tool/qshell.html
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">22</span>
+              <span class="site-state-item-count">21</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -685,7 +685,7 @@ http://developer.qiniu.com/code/v6/tool/qshell.html
 </span>
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共12.8k字</span>
+  <span class="post-count">博客全站共12.6k字</span>
 </div>
 
 

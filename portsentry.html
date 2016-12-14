@@ -120,18 +120,18 @@
 <meta property="og:description" content="注：本文采用的操作系统为 ubuntu14.04
 
 简介PortSentry is part of SentryTools. This daemon will watch unused ports for activity and depending on how it is configured take action upon excessive access to watched port">
-<meta property="og:image" content="http://inbox.bz1.me/portsentry1588c.png?imageView/2/h/300">
-<meta property="og:image" content="http://inbox.bz1.me/fortestipgs.png?imageView/2/h/50">
-<meta property="og:image" content="http://inbox.bz1.me/nmapsaomiao.png?imageView/2/h/300">
-<meta property="og:image" content="http://inbox.bz1.me/denydioale.png">
-<meta property="og:image" content="http://inbox.bz1.me/blockded.png?imageView/2/h/300">
-<meta property="og:updated_time" content="2016-12-08T14:34:28.000Z">
+<meta property="og:image" content="https://upload.bz1.me/portsentry1588c.png?imageView/2/h/300">
+<meta property="og:image" content="https://upload.bz1.me/fortestipgs.png?imageView/2/h/50">
+<meta property="og:image" content="https://upload.bz1.me/nmapsaomiao.png?imageView/2/h/300">
+<meta property="og:image" content="https://upload.bz1.me/denydioale.png">
+<meta property="og:image" content="https://upload.bz1.me/blockded.png?imageView/2/h/300">
+<meta property="og:updated_time" content="2016-12-14T05:59:59.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PortSentry 保护云主机禁止被恶意扫描">
 <meta name="twitter:description" content="注：本文采用的操作系统为 ubuntu14.04
 
 简介PortSentry is part of SentryTools. This daemon will watch unused ports for activity and depending on how it is configured take action upon excessive access to watched port">
-<meta name="twitter:image" content="http://inbox.bz1.me/portsentry1588c.png?imageView/2/h/300">
+<meta name="twitter:image" content="https://upload.bz1.me/portsentry1588c.png?imageView/2/h/300">
 
 
 
@@ -433,7 +433,7 @@
 <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">tar</span> <span class="selector-tag">zxvf</span> <span class="selector-tag">portsentry-1</span><span class="selector-class">.2</span><span class="selector-class">.tar</span><span class="selector-class">.gz</span></div></pre></td></tr></table></figure>
 <p>不能直接编译，这里有点特殊，解压完的包中，<code>portsentry.c</code>这个文件中在<code>1584</code>行有一处错误，将其改成一行</p>
 <figure class="highlight abnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">printf (<span class="string">"Copyright 1997-2003 Craig H. Rowland &lt;craigrowland at users dot sourceforget dot net&gt;\n"</span>)<span class="comment">;</span></div></pre></td></tr></table></figure>
-<p><img src="http://inbox.bz1.me/portsentry1588c.png?imageView/2/h/300" alt="portsentry"></p>
+<p><img src="https://upload.bz1.me/portsentry1588c.png?imageView/2/h/300" alt="portsentry"></p>
 <p>然后进行编译</p>
 <figure class="highlight gauss"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">make</span> linux&amp; <span class="built_in">make</span> install</div></pre></td></tr></table></figure>
 <p>成功安装，安装的路劲为<code>/usr/local/psionic/portsentry</code><br><a id="more"></a></p>
@@ -471,9 +471,9 @@
 <p>启动命令：</p>
 <figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="regexp">/usr/</span>local<span class="regexp">/psionic/</span>portsentry<span class="regexp">/portsentry -atcp</span></div></pre></td></tr></table></figure>
 <p>建议将这条命令写入 <code>/etc/rc.local</code> 中，这样开机就自启动了</p>
-<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>我的<code>云主机 A</code> <code>IP</code> 假设为 <code>XXX.XXX.XXX.XXX</code>，云主机 A 上配置并开启了 <code>portsentry</code><br>开启一台<code>云主机 B</code>，<code>IP</code> 地址为 <code>115.231.183.78</code><br><img src="http://inbox.bz1.me/fortestipgs.png?imageView/2/h/50" alt="ip"></p>
-<p>使用 <code>云主机 B</code> 扫描 <code>云主机 A</code> 的端口<br><img src="http://inbox.bz1.me/nmapsaomiao.png?imageView/2/h/300" alt="nmap"></p>
-<p><code>云主机 A</code> 监测到了恶意扫描，会将其加入 <code>/etc/hosts.deny</code>,并且在 <code>/usr/local/psionic/portsentry/portsentry.blocked.atcp</code> 会记录 block 掉了<br><img src="http://inbox.bz1.me/denydioale.png" alt=""><br><img src="http://inbox.bz1.me/blockded.png?imageView/2/h/300" alt="blockd"></p>
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>我的<code>云主机 A</code> <code>IP</code> 假设为 <code>XXX.XXX.XXX.XXX</code>，云主机 A 上配置并开启了 <code>portsentry</code><br>开启一台<code>云主机 B</code>，<code>IP</code> 地址为 <code>115.231.183.78</code><br><img src="https://upload.bz1.me/fortestipgs.png?imageView/2/h/50" alt="ip"></p>
+<p>使用 <code>云主机 B</code> 扫描 <code>云主机 A</code> 的端口<br><img src="https://upload.bz1.me/nmapsaomiao.png?imageView/2/h/300" alt="nmap"></p>
+<p><code>云主机 A</code> 监测到了恶意扫描，会将其加入 <code>/etc/hosts.deny</code>,并且在 <code>/usr/local/psionic/portsentry/portsentry.blocked.atcp</code> 会记录 block 掉了<br><img src="https://upload.bz1.me/denydioale.png" alt=""><br><img src="https://upload.bz1.me/blockded.png?imageView/2/h/300" alt="blockd"></p>
 <p>简单处理一下，发现还有不是自己扫的，无聊的人也是多- -！</p>
 
       
@@ -626,7 +626,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">22</span>
+              <span class="site-state-item-count">21</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -754,7 +754,7 @@
 </span>
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共12.8k字</span>
+  <span class="post-count">博客全站共12.6k字</span>
 </div>
 
 

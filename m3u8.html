@@ -116,12 +116,12 @@
 <meta property="og:url" content="http://note.bz1.me/m3u8.html">
 <meta property="og:site_name" content="Tecooler means (Technology is cool)">
 <meta property="og:description" content="关于 m3u8M3U8是Unicode版本的M3U，用UTF-8编码。”M3U”和”M3U8”文件都是苹果公司使用的HTTP Live Streaming格式的基础，这种格式可以在iPhone和Macbook等设备播放。m3u8 其实是一个文本文件，是一个 playlist，用来索引 ts 文件，真正的流媒体文件其实是ts 文件⭐️参考 wiki (https://zh.wikipedia.org">
-<meta property="og:image" content="http://inbox.bz1.me/tssssh.png">
-<meta property="og:updated_time" content="2016-12-08T14:56:14.000Z">
+<meta property="og:image" content="https://upload.bz1.me/tssssh.png">
+<meta property="og:updated_time" content="2016-12-14T05:58:26.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于 m3u8">
 <meta name="twitter:description" content="关于 m3u8M3U8是Unicode版本的M3U，用UTF-8编码。”M3U”和”M3U8”文件都是苹果公司使用的HTTP Live Streaming格式的基础，这种格式可以在iPhone和Macbook等设备播放。m3u8 其实是一个文本文件，是一个 playlist，用来索引 ts 文件，真正的流媒体文件其实是ts 文件⭐️参考 wiki (https://zh.wikipedia.org">
-<meta name="twitter:image" content="http://inbox.bz1.me/tssssh.png">
+<meta name="twitter:image" content="https://upload.bz1.me/tssssh.png">
 
 
 
@@ -414,7 +414,7 @@
 <p>标准的 m3u8 文件遵循了 apple 公司的官方标准，可以用官方工具(     <code>mediastreamvalidator</code> )检测看下，此处不赘述。<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$ </span>mediastreamvalidator <span class="symbol">http:</span>/<span class="regexp">/sc.sc.bz1.me/</span><span class="number">123123123</span>.m3u8</div></pre></td></tr></table></figure></p>
 <p>有一些可能就不是很标准，本文脚本可以拆分出每个 ts 的物理时间戳，走北京时间，并且计算出每个 ts 的时长和视频总时长，简单实用。<br>实用脚本前需要先在本地下载七牛的 <code>qshell 工具</code>(<a href="http://developer.qiniu.com/code/v6/tool/qshell.html)，并且加入环境变量(全局可以运行" target="_blank" rel="external">http://developer.qiniu.com/code/v6/tool/qshell.html)，并且加入环境变量(全局可以运行</a> qshell)</p>
 <h3 id="脚本如下："><a href="#脚本如下：" class="headerlink" title="脚本如下："></a>脚本如下：</h3><figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">curl <span class="variable">$1</span> | grep ts | awk -F '/z1.' '&#123;<span class="keyword">print</span> <span class="variable">$2&#125;</span>' | awk -F '/' '&#123;<span class="keyword">print</span> <span class="variable">$2&#125;</span>' | awk -F <span class="string">"."</span> '&#123;<span class="keyword">print</span> <span class="variable">$1&#125;</span>' | awk -F '-' '&#123;<span class="string">"qshell tms2d "</span><span class="variable">$1</span>|getline a; <span class="keyword">close</span>(<span class="string">"qshell tms2d "</span><span class="variable">$1</span>);<span class="string">"qshell tms2d "</span><span class="variable">$2</span>|getline b;<span class="keyword">close</span>(<span class="string">"qshell tms2d "</span><span class="variable">$2</span>);<span class="keyword">print</span> a,<span class="string">" "</span>,b;&#125;' &gt;test11</div><div class="line"></div><div class="line">curl <span class="variable">$1</span> | grep ts | awk -F '/z1.' '&#123;<span class="keyword">print</span> <span class="variable">$2&#125;</span>' | awk -F '/' '&#123;<span class="keyword">print</span> <span class="variable">$2&#125;</span>' | awk -F <span class="string">"."</span> '&#123;<span class="keyword">print</span> <span class="variable">$1&#125;</span>' | awk -F <span class="string">"-"</span> '&#123;<span class="keyword">print</span> (<span class="variable">$2</span> - <span class="variable">$1</span>)/1000 <span class="string">" s"</span>&#125;' &gt;test22</div><div class="line"></div><div class="line"><span class="keyword">cat</span> test22 | awk '&#123;<span class="keyword">sum</span>+=<span class="variable">$1&#125;</span> END &#123;<span class="keyword">print</span> <span class="string">"Total = "</span>, <span class="keyword">sum</span>&#125;' &gt;test33</div><div class="line"></div><div class="line">paste test11 test22</div><div class="line">echo <span class="string">""</span></div><div class="line">echo <span class="string">"m3u8中的ts文件总时长(分钟为单位)"</span></div><div class="line"><span class="keyword">cat</span> test33 | awk '&#123;<span class="keyword">print</span> <span class="variable">$3</span>/60 <span class="string">" min"</span>&#125;'</div><div class="line"></div><div class="line"><span class="keyword">rm</span> test11</div><div class="line"><span class="keyword">rm</span> test22</div><div class="line"><span class="keyword">rm</span> test33</div></pre></td></tr></table></figure>
-<h3 id="测试输出如下："><a href="#测试输出如下：" class="headerlink" title="测试输出如下："></a>测试输出如下：</h3><p><img src="http://inbox.bz1.me/tssssh.png" alt="tsss.sh"></p>
+<h3 id="测试输出如下："><a href="#测试输出如下：" class="headerlink" title="测试输出如下："></a>测试输出如下：</h3><p><img src="https://upload.bz1.me/tssssh.png" alt="tsss.sh"></p>
 
       
     </div>
@@ -566,7 +566,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">22</span>
+              <span class="site-state-item-count">21</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -694,7 +694,7 @@
 </span>
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共12.8k字</span>
+  <span class="post-count">博客全站共12.6k字</span>
 </div>
 
 

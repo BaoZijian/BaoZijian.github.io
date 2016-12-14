@@ -118,14 +118,14 @@
 <meta property="og:site_name" content="Tecooler means (Technology is cool)">
 <meta property="og:description" content="问题描述：在七牛云开通了直播服务，创建了直播空间，也进行了CNAME，在使用七牛的提供的rtmp推流地址推流时，在拉流播放时候，发现RTMP播放域名可以播放，但是HLS却无法播放。
 问题原因：这样的报错原因基本为以下三种之一原因一：检查一下推流地址是否填写的是RTMP的播放地址，导致RTMP可以正常播放，但是HLS不能，后台也查不到有推流上来。">
-<meta property="og:image" content="http://lj.bz1.me/blob.png">
-<meta property="og:image" content="http://lj.bz1.me/media.png">
-<meta property="og:updated_time" content="2016-12-08T14:34:28.000Z">
+<meta property="og:image" content="https://upload.bz1.me/blob.png">
+<meta property="og:image" content="https://upload.bz1.me/media.png">
+<meta property="og:updated_time" content="2016-12-14T05:55:04.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="RTMP可以播放，但是HLS不可以播放">
 <meta name="twitter:description" content="问题描述：在七牛云开通了直播服务，创建了直播空间，也进行了CNAME，在使用七牛的提供的rtmp推流地址推流时，在拉流播放时候，发现RTMP播放域名可以播放，但是HLS却无法播放。
 问题原因：这样的报错原因基本为以下三种之一原因一：检查一下推流地址是否填写的是RTMP的播放地址，导致RTMP可以正常播放，但是HLS不能，后台也查不到有推流上来。">
-<meta name="twitter:image" content="http://lj.bz1.me/blob.png">
+<meta name="twitter:image" content="https://upload.bz1.me/blob.png">
 
 
 
@@ -419,10 +419,10 @@
 <p><strong>原因四：</strong>crossdomain.xml 缺失在直播对应空间里面</p>
 <p><strong>原因五：</strong> ts文件对应域名没有取消302跳转</p>
 <p><strong>解决方法</strong>：<br><strong>一：</strong>使用该地址进行推流。</p>
-<p><img src="http://lj.bz1.me/blob.png" alt=""></p>
+<p><img src="https://upload.bz1.me/blob.png" alt=""></p>
 <p>二：对视频进行转码，转成h264 + acc/mp3 的视频 + 音频编码格式然后再推，转码接口参考：<a href="http://developer.qiniu.com/code/v6/api/dora-api/av/avthumb.html" target="_blank" rel="external">http://developer.qiniu.com/code/v6/api/dora-api/av/avthumb.html</a></p>
 <p><strong>三：</strong>dig一下media的域名CNAME，检查到该域名是否进行了正确的CNAME。</p>
-<p><img src="http://lj.bz1.me/media.png" alt="dd"></p>
+<p><img src="https://upload.bz1.me/media.png" alt="dd"></p>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">~ » dig +short pili-media<span class="selector-class">.live</span><span class="selector-class">.bz1</span><span class="selector-class">.me</span>                           </div><div class="line"><span class="number">1000117</span><span class="selector-class">.media</span><span class="selector-class">.z1</span><span class="selector-class">.pili</span><span class="selector-class">.qiniudns</span><span class="selector-class">.com</span>.</div><div class="line">wsall<span class="selector-class">.qiniu</span><span class="selector-class">.hls</span><span class="selector-class">.wscdns</span><span class="selector-class">.com</span>.</div><div class="line">qiniu<span class="selector-class">.livevideo</span><span class="selector-class">.ourwebat</span><span class="selector-class">.com</span>.</div><div class="line"><span class="number">118.212</span>.<span class="number">138.191</span></div></pre></td></tr></table></figure>
 <p><strong>四：</strong>上传该crossdomain.xml 放入直播空间 <a href="http://kb-static.qiniucdn.com/crossdomain.xml?attname=" target="_blank" rel="external">点我下载</a> </p>
 <p><strong>五：</strong>提交工单提供一下media的域名，取消302</p>
@@ -568,7 +568,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">22</span>
+              <span class="site-state-item-count">21</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -680,7 +680,7 @@
 </span>
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共12.8k字</span>
+  <span class="post-count">博客全站共12.6k字</span>
 </div>
 
 

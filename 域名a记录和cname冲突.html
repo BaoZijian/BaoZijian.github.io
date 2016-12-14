@@ -118,24 +118,24 @@
 <meta property="og:site_name" content="Tecooler means (Technology is cool)">
 <meta property="og:description" content="问题描述假如用户的主页为www.xxx.com，为了使用CDN加速，在七牛也绑定了加速域名为www.xxx.com，绑定好了之后，七牛返回给用户一个CNAME的地址，此时用户去域名提供商那边去配置CNAME，然后提示 “CNAME记录与主机记录的A记录冲突，无法保存成功”
 问题原因A记录就是把一个域名解析到一个IP地址（Address，特制数字IP地址），而CNAME记录就是把域名解析到另外一个域">
-<meta property="og:image" content="http://inbox.bz1.me/cname冲突.png">
-<meta property="og:image" content="http://inbox.bz1.me/加速.png">
-<meta property="og:image" content="http://inbox.bz1.me/cdnconf.png">
-<meta property="og:image" content="http://inbox.bz1.me/cnameconff.png">
-<meta property="og:image" content="http://inbox.bz1.me/ali.png">
-<meta property="og:image" content="http://inbox.bz1.me/dfsfsdf.png">
-<meta property="og:image" content="http://inbox.bz1.me/加速.png">
-<meta property="og:image" content="http://inbox.bz1.me/ceshi.png">
-<meta property="og:image" content="http://inbox.bz1.me/cnameconff.png">
-<meta property="og:image" content="http://inbox.bz1.me/ali.png">
-<meta property="og:image" content="http://inbox.bz1.me/kongjianjingxiang.png">
-<meta property="og:image" content="http://inbox.bz1.me/ddserwef.png">
-<meta property="og:updated_time" content="2016-12-08T14:34:28.000Z">
+<meta property="og:image" content="https://upload.bz1.me/cname冲突.png">
+<meta property="og:image" content="https://upload.bz1.me/加速.png">
+<meta property="og:image" content="https://upload.bz1.me/cdnconf.png">
+<meta property="og:image" content="https://upload.bz1.me/cnameconff.png">
+<meta property="og:image" content="https://upload.bz1.me/ali.png">
+<meta property="og:image" content="https://upload.bz1.me/dfsfsdf.png">
+<meta property="og:image" content="https://upload.bz1.me/加速.png">
+<meta property="og:image" content="https://upload.bz1.me/ceshi.png">
+<meta property="og:image" content="https://upload.bz1.me/cnameconff.png">
+<meta property="og:image" content="https://upload.bz1.me/ali.png">
+<meta property="og:image" content="https://upload.bz1.me/kongjianjingxiang.png">
+<meta property="og:image" content="https://upload.bz1.me/ddserwef.png">
+<meta property="og:updated_time" content="2016-12-14T05:53:21.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="配置CDN加速域名时CNAME与A记录冲突原因及解决方式">
 <meta name="twitter:description" content="问题描述假如用户的主页为www.xxx.com，为了使用CDN加速，在七牛也绑定了加速域名为www.xxx.com，绑定好了之后，七牛返回给用户一个CNAME的地址，此时用户去域名提供商那边去配置CNAME，然后提示 “CNAME记录与主机记录的A记录冲突，无法保存成功”
 问题原因A记录就是把一个域名解析到一个IP地址（Address，特制数字IP地址），而CNAME记录就是把域名解析到另外一个域">
-<meta name="twitter:image" content="http://inbox.bz1.me/cname冲突.png">
+<meta name="twitter:image" content="https://upload.bz1.me/cname冲突.png">
 
 
 
@@ -421,11 +421,11 @@
       
 
       
-        <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>假如用户的主页为www.xxx.com，为了使用CDN加速，在七牛也绑定了加速域名为www.xxx.com，绑定好了之后，七牛返回给用户一个CNAME的地址，此时用户去域名提供商那边去配置CNAME，然后提示 “CNAME记录与主机记录的A记录冲突，无法保存成功”<br><img src="http://inbox.bz1.me/cname冲突.png" alt=""></p>
+        <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>假如用户的主页为www.xxx.com，为了使用CDN加速，在七牛也绑定了加速域名为www.xxx.com，绑定好了之后，七牛返回给用户一个CNAME的地址，此时用户去域名提供商那边去配置CNAME，然后提示 “CNAME记录与主机记录的A记录冲突，无法保存成功”<br><img src="https://upload.bz1.me/cname冲突.png" alt=""></p>
 <h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><p>A记录就是把一个域名解析到一个IP地址（Address，特制数字IP地址），而CNAME记录就是把域名解析到另外一个域名。其功能是差不多，CNAME将几个主机名指向一个别名，其实跟指向IP地址是一样的，因为这个别名也要做一个A记录的。<br><strong>这两个都是将您的当前域名（www.xxx.com）去解析到一个IP或者一个服务器，当访问您当前域名的时候会解析过去，但是一个域名不可以解析到两个服务器。</strong><br><a id="more"></a></p>
 <h2 id="规避方式"><a href="#规避方式" class="headerlink" title="规避方式"></a>规避方式</h2><p>本文提供两种方式来解决既想使用CDN加速，又想使用www的域名。</p>
-<h3 id="方式一：直接使用CDN加速，不使用对象存储"><a href="#方式一：直接使用CDN加速，不使用对象存储" class="headerlink" title="方式一：直接使用CDN加速，不使用对象存储"></a>方式一：直接使用CDN加速，不使用对象存储</h3><p>1.在七牛绑定了www.xxx.com的域名<br><img src="http://inbox.bz1.me/加速.png" alt=""><br>2.源站配置中选择IP地址，并且提供一下源站可访问的一个文件名（通过<em>http://<ip>/文件名</ip></em> 可访问），然后点击测试，测试通过变为绿色字样即可。<br><img src="http://inbox.bz1.me/cdnconf.png" alt=""><br>3.等候七牛处理完毕，并返回CNAME地址<br><img src="http://inbox.bz1.me/cnameconff.png" alt=""><br>4.到域名提供上那边进行CNAME<br><img src="http://inbox.bz1.me/ali.png" alt=""><br>配置完毕，www.xxx.com开启了CDN加速</p>
-<h3 id="方式二：使用七牛镜像存储"><a href="#方式二：使用七牛镜像存储" class="headerlink" title="方式二：使用七牛镜像存储"></a>方式二：使用七牛镜像存储</h3><p>1.删除您域名提供商那边主机记录为www的A记录和CNAME<br>2.配置test.xxx.com，配置A记录主机记录www，记录值为您的服务器IP<br><img src="http://inbox.bz1.me/dfsfsdf.png" alt=""><br>3.在七牛绑定www.xxx.com的域名<br><img src="http://inbox.bz1.me/加速.png" alt=""><br>4.源站配置中选择七牛云存储，选定一个bucket，选择创建<br><img src="http://inbox.bz1.me/ceshi.png" alt=""><br>5.等候七牛处理完毕，并返回CNAME地址<br><img src="http://inbox.bz1.me/cnameconff.png" alt=""><br>6.到域名提供上那边进行CNAME<br><img src="http://inbox.bz1.me/ali.png" alt=""><br>7.进入对应的bucket，选择镜像存储<br><img src="http://inbox.bz1.me/kongjianjingxiang.png" alt=""><br>8.镜像源填写您的源站域名 test.xxx.com<br><img src="http://inbox.bz1.me/ddserwef.png" alt=""><br>配置完毕，通过www.xxx.com便可访问您的源站（服务器）</p>
+<h3 id="方式一：直接使用CDN加速，不使用对象存储"><a href="#方式一：直接使用CDN加速，不使用对象存储" class="headerlink" title="方式一：直接使用CDN加速，不使用对象存储"></a>方式一：直接使用CDN加速，不使用对象存储</h3><p>1.在七牛绑定了www.xxx.com的域名<br><img src="https://upload.bz1.me/加速.png" alt=""><br>2.源站配置中选择IP地址，并且提供一下源站可访问的一个文件名（通过<em>http://<ip>/文件名</ip></em> 可访问），然后点击测试，测试通过变为绿色字样即可。<br><img src="https://upload.bz1.me/cdnconf.png" alt=""><br>3.等候七牛处理完毕，并返回CNAME地址<br><img src="https://upload.bz1.me/cnameconff.png" alt=""><br>4.到域名提供上那边进行CNAME<br><img src="https://upload.bz1.me/ali.png" alt=""><br>配置完毕，www.xxx.com开启了CDN加速</p>
+<h3 id="方式二：使用七牛镜像存储"><a href="#方式二：使用七牛镜像存储" class="headerlink" title="方式二：使用七牛镜像存储"></a>方式二：使用七牛镜像存储</h3><p>1.删除您域名提供商那边主机记录为www的A记录和CNAME<br>2.配置test.xxx.com，配置A记录主机记录www，记录值为您的服务器IP<br><img src="https://upload.bz1.me/dfsfsdf.png" alt=""><br>3.在七牛绑定www.xxx.com的域名<br><img src="https://upload.bz1.me/加速.png" alt=""><br>4.源站配置中选择七牛云存储，选定一个bucket，选择创建<br><img src="https://upload.bz1.me/ceshi.png" alt=""><br>5.等候七牛处理完毕，并返回CNAME地址<br><img src="https://upload.bz1.me/cnameconff.png" alt=""><br>6.到域名提供上那边进行CNAME<br><img src="https://upload.bz1.me/ali.png" alt=""><br>7.进入对应的bucket，选择镜像存储<br><img src="https://upload.bz1.me/kongjianjingxiang.png" alt=""><br>8.镜像源填写您的源站域名 test.xxx.com<br><img src="https://upload.bz1.me/ddserwef.png" alt=""><br>配置完毕，通过www.xxx.com便可访问您的源站（服务器）</p>
 
       
     </div>
@@ -577,7 +577,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">22</span>
+              <span class="site-state-item-count">21</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -705,7 +705,7 @@
 </span>
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共12.8k字</span>
+  <span class="post-count">博客全站共12.6k字</span>
 </div>
 
 

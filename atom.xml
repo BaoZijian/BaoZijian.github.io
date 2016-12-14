@@ -57,7 +57,7 @@
     <link href="http://note.bz1.me/%E4%B8%83%E7%89%9B%E7%9B%B4%E6%92%AD%E6%B5%81-streamJson.html"/>
     <id>http://note.bz1.me/七牛直播流-streamJson.html</id>
     <published>2016-12-12T06:19:47.000Z</published>
-    <updated>2016-12-12T08:16:38.000Z</updated>
+    <updated>2016-12-14T05:51:21.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="关于七牛-streamJson-注释"><a href="#关于七牛-streamJson-注释" class="headerlink" title="关于七牛 streamJson 注释"></a>关于七牛 streamJson 注释</h3><p>七牛的 Android 和 ios 推流可以使用<code>streamJson</code>或者<code>七牛推流地址(url)</code>进行推流。</p>
 <ul>
@@ -72,7 +72,7 @@
 <li>hls 播放域名：pili-live-hls.baozijian.cc</li>
 <li>ts 切片域名：pili-media.baozijian.cc</li>
 <li>flv 播放地址：pili-live-hdl.baozijian.cc</li>
-<li>直播封面：pili-live-snapshot.baozijian.cc<br><img src="http://inbox.bz1.me/bloghub.png" alt=""></li>
+<li>直播封面：pili-live-snapshot.baozijian.cc<br><img src="https://upload.bz1.me/bloghub.png" alt=""></li>
 </ul>
 <h3 id="七牛直播流管理-amp-推拉流地址-amp-禁播状态-amp-时间记录"><a href="#七牛直播流管理-amp-推拉流地址-amp-禁播状态-amp-时间记录" class="headerlink" title="七牛直播流管理&amp;推拉流地址&amp;禁播状态&amp;时间记录"></a>七牛直播流管理&amp;推拉流地址&amp;禁播状态&amp;时间记录</h3><ul>
 <li>hub：tron</li>
@@ -82,7 +82,7 @@
 <li>flv 播放地址：<a href="http://pili-live-hdl.baozijian.cc/tron/baozijian.flv" target="_blank" rel="external">http://pili-live-hdl.baozijian.cc/tron/baozijian.flv</a></li>
 <li>禁播状态：true</li>
 <li>创建时间：2016-12-12 14:08:51</li>
-<li>更新时间：2016-12-12 14:21:32<br><img src="http://inbox.bz1.me/bloghub2.png" alt=""></li>
+<li>更新时间：2016-12-12 14:21:32<br><img src="https://upload.bz1.me/bloghub2.png" alt=""></li>
 </ul>
 <h3 id="七牛直播空间设置"><a href="#七牛直播空间设置" class="headerlink" title="七牛直播空间设置"></a>七牛直播空间设置</h3><p>七牛 portal.qiniu.com 控制台的直播空间设置中有如下属性可以设置：</p>
 <ul>
@@ -95,8 +95,8 @@
 </li>
 <li>直播状态通知：当直播的状态有变化时，发送通知到指定的 URL 地址</li>
 <li>直播中断超时：当一个流正在推的时候，status() 可以获取到流的状态为 connected,当pili持续 n 秒内没有收到推流端推送来的数据后，流会由 connected 变为 disconnected n 秒即为该 hub 的 timeout ，n 秒的值可以在此处设置。</li>
-<li>直播鉴权：此处手动设置只有三种，实际有四种直播鉴权『static、dynamic、expire、none』<a href="http://note.bz1.me/七牛直播推流鉴权.html">详细参考</a></li>
-<li>删除直播空间：删除直播空间<br><img src="http://inbox.bz1.me/bloghub3.png" alt=""></li>
+<li>直播鉴权：此处手动设置只有三种，实际有四种直播鉴权『static、dynamic、expire、none』<a href="https://note.bz1.me/七牛直播推流鉴权.html">详细参考</a></li>
+<li>删除直播空间：删除直播空间<br><img src="https://upload.bz1.me/bloghub3.png" alt=""></li>
 </ul>
 ]]></content>
     
@@ -191,7 +191,7 @@
     <link href="http://note.bz1.me/shell-%E9%87%87%E7%94%A8%E8%A1%A8%E5%8D%95-%E5%88%86%E7%89%87%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E8%87%B3%E4%B8%83%E7%89%9B%E4%BA%91.html"/>
     <id>http://note.bz1.me/shell-采用表单-分片上传文件至七牛云.html</id>
     <published>2016-12-09T15:09:46.000Z</published>
-    <updated>2016-12-09T15:18:37.000Z</updated>
+    <updated>2016-12-14T06:00:28.000Z</updated>
     
     <content type="html"><![CDATA[<p>注意1：需要将 qshell 加入环境变量<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mv qshell <span class="regexp">/usr/</span>local<span class="regexp">/bin/</span>qshell</div></pre></td></tr></table></figure></p>
 <p><a href="http://developer.qiniu.com/code/v6/tool/qshell.html" target="_blank" rel="external">http://developer.qiniu.com/code/v6/tool/qshell.html</a></p>
@@ -202,7 +202,7 @@
 <li>domain</li>
 </ol>
 <h3 id="shell-脚本如下："><a href="#shell-脚本如下：" class="headerlink" title="shell 脚本如下："></a>shell 脚本如下：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#!/usr/bin/env bash</span></div><div class="line">ii=<span class="variable">$1</span></div><div class="line">qshell account &lt;ak&gt; &lt;sk&gt;</div><div class="line">jj=$(ls <span class="_">-l</span> | grep <span class="variable">$ii</span> | awk <span class="string">'&#123;print $5&#125;'</span>)</div><div class="line"></div><div class="line"><span class="keyword">if</span> [[ <span class="variable">$jj</span> <span class="_">-lt</span> <span class="string">'100000000'</span> ]];</div><div class="line">	<span class="keyword">then</span></div><div class="line">	<span class="built_in">echo</span> <span class="string">""</span></div><div class="line">	<span class="built_in">echo</span> <span class="string">"文件大小：<span class="variable">$bb</span>"</span></div><div class="line">	<span class="built_in">echo</span> <span class="string">"此文件小于100M，将采用表单上传"</span></div><div class="line">	<span class="built_in">echo</span> <span class="string">""</span></div><div class="line">	qshell fput &lt;bucket&gt; <span class="variable">$ii</span> <span class="variable">$1</span> | tee <span class="_">-a</span> <span class="built_in">test</span>1111</div><div class="line"></div><div class="line">	xx=$(cat <span class="built_in">test</span>1111 | grep <span class="string">"Put"</span> | awk -F <span class="string">')'</span> <span class="string">'&#123;print $2&#125;'</span>)</div><div class="line">	rm <span class="built_in">test</span>1111</div><div class="line">	<span class="keyword">if</span> [[ <span class="variable">$xx</span> = <span class="string">' success!'</span> ]];</div><div class="line">		<span class="keyword">then</span></div><div class="line">		<span class="built_in">echo</span> <span class="string">""</span></div><div class="line">		<span class="built_in">echo</span> <span class="string">"访问链接："</span></div><div class="line">		<span class="built_in">echo</span> <span class="string">"http://&lt;domain&gt;/<span class="variable">$ii</span>"</span></div><div class="line">		<span class="built_in">echo</span> <span class="string">""</span></div><div class="line">	<span class="keyword">else</span></div><div class="line">		<span class="built_in">echo</span> <span class="string">"Fail, please try again!"</span></div><div class="line">	<span class="keyword">fi</span></div><div class="line"></div><div class="line"><span class="keyword">elif</span> [[ <span class="variable">$jj</span> -ge <span class="string">'100000000'</span> ]];</div><div class="line">	<span class="keyword">then</span></div><div class="line">	<span class="built_in">echo</span> <span class="string">""</span></div><div class="line">	<span class="built_in">echo</span> <span class="string">"文件大小：<span class="variable">$bb</span>"</span></div><div class="line">	<span class="built_in">echo</span> <span class="string">"此文件大于100M，将采用分片上传"</span></div><div class="line">	<span class="built_in">echo</span> <span class="string">""</span></div><div class="line">	qshell rput &lt;bucket&gt; <span class="variable">$ii</span> <span class="variable">$1</span> | tee <span class="_">-a</span> <span class="built_in">test</span>1111</div><div class="line"></div><div class="line">	xx=$(cat <span class="built_in">test</span>1111 | grep <span class="string">"Put"</span> | awk -F <span class="string">')'</span> <span class="string">'&#123;print $2&#125;'</span>)</div><div class="line">	rm <span class="built_in">test</span>1111</div><div class="line">	<span class="keyword">if</span> [[ <span class="variable">$xx</span> = <span class="string">' success!'</span> ]];</div><div class="line">		<span class="keyword">then</span></div><div class="line">		<span class="built_in">echo</span> <span class="string">""</span></div><div class="line">		<span class="built_in">echo</span> <span class="string">"访问链接："</span></div><div class="line">		<span class="built_in">echo</span> <span class="string">"http://&lt;domain&gt;/<span class="variable">$ii</span>"</span></div><div class="line">		<span class="built_in">echo</span> <span class="string">""</span></div><div class="line">	<span class="keyword">else</span></div><div class="line">		<span class="built_in">echo</span> <span class="string">"Fail, please try again!"</span></div><div class="line">	<span class="keyword">fi</span></div><div class="line"><span class="keyword">else</span></div><div class="line">	<span class="built_in">echo</span> <span class="string">"File error~ 卧槽日了狗"</span></div><div class="line"><span class="keyword">fi</span></div></pre></td></tr></table></figure>
-<h3 id="测试截图："><a href="#测试截图：" class="headerlink" title="测试截图："></a>测试截图：</h3><p><img src="http://inbox.bz1.me/qsuptest.png" alt="qsup1"><br><img src="http://inbox.bz1.me/qsuptest2.png" alt="qsup2"></p>
+<h3 id="测试截图："><a href="#测试截图：" class="headerlink" title="测试截图："></a>测试截图：</h3><p><img src="https://upload.bz1.me/qsuptest.png" alt="qsup1"><br><img src="https://upload.bz1.me/qsuptest2.png" alt="qsup2"></p>
 ]]></content>
     
     <summary type="html">
@@ -248,7 +248,7 @@
     <link href="http://note.bz1.me/m3u8.html"/>
     <id>http://note.bz1.me/m3u8.html</id>
     <published>2016-12-08T14:21:02.000Z</published>
-    <updated>2016-12-08T14:56:14.000Z</updated>
+    <updated>2016-12-14T05:58:26.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="关于-m3u8"><a href="#关于-m3u8" class="headerlink" title="关于 m3u8"></a>关于 m3u8</h2><p>M3U8是Unicode版本的M3U，用UTF-8编码。”M3U”和”M3U8”文件都是苹果公司使用的HTTP Live Streaming格式的基础，这种格式可以在iPhone和Macbook等设备播放。<br>m3u8 其实是一个文本文件，是一个 <code>playlist</code>，用来索引 <code>ts 文件</code>，真正的流媒体文件其实是<code>ts 文件</code><br>⭐️参考 wiki (<a href="https://zh.wikipedia.org/wiki/M3U#M3U8" target="_blank" rel="external">https://zh.wikipedia.org/wiki/M3U#M3U8</a>)</p>
 <h3 id="举个例子："><a href="#举个例子：" class="headerlink" title="举个例子："></a>举个例子：</h3><p><code>http://sc.sc.bz1.me/123123123.m3u8</code></p>
@@ -257,7 +257,7 @@
 <p>标准的 m3u8 文件遵循了 apple 公司的官方标准，可以用官方工具(     <code>mediastreamvalidator</code> )检测看下，此处不赘述。<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$ </span>mediastreamvalidator <span class="symbol">http:</span>/<span class="regexp">/sc.sc.bz1.me/</span><span class="number">123123123</span>.m3u8</div></pre></td></tr></table></figure></p>
 <p>有一些可能就不是很标准，本文脚本可以拆分出每个 ts 的物理时间戳，走北京时间，并且计算出每个 ts 的时长和视频总时长，简单实用。<br>实用脚本前需要先在本地下载七牛的 <code>qshell 工具</code>(<a href="http://developer.qiniu.com/code/v6/tool/qshell.html)，并且加入环境变量(全局可以运行" target="_blank" rel="external">http://developer.qiniu.com/code/v6/tool/qshell.html)，并且加入环境变量(全局可以运行</a> qshell)</p>
 <h3 id="脚本如下："><a href="#脚本如下：" class="headerlink" title="脚本如下："></a>脚本如下：</h3><figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">curl <span class="variable">$1</span> | grep ts | awk -F '/z1.' '&#123;<span class="keyword">print</span> <span class="variable">$2&#125;</span>' | awk -F '/' '&#123;<span class="keyword">print</span> <span class="variable">$2&#125;</span>' | awk -F <span class="string">"."</span> '&#123;<span class="keyword">print</span> <span class="variable">$1&#125;</span>' | awk -F '-' '&#123;<span class="string">"qshell tms2d "</span><span class="variable">$1</span>|getline a; <span class="keyword">close</span>(<span class="string">"qshell tms2d "</span><span class="variable">$1</span>);<span class="string">"qshell tms2d "</span><span class="variable">$2</span>|getline b;<span class="keyword">close</span>(<span class="string">"qshell tms2d "</span><span class="variable">$2</span>);<span class="keyword">print</span> a,<span class="string">" "</span>,b;&#125;' &gt;test11</div><div class="line"></div><div class="line">curl <span class="variable">$1</span> | grep ts | awk -F '/z1.' '&#123;<span class="keyword">print</span> <span class="variable">$2&#125;</span>' | awk -F '/' '&#123;<span class="keyword">print</span> <span class="variable">$2&#125;</span>' | awk -F <span class="string">"."</span> '&#123;<span class="keyword">print</span> <span class="variable">$1&#125;</span>' | awk -F <span class="string">"-"</span> '&#123;<span class="keyword">print</span> (<span class="variable">$2</span> - <span class="variable">$1</span>)/1000 <span class="string">" s"</span>&#125;' &gt;test22</div><div class="line"></div><div class="line"><span class="keyword">cat</span> test22 | awk '&#123;<span class="keyword">sum</span>+=<span class="variable">$1&#125;</span> END &#123;<span class="keyword">print</span> <span class="string">"Total = "</span>, <span class="keyword">sum</span>&#125;' &gt;test33</div><div class="line"></div><div class="line">paste test11 test22</div><div class="line">echo <span class="string">""</span></div><div class="line">echo <span class="string">"m3u8中的ts文件总时长(分钟为单位)"</span></div><div class="line"><span class="keyword">cat</span> test33 | awk '&#123;<span class="keyword">print</span> <span class="variable">$3</span>/60 <span class="string">" min"</span>&#125;'</div><div class="line"></div><div class="line"><span class="keyword">rm</span> test11</div><div class="line"><span class="keyword">rm</span> test22</div><div class="line"><span class="keyword">rm</span> test33</div></pre></td></tr></table></figure>
-<h3 id="测试输出如下："><a href="#测试输出如下：" class="headerlink" title="测试输出如下："></a>测试输出如下：</h3><p><img src="http://inbox.bz1.me/tssssh.png" alt="tsss.sh"></p>
+<h3 id="测试输出如下："><a href="#测试输出如下：" class="headerlink" title="测试输出如下："></a>测试输出如下：</h3><p><img src="https://upload.bz1.me/tssssh.png" alt="tsss.sh"></p>
 ]]></content>
     
     <summary type="html">
@@ -278,7 +278,7 @@
     <link href="http://note.bz1.me/portsentry.html"/>
     <id>http://note.bz1.me/portsentry.html</id>
     <published>2016-09-27T14:21:02.000Z</published>
-    <updated>2016-12-08T14:34:28.000Z</updated>
+    <updated>2016-12-14T05:59:59.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>注：本文采用的操作系统为 ubuntu14.04</p>
@@ -296,7 +296,7 @@
 <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">tar</span> <span class="selector-tag">zxvf</span> <span class="selector-tag">portsentry-1</span><span class="selector-class">.2</span><span class="selector-class">.tar</span><span class="selector-class">.gz</span></div></pre></td></tr></table></figure>
 <p>不能直接编译，这里有点特殊，解压完的包中，<code>portsentry.c</code>这个文件中在<code>1584</code>行有一处错误，将其改成一行</p>
 <figure class="highlight abnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">printf (<span class="string">"Copyright 1997-2003 Craig H. Rowland &lt;craigrowland at users dot sourceforget dot net&gt;\n"</span>)<span class="comment">;</span></div></pre></td></tr></table></figure>
-<p><img src="http://inbox.bz1.me/portsentry1588c.png?imageView/2/h/300" alt="portsentry"></p>
+<p><img src="https://upload.bz1.me/portsentry1588c.png?imageView/2/h/300" alt="portsentry"></p>
 <p>然后进行编译</p>
 <figure class="highlight gauss"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">make</span> linux&amp; <span class="built_in">make</span> install</div></pre></td></tr></table></figure>
 <p>成功安装，安装的路劲为<code>/usr/local/psionic/portsentry</code><br><a id="more"></a></p>
@@ -334,9 +334,9 @@
 <p>启动命令：</p>
 <figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="regexp">/usr/</span>local<span class="regexp">/psionic/</span>portsentry<span class="regexp">/portsentry -atcp</span></div></pre></td></tr></table></figure>
 <p>建议将这条命令写入 <code>/etc/rc.local</code> 中，这样开机就自启动了</p>
-<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>我的<code>云主机 A</code> <code>IP</code> 假设为 <code>XXX.XXX.XXX.XXX</code>，云主机 A 上配置并开启了 <code>portsentry</code><br>开启一台<code>云主机 B</code>，<code>IP</code> 地址为 <code>115.231.183.78</code><br><img src="http://inbox.bz1.me/fortestipgs.png?imageView/2/h/50" alt="ip"></p>
-<p>使用 <code>云主机 B</code> 扫描 <code>云主机 A</code> 的端口<br><img src="http://inbox.bz1.me/nmapsaomiao.png?imageView/2/h/300" alt="nmap"></p>
-<p><code>云主机 A</code> 监测到了恶意扫描，会将其加入 <code>/etc/hosts.deny</code>,并且在 <code>/usr/local/psionic/portsentry/portsentry.blocked.atcp</code> 会记录 block 掉了<br><img src="http://inbox.bz1.me/denydioale.png" alt=""><br><img src="http://inbox.bz1.me/blockded.png?imageView/2/h/300" alt="blockd"></p>
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>我的<code>云主机 A</code> <code>IP</code> 假设为 <code>XXX.XXX.XXX.XXX</code>，云主机 A 上配置并开启了 <code>portsentry</code><br>开启一台<code>云主机 B</code>，<code>IP</code> 地址为 <code>115.231.183.78</code><br><img src="https://upload.bz1.me/fortestipgs.png?imageView/2/h/50" alt="ip"></p>
+<p>使用 <code>云主机 B</code> 扫描 <code>云主机 A</code> 的端口<br><img src="https://upload.bz1.me/nmapsaomiao.png?imageView/2/h/300" alt="nmap"></p>
+<p><code>云主机 A</code> 监测到了恶意扫描，会将其加入 <code>/etc/hosts.deny</code>,并且在 <code>/usr/local/psionic/portsentry/portsentry.blocked.atcp</code> 会记录 block 掉了<br><img src="https://upload.bz1.me/denydioale.png" alt=""><br><img src="https://upload.bz1.me/blockded.png?imageView/2/h/300" alt="blockd"></p>
 <p>简单处理一下，发现还有不是自己扫的，无聊的人也是多- -！</p>
 ]]></content>
     
@@ -358,7 +358,7 @@
 &lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;tar&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;zxvf&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;portsentry-1&lt;/span&gt;&lt;span class=&quot;selector-class&quot;&gt;.2&lt;/span&gt;&lt;span class=&quot;selector-class&quot;&gt;.tar&lt;/span&gt;&lt;span class=&quot;selector-class&quot;&gt;.gz&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;不能直接编译，这里有点特殊，解压完的包中，&lt;code&gt;portsentry.c&lt;/code&gt;这个文件中在&lt;code&gt;1584&lt;/code&gt;行有一处错误，将其改成一行&lt;/p&gt;
 &lt;figure class=&quot;highlight abnf&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;printf (&lt;span class=&quot;string&quot;&gt;&quot;Copyright 1997-2003 Craig H. Rowland &amp;lt;craigrowland at users dot sourceforget dot net&amp;gt;\n&quot;&lt;/span&gt;)&lt;span class=&quot;comment&quot;&gt;;&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;&lt;img src=&quot;http://inbox.bz1.me/portsentry1588c.png?imageView/2/h/300&quot; alt=&quot;portsentry&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://upload.bz1.me/portsentry1588c.png?imageView/2/h/300&quot; alt=&quot;portsentry&quot;&gt;&lt;/p&gt;
 &lt;p&gt;然后进行编译&lt;/p&gt;
 &lt;figure class=&quot;highlight gauss&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;make&lt;/span&gt; linux&amp;amp; &lt;span class=&quot;built_in&quot;&gt;make&lt;/span&gt; install&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;成功安装，安装的路劲为&lt;code&gt;/usr/local/psionic/portsentry&lt;/code&gt;&lt;br&gt;
@@ -377,7 +377,7 @@
     <link href="http://note.bz1.me/ss-polipo-pac.html"/>
     <id>http://note.bz1.me/ss-polipo-pac.html</id>
     <published>2016-09-26T14:35:32.000Z</published>
-    <updated>2016-12-08T14:34:28.000Z</updated>
+    <updated>2016-12-14T06:01:20.000Z</updated>
     
     <content type="html"><![CDATA[<p>本文将从<strong>代理</strong>教会大家如何科学上网，作为笔记分享，共同学习，一起进步。</p>
 <p>涉及如下三大块内容：</p>
@@ -427,11 +427,11 @@
 <h4 id="配置："><a href="#配置：" class="headerlink" title="配置："></a>配置：</h4><p><code>PAC</code>文件需要可以被访问，建议放在<a href="portal.qiniu.com">七牛</a>或者<a href="aliyun.com">阿里OSS</a>这样的云存储上</p>
 <p>假如是七牛，可以参考七牛的<a href="http://developer.qiniu.com/article/kodo/kodo-first/quickstart.html" target="_blank" rel="external">官方文档</a>进行上传和访问</p>
 <p>生成的模板如下：<br><code>http://domain/a.pac</code></p>
-<h3 id="配置在-MAC-上"><a href="#配置在-MAC-上" class="headerlink" title="配置在 MAC 上"></a>配置在 MAC 上</h3><p>打开<strong>系统偏好设置</strong>，选择<strong>网络</strong><br><img src="http://inbox.bz1.me/macproxy.png" alt="macproxy"></p>
-<p>选择<strong>高级</strong><br><img src="http://inbox.bz1.me/gaojiproxy.png" alt="gaojiproxy"></p>
-<p>选择<strong>代理</strong>，选择<strong>自动代理设置</strong>，URL 处填写 PAC 文件的访问地址<br><img src="http://inbox.bz1.me/zidongproxy.png" alt=""></p>
-<h3 id="配置在-IOS-手机上"><a href="#配置在-IOS-手机上" class="headerlink" title="配置在 IOS 手机上"></a>配置在 IOS 手机上</h3><p>打开<strong>设置</strong>==&gt;<strong>无线局域网</strong>，点击箭头所指位置<br><img src="http://inbox.bz1.me/qiniu5G.png" alt="wifi"></p>
-<p>在最下面的 HTTP 代理中选择<strong>自动</strong><br><img src="http://inbox.bz1.me/httpproxypac.png" alt="httpproxypac"></p>
+<h3 id="配置在-MAC-上"><a href="#配置在-MAC-上" class="headerlink" title="配置在 MAC 上"></a>配置在 MAC 上</h3><p>打开<strong>系统偏好设置</strong>，选择<strong>网络</strong><br><img src="https://upload.bz1.me/macproxy.png" alt="macproxy"></p>
+<p>选择<strong>高级</strong><br><img src="https://upload.bz1.me/gaojiproxy.png" alt="gaojiproxy"></p>
+<p>选择<strong>代理</strong>，选择<strong>自动代理设置</strong>，URL 处填写 PAC 文件的访问地址<br><img src="https://upload.bz1.me/zidongproxy.png" alt=""></p>
+<h3 id="配置在-IOS-手机上"><a href="#配置在-IOS-手机上" class="headerlink" title="配置在 IOS 手机上"></a>配置在 IOS 手机上</h3><p>打开<strong>设置</strong>==&gt;<strong>无线局域网</strong>，点击箭头所指位置<br><img src="https://upload.bz1.me/qiniu5G.png" alt="wifi"></p>
+<p>在最下面的 HTTP 代理中选择<strong>自动</strong><br><img src="https://upload.bz1.me/httpproxypac.png" alt="httpproxypac"></p>
 <p>此时，MAC 和 IOS 都可以科学上网啦~~~</p>
 <p>更多方式进行代理请参考 <a href="https://tyr.gift/pac-proxy.html" target="_blank" rel="external">关于PAC自动代理和ios翻墙</a></p>
 ]]></content>
@@ -482,7 +482,7 @@
     <link href="http://note.bz1.me/livedomain.html"/>
     <id>http://note.bz1.me/livedomain.html</id>
     <published>2016-08-18T13:56:25.000Z</published>
-    <updated>2016-12-08T14:34:28.000Z</updated>
+    <updated>2016-12-14T05:56:18.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="七牛直播域名"><a href="#七牛直播域名" class="headerlink" title="七牛直播域名"></a>七牛直播域名</h1><p>如图所示：</p>
 <ul>
@@ -492,7 +492,7 @@
 <li>flv播放域名</li>
 </ul>
 <p>所对应地址及其组成格式</p>
-<p><img src="http://inbox.bz1.me/tu.png" alt=""></p>
+<p><img src="https://upload.bz1.me/tu.png" alt=""></p>
 <p>开通七牛云直播，欢迎访问：<a href="http://www.qiniu.com/" target="_blank" rel="external">http://www.qiniu.com/</a></p>
 ]]></content>
     
@@ -518,18 +518,18 @@
     <link href="http://note.bz1.me/%E5%9F%9F%E5%90%8Da%E8%AE%B0%E5%BD%95%E5%92%8Ccname%E5%86%B2%E7%AA%81.html"/>
     <id>http://note.bz1.me/域名a记录和cname冲突.html</id>
     <published>2016-07-25T08:45:07.000Z</published>
-    <updated>2016-12-08T14:34:28.000Z</updated>
+    <updated>2016-12-14T05:53:21.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>假如用户的主页为www.xxx.com，为了使用CDN加速，在七牛也绑定了加速域名为www.xxx.com，绑定好了之后，七牛返回给用户一个CNAME的地址，此时用户去域名提供商那边去配置CNAME，然后提示 “CNAME记录与主机记录的A记录冲突，无法保存成功”<br><img src="http://inbox.bz1.me/cname冲突.png" alt=""></p>
+    <content type="html"><![CDATA[<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>假如用户的主页为www.xxx.com，为了使用CDN加速，在七牛也绑定了加速域名为www.xxx.com，绑定好了之后，七牛返回给用户一个CNAME的地址，此时用户去域名提供商那边去配置CNAME，然后提示 “CNAME记录与主机记录的A记录冲突，无法保存成功”<br><img src="https://upload.bz1.me/cname冲突.png" alt=""></p>
 <h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><p>A记录就是把一个域名解析到一个IP地址（Address，特制数字IP地址），而CNAME记录就是把域名解析到另外一个域名。其功能是差不多，CNAME将几个主机名指向一个别名，其实跟指向IP地址是一样的，因为这个别名也要做一个A记录的。<br><strong>这两个都是将您的当前域名（www.xxx.com）去解析到一个IP或者一个服务器，当访问您当前域名的时候会解析过去，但是一个域名不可以解析到两个服务器。</strong><br><a id="more"></a></p>
 <h2 id="规避方式"><a href="#规避方式" class="headerlink" title="规避方式"></a>规避方式</h2><p>本文提供两种方式来解决既想使用CDN加速，又想使用www的域名。</p>
-<h3 id="方式一：直接使用CDN加速，不使用对象存储"><a href="#方式一：直接使用CDN加速，不使用对象存储" class="headerlink" title="方式一：直接使用CDN加速，不使用对象存储"></a>方式一：直接使用CDN加速，不使用对象存储</h3><p>1.在七牛绑定了www.xxx.com的域名<br><img src="http://inbox.bz1.me/加速.png" alt=""><br>2.源站配置中选择IP地址，并且提供一下源站可访问的一个文件名（通过<em>http://<ip>/文件名</ip></em> 可访问），然后点击测试，测试通过变为绿色字样即可。<br><img src="http://inbox.bz1.me/cdnconf.png" alt=""><br>3.等候七牛处理完毕，并返回CNAME地址<br><img src="http://inbox.bz1.me/cnameconff.png" alt=""><br>4.到域名提供上那边进行CNAME<br><img src="http://inbox.bz1.me/ali.png" alt=""><br>配置完毕，www.xxx.com开启了CDN加速</p>
-<h3 id="方式二：使用七牛镜像存储"><a href="#方式二：使用七牛镜像存储" class="headerlink" title="方式二：使用七牛镜像存储"></a>方式二：使用七牛镜像存储</h3><p>1.删除您域名提供商那边主机记录为www的A记录和CNAME<br>2.配置test.xxx.com，配置A记录主机记录www，记录值为您的服务器IP<br><img src="http://inbox.bz1.me/dfsfsdf.png" alt=""><br>3.在七牛绑定www.xxx.com的域名<br><img src="http://inbox.bz1.me/加速.png" alt=""><br>4.源站配置中选择七牛云存储，选定一个bucket，选择创建<br><img src="http://inbox.bz1.me/ceshi.png" alt=""><br>5.等候七牛处理完毕，并返回CNAME地址<br><img src="http://inbox.bz1.me/cnameconff.png" alt=""><br>6.到域名提供上那边进行CNAME<br><img src="http://inbox.bz1.me/ali.png" alt=""><br>7.进入对应的bucket，选择镜像存储<br><img src="http://inbox.bz1.me/kongjianjingxiang.png" alt=""><br>8.镜像源填写您的源站域名 test.xxx.com<br><img src="http://inbox.bz1.me/ddserwef.png" alt=""><br>配置完毕，通过www.xxx.com便可访问您的源站（服务器）</p>
+<h3 id="方式一：直接使用CDN加速，不使用对象存储"><a href="#方式一：直接使用CDN加速，不使用对象存储" class="headerlink" title="方式一：直接使用CDN加速，不使用对象存储"></a>方式一：直接使用CDN加速，不使用对象存储</h3><p>1.在七牛绑定了www.xxx.com的域名<br><img src="https://upload.bz1.me/加速.png" alt=""><br>2.源站配置中选择IP地址，并且提供一下源站可访问的一个文件名（通过<em>http://<ip>/文件名</ip></em> 可访问），然后点击测试，测试通过变为绿色字样即可。<br><img src="https://upload.bz1.me/cdnconf.png" alt=""><br>3.等候七牛处理完毕，并返回CNAME地址<br><img src="https://upload.bz1.me/cnameconff.png" alt=""><br>4.到域名提供上那边进行CNAME<br><img src="https://upload.bz1.me/ali.png" alt=""><br>配置完毕，www.xxx.com开启了CDN加速</p>
+<h3 id="方式二：使用七牛镜像存储"><a href="#方式二：使用七牛镜像存储" class="headerlink" title="方式二：使用七牛镜像存储"></a>方式二：使用七牛镜像存储</h3><p>1.删除您域名提供商那边主机记录为www的A记录和CNAME<br>2.配置test.xxx.com，配置A记录主机记录www，记录值为您的服务器IP<br><img src="https://upload.bz1.me/dfsfsdf.png" alt=""><br>3.在七牛绑定www.xxx.com的域名<br><img src="https://upload.bz1.me/加速.png" alt=""><br>4.源站配置中选择七牛云存储，选定一个bucket，选择创建<br><img src="https://upload.bz1.me/ceshi.png" alt=""><br>5.等候七牛处理完毕，并返回CNAME地址<br><img src="https://upload.bz1.me/cnameconff.png" alt=""><br>6.到域名提供上那边进行CNAME<br><img src="https://upload.bz1.me/ali.png" alt=""><br>7.进入对应的bucket，选择镜像存储<br><img src="https://upload.bz1.me/kongjianjingxiang.png" alt=""><br>8.镜像源填写您的源站域名 test.xxx.com<br><img src="https://upload.bz1.me/ddserwef.png" alt=""><br>配置完毕，通过www.xxx.com便可访问您的源站（服务器）</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h2&gt;&lt;p&gt;假如用户的主页为www.xxx.com，为了使用CDN加速，在七牛也绑定了加速域名为www.xxx.com，绑定好了之后，七牛返回给用户一个CNAME的地址，此时用户去域名提供商那边去配置CNAME，然后提示 “CNAME记录与主机记录的A记录冲突，无法保存成功”&lt;br&gt;&lt;img src=&quot;http://inbox.bz1.me/cname冲突.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+      &lt;h2 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h2&gt;&lt;p&gt;假如用户的主页为www.xxx.com，为了使用CDN加速，在七牛也绑定了加速域名为www.xxx.com，绑定好了之后，七牛返回给用户一个CNAME的地址，此时用户去域名提供商那边去配置CNAME，然后提示 “CNAME记录与主机记录的A记录冲突，无法保存成功”&lt;br&gt;&lt;img src=&quot;https://upload.bz1.me/cname冲突.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;h2 id=&quot;问题原因&quot;&gt;&lt;a href=&quot;#问题原因&quot; class=&quot;headerlink&quot; title=&quot;问题原因&quot;&gt;&lt;/a&gt;问题原因&lt;/h2&gt;&lt;p&gt;A记录就是把一个域名解析到一个IP地址（Address，特制数字IP地址），而CNAME记录就是把域名解析到另外一个域名。其功能是差不多，CNAME将几个主机名指向一个别名，其实跟指向IP地址是一样的，因为这个别名也要做一个A记录的。&lt;br&gt;&lt;strong&gt;这两个都是将您的当前域名（www.xxx.com）去解析到一个IP或者一个服务器，当访问您当前域名的时候会解析过去，但是一个域名不可以解析到两个服务器。&lt;/strong&gt;&lt;br&gt;
     
     </summary>
@@ -546,7 +546,7 @@
     <link href="http://note.bz1.me/hlscannotplay.html"/>
     <id>http://note.bz1.me/hlscannotplay.html</id>
     <published>2016-07-14T03:32:20.000Z</published>
-    <updated>2016-12-08T14:34:28.000Z</updated>
+    <updated>2016-12-14T05:55:04.000Z</updated>
     
     <content type="html"><![CDATA[<p><strong>问题描述</strong>：在七牛云开通了直播服务，创建了直播空间，也进行了CNAME，在使用七牛的提供的rtmp推流地址推流时，在拉流播放时候，发现RTMP播放域名可以播放，但是HLS却无法播放。</p>
 <p><strong>问题原因</strong>：这样的报错原因基本为以下三种之一<br><strong>原因一：</strong>检查一下推流地址是否填写的是RTMP的播放地址，导致RTMP可以正常播放，但是HLS不能，后台也查不到有推流上来。</p>
@@ -556,10 +556,10 @@
 <p><strong>原因四：</strong>crossdomain.xml 缺失在直播对应空间里面</p>
 <p><strong>原因五：</strong> ts文件对应域名没有取消302跳转</p>
 <p><strong>解决方法</strong>：<br><strong>一：</strong>使用该地址进行推流。</p>
-<p><img src="http://lj.bz1.me/blob.png" alt=""></p>
+<p><img src="https://upload.bz1.me/blob.png" alt=""></p>
 <p>二：对视频进行转码，转成h264 + acc/mp3 的视频 + 音频编码格式然后再推，转码接口参考：<a href="http://developer.qiniu.com/code/v6/api/dora-api/av/avthumb.html" target="_blank" rel="external">http://developer.qiniu.com/code/v6/api/dora-api/av/avthumb.html</a></p>
 <p><strong>三：</strong>dig一下media的域名CNAME，检查到该域名是否进行了正确的CNAME。</p>
-<p><img src="http://lj.bz1.me/media.png" alt="dd"></p>
+<p><img src="https://upload.bz1.me/media.png" alt="dd"></p>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">~ » dig +short pili-media<span class="selector-class">.live</span><span class="selector-class">.bz1</span><span class="selector-class">.me</span>                           </div><div class="line"><span class="number">1000117</span><span class="selector-class">.media</span><span class="selector-class">.z1</span><span class="selector-class">.pili</span><span class="selector-class">.qiniudns</span><span class="selector-class">.com</span>.</div><div class="line">wsall<span class="selector-class">.qiniu</span><span class="selector-class">.hls</span><span class="selector-class">.wscdns</span><span class="selector-class">.com</span>.</div><div class="line">qiniu<span class="selector-class">.livevideo</span><span class="selector-class">.ourwebat</span><span class="selector-class">.com</span>.</div><div class="line"><span class="number">118.212</span>.<span class="number">138.191</span></div></pre></td></tr></table></figure>
 <p><strong>四：</strong>上传该crossdomain.xml 放入直播空间 <a href="http://kb-static.qiniucdn.com/crossdomain.xml?attname=" target="_blank" rel="external">点我下载</a> </p>
 <p><strong>五：</strong>提交工单提供一下media的域名，取消302</p>
@@ -840,39 +840,6 @@
   </entry>
   
   <entry>
-    <title>imageMogr2将gif转为web并且缩放时报错</title>
-    <link href="http://note.bz1.me/imageMogr2-qiniu.html"/>
-    <id>http://note.bz1.me/imageMogr2-qiniu.html</id>
-    <published>2016-06-27T14:42:00.000Z</published>
-    <updated>2016-12-08T14:34:28.000Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="报错：error-“The-original-image-abnormal”"><a href="#报错：error-“The-original-image-abnormal”" class="headerlink" title="报错：error: “The original image abnormal”"></a>报错：error: “The original image abnormal”</h4><blockquote>
-<p>imageMogr2将gif转为web并且缩放时，使用imageMogr2/format/webp|imageMogr2/thumbnail/100x报错</p>
-</blockquote>
-<p><strong>报错链接</strong>：<a href="http://photo.bz1.me/cat.gif?imageMogr2/format/webp|imageMogr2/thumbnail/100x" target="_blank" rel="external">http://photo.bz1.me/cat.gif?imageMogr2/format/webp|imageMogr2/thumbnail/100x</a></p>
-<p><strong>报错原因</strong>：由于 imageMagick 对 animated webp 进行缩放处理不支持，导致在imageMogr2将.gif转成.webp格式的文件时缩放报错</p>
-<p><strong>解决方法</strong>：2种。</p>
-<p>1）使用管道符，使用imageMogr2缩放.gif图片后再转成.webp格式文件，如：<a href="http://photo.bz1.me/cat.gif?imageMogr2/thumbnail/100x|imageMogr2/format/webp" target="_blank" rel="external">http://photo.bz1.me/cat.gif?imageMogr2/thumbnail/100x|imageMogr2/format/webp</a></p>
-<p>2）不使用管道符，在缩放.gif图片时直接指定目标格式为.webp，如：<a href="http://photo.bz1.me/cat.gif?imageMogr2/thumbnail/100x/format/webp" target="_blank" rel="external">http://photo.bz1.me/cat.gif?imageMogr2/thumbnail/100x/format/webp</a></p>
-<p>参考：</p>
-<p><a href="http://developer.qiniu.com/code/v6/api/kodo-api/image/imagemogr2.html" target="_blank" rel="external">http://developer.qiniu.com/code/v6/api/kodo-api/image/imagemogr2.html</a>  高级图片处理imageMogr2</p>
-<p><a href="http://upliu.net/image-magick-tool-identify.html" target="_blank" rel="external">http://upliu.net/image-magick-tool-identify.html</a>   查看图片大小色度等信息的命令 identify</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h4 id=&quot;报错：error-“The-original-image-abnormal”&quot;&gt;&lt;a href=&quot;#报错：error-“The-original-image-abnormal”&quot; class=&quot;headerlink&quot; title=&quot;报错：error: “The o
-    
-    </summary>
-    
-      <category term="qiniu" scheme="http://note.bz1.me/categories/qiniu/"/>
-    
-    
-      <category term="ufop" scheme="http://note.bz1.me/tags/ufop/"/>
-    
-  </entry>
-  
-  <entry>
     <title>cloudcomputing</title>
     <link href="http://note.bz1.me/cloudcomputing.html"/>
     <id>http://note.bz1.me/cloudcomputing.html</id>
@@ -940,6 +907,47 @@
     
     
       <category term="公众号运营" scheme="http://note.bz1.me/tags/%E5%85%AC%E4%BC%97%E5%8F%B7%E8%BF%90%E8%90%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>centos6.5-配置yum安装nginx</title>
+    <link href="http://note.bz1.me/nginx-centos6-5-yum.html"/>
+    <id>http://note.bz1.me/nginx-centos6-5-yum.html</id>
+    <published>2016-04-18T06:25:34.000Z</published>
+    <updated>2016-12-08T14:34:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>在<code>/etc/yum.repos.d/</code>目录下创建一个源配置文件<code>nginx.repo</code>：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cd /etc/yum<span class="selector-class">.repos</span><span class="selector-class">.d</span>/</div><div class="line"> </div><div class="line">vim nginx.repo</div></pre></td></tr></table></figure>
+<p>填写如下内容：</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="section">[nginx]</span></div><div class="line"><span class="attr">name</span>=nginx repo</div><div class="line"><span class="attr">baseurl</span>=http://nginx.org/packages/centos/<span class="variable">$releasever</span>/<span class="variable">$basearch</span>/</div><div class="line"><span class="attr">gpgcheck</span>=<span class="number">0</span></div><div class="line"><span class="attr">enabled</span>=<span class="number">1</span></div></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>wq以后会产生一个文件为：/etc/yum.repos.d/nginx.repo</p>
+<p>下面直接执行如下指令即可自动安装好Nginx：</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum <span class="keyword">install</span> nginx -y</div></pre></td></tr></table></figure>
+<p>安装完成，下面直接就可以启动Nginx了：</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="regexp">/etc/i</span>nit.d<span class="regexp">/nginx start</span></div></pre></td></tr></table></figure>
+<p>现在Nginx已经启动了，直接访问服务器就能看到Nginx欢迎页面了的。</p>
+<p>如果还无法访问，则需配置一下Linux防火墙</p>
+<figure class="highlight pf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">iptables -I INPUT <span class="number">5</span> -i eth0 -p tcp --dport <span class="number">80</span> -m <span class="keyword">state</span> --state NEW,ESTABLISHED -j ACCEPT</div><div class="line"> </div><div class="line">service iptables save</div><div class="line"> </div><div class="line">service iptables restart</div></pre></td></tr></table></figure>
+<p>Nginx的命令以及配置文件位置：</p>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta-keyword">/etc/</span>init.d/nginx start	        <span class="meta"># 启动Nginx服务</span></div><div class="line"> </div><div class="line"><span class="meta-keyword">/etc/</span>init.d/nginx stop 		<span class="meta"># 停止Nginx服务</span></div><div class="line"> </div><div class="line"><span class="meta-keyword">/etc/</span>nginx/nginx.conf 		<span class="meta"># Nginx配置文件位置</span></div></pre></td></tr></table></figure>
+<p>至此，Nginx已经全部配置安装完成。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在&lt;code&gt;/etc/yum.repos.d/&lt;/code&gt;目录下创建一个源配置文件&lt;code&gt;nginx.repo&lt;/code&gt;：&lt;/p&gt;
+&lt;figure class=&quot;highlight stylus&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;cd /etc/yum&lt;span class=&quot;selector-class&quot;&gt;.repos&lt;/span&gt;&lt;span class=&quot;selector-class&quot;&gt;.d&lt;/span&gt;/&lt;/div&gt;&lt;div class=&quot;line&quot;&gt; &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;vim nginx.repo&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;填写如下内容：&lt;/p&gt;
+&lt;figure class=&quot;highlight ini&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;section&quot;&gt;[nginx]&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;name&lt;/span&gt;=nginx repo&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;baseurl&lt;/span&gt;=http://nginx.org/packages/centos/&lt;span class=&quot;variable&quot;&gt;$releasever&lt;/span&gt;/&lt;span class=&quot;variable&quot;&gt;$basearch&lt;/span&gt;/&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;gpgcheck&lt;/span&gt;=&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;enabled&lt;/span&gt;=&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="linux" scheme="http://note.bz1.me/categories/linux/"/>
+    
+    
+      <category term="nginx" scheme="http://note.bz1.me/tags/nginx/"/>
     
   </entry>
   
