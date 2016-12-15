@@ -258,19 +258,19 @@
     
     
   <url>
-    <loc>https://www.bz1.me/videoaudio.html</loc>
+    <loc>https://www.bz1.me/vim.html</loc>
     <lastmod>2016-12-08T14:34:28.000Z</lastmod>
     <data>
         <display>
-        <title>关于七牛多媒体处理预设格式的小节</title>
-        <pubTime>2016-07-06T01:35:00.000Z</pubTime>
+        <title>vim</title>
+        <pubTime>2016-06-27T14:42:00.000Z</pubTime>
         
-        <tag>ufop</tag>
+        <tag>vim</tag>
          
          
            
              
-              <breadCrumb title="qiniu" url="https://www.bz1.me/categories/qiniu/"/>
+              <breadCrumb title="linux" url="https://www.bz1.me/categories/linux/"/>
           
         </display>
     </data>
@@ -293,34 +293,14 @@
 
     
   <url>
-    <loc>https://www.bz1.me/vim.html</loc>
+    <loc>https://www.bz1.me/videoaudio.html</loc>
     <lastmod>2016-12-08T14:34:28.000Z</lastmod>
     <data>
         <display>
-        <title>vim</title>
-        <pubTime>2016-06-27T14:42:00.000Z</pubTime>
+        <title>关于七牛多媒体处理预设格式的小节</title>
+        <pubTime>2016-07-06T01:35:00.000Z</pubTime>
         
-        <tag>vim</tag>
-         
-         
-           
-             
-              <breadCrumb title="linux" url="https://www.bz1.me/categories/linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.bz1.me/pili%E7%9B%B4%E6%92%ADFAQ.html</loc>
-    <lastmod>2016-12-08T14:34:28.000Z</lastmod>
-    <data>
-        <display>
-        <title>七牛直播云常见FAQ</title>
-        <pubTime>2016-07-13T01:09:00.000Z</pubTime>
-        
-        <tag>pili</tag>
+        <tag>ufop</tag>
          
          
            
@@ -346,6 +326,26 @@
            
              
               <breadCrumb title="linux" url="https://www.bz1.me/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.bz1.me/pili%E7%9B%B4%E6%92%ADFAQ.html</loc>
+    <lastmod>2016-12-08T14:34:28.000Z</lastmod>
+    <data>
+        <display>
+        <title>七牛直播云常见FAQ</title>
+        <pubTime>2016-07-13T01:09:00.000Z</pubTime>
+        
+        <tag>pili</tag>
+         
+         
+           
+             
+              <breadCrumb title="qiniu" url="https://www.bz1.me/categories/qiniu/"/>
           
         </display>
     </data>
