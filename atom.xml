@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.bz1.me/"/>
-  <updated>2016-12-12T08:19:36.000Z</updated>
+  <updated>2016-12-15T02:52:33.000Z</updated>
   <id>https://www.bz1.me/</id>
   
   <author>
@@ -14,6 +14,47 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于七牛推拉流地址</title>
+    <link href="https://www.bz1.me/%E5%85%B3%E4%BA%8E%E4%B8%83%E7%89%9B%E6%8E%A8%E6%8B%89%E6%B5%81%E5%9C%B0%E5%9D%80.html"/>
+    <id>https://www.bz1.me/关于七牛推拉流地址.html</id>
+    <published>2016-12-15T02:41:00.000Z</published>
+    <updated>2016-12-15T02:52:33.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>⭐️注：</p>
+<ul>
+<li>publish-domain : pili-publish.baozijian.cc</li>
+<li>rtmp-pull-domain : pili-live-rtmp.baozijian.cc</li>
+<li>hls-pull-domain : pili-live-hls.baozijian.cc</li>
+<li>flv-pull-domain : pili-live-hdl.baozijian.cc</li>
+<li>hub : tron</li>
+<li>title : baozijian</li>
+<li>key : baozijian<h3 id="关于七牛的推流地址"><a href="#关于七牛的推流地址" class="headerlink" title="关于七牛的推流地址"></a>关于七牛的推流地址</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">静态鉴权推流地址 e<span class="selector-class">.g</span>.</div><div class="line">rtmp:<span class="comment">//pili-publish.baozijian.cc/tron/baozijian?key=baozijian</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>这个推流地址是有固定的组成格式，格式如下<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rtmp://<span class="tag">&lt;<span class="name">publish-domain</span>&gt;</span>/<span class="tag">&lt;<span class="name">hub</span>&gt;</span>/<span class="tag">&lt;<span class="name">tilte</span>&gt;</span>?key=<span class="tag">&lt;<span class="name">key</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h3 id="关于七牛的拉流地址"><a href="#关于七牛的拉流地址" class="headerlink" title="关于七牛的拉流地址"></a>关于七牛的拉流地址</h3><figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">e.g.</div><div class="line"><span class="comment"># rtmp 播放地址：</span></div><div class="line">rtmp:<span class="regexp">//</span>pili-live-rtmp.baozijian.cc<span class="regexp">/tron/</span>baozijian</div><div class="line"><span class="comment"># hls 播放地址：</span></div><div class="line">http:<span class="regexp">//</span>pili-live-hls.baozijian.cc<span class="regexp">/tron/</span>baozijian.m3u8</div><div class="line"><span class="comment"># flv 播放地址：</span></div><div class="line">http:<span class="regexp">//</span>pili-live-hdl.baozijian.cc<span class="regexp">/tron/</span>baozijian.flv</div></pre></td></tr></table></figure>
+<p>对应的播放地址的格式：<br><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># rtmp 播放地址：</span></div><div class="line">rtmp://<span class="variable">&lt;rtmp-pull-domain&gt;</span>/<span class="variable">&lt;hub&gt;</span>/<span class="variable">&lt;tilte&gt;</span></div><div class="line"><span class="comment"># hls 播放地址：</span></div><div class="line">http://<span class="variable">&lt;hls-pull-domain&gt;</span>/<span class="variable">&lt;hub&gt;</span>/<span class="variable">&lt;tilte&gt;</span>.m3u8</div><div class="line"><span class="comment"># flv 播放地址：</span></div><div class="line">http://<span class="variable">&lt;flv-pull-domain&gt;</span>/<span class="variable">&lt;hub&gt;</span>/<span class="variable">&lt;title&gt;</span>.flv</div></pre></td></tr></table></figure></p>
+<p><img src="https://upload.bz1.me/bloghub2.png" alt=""></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;⭐️注：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;publish-domain : pili-publish.baozijian.cc&lt;/li&gt;
+&lt;li&gt;rtmp-pull-domain : pili-live-rtmp.baozijian.cc&lt;/li&gt;
+&lt;li&gt;hls-pull-do
+    
+    </summary>
+    
+      <category term="qiniu" scheme="https://www.bz1.me/categories/qiniu/"/>
+    
+    
+      <category term="pili" scheme="https://www.bz1.me/tags/pili/"/>
+    
+  </entry>
   
   <entry>
     <title>七牛直播推流鉴权</title>
@@ -54,27 +95,30 @@
   
   <entry>
     <title>七牛直播流 streamJson&amp;直播空间</title>
-    <link href="https://www.bz1.me/%E4%B8%83%E7%89%9B%E7%9B%B4%E6%92%AD%E6%B5%81-streamJson.html"/>
-    <id>https://www.bz1.me/七牛直播流-streamJson.html</id>
+    <link href="https://www.bz1.me/%E4%B8%83%E7%89%9B%E7%9B%B4%E6%92%AD%E7%A9%BA%E9%97%B4%E8%AF%A6%E8%A7%A3.html"/>
+    <id>https://www.bz1.me/七牛直播空间详解.html</id>
     <published>2016-12-12T06:19:47.000Z</published>
-    <updated>2016-12-14T05:51:21.000Z</updated>
+    <updated>2016-12-15T02:39:33.000Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="关于七牛-streamJson-注释"><a href="#关于七牛-streamJson-注释" class="headerlink" title="关于七牛 streamJson 注释"></a>关于七牛 streamJson 注释</h3><p>七牛的 Android 和 ios 推流可以使用<code>streamJson</code>或者<code>七牛推流地址(url)</code>进行推流。</p>
+    <content type="html"><![CDATA[<p>直播空间截图和具体的设置方式细节在后面，首先先介绍一下七牛的推流地址</p>
+<h3 id="关于七牛-streamJson-注释"><a href="#关于七牛-streamJson-注释" class="headerlink" title="关于七牛 streamJson 注释"></a>关于七牛 streamJson 注释</h3><p>七牛的 Android 和 ios 推流可以使用<code>streamJson</code>或者<code>七牛推流地址(url)</code>进行推流。</p>
 <ul>
 <li>服务端 V1 版本的 sdk 同时支持生成 url 和 streamJson</li>
 <li>服务端 V2 版本的 sdk 不支持生成 streamJson<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line"><span class="string">"id"</span>: <span class="string">"z1.tron.baozijian"</span>, <span class="comment">//流 id</span></div><div class="line"><span class="string">"createdAt"</span>: <span class="string">"2016-12-12T06:08:51.365Z"</span>, <span class="comment">//创建时间</span></div><div class="line"><span class="string">"updatedAt"</span>: <span class="string">"2016-12-12T06:08:51.365Z"</span>, <span class="comment">//更新时间</span></div><div class="line"><span class="string">"title"</span>: <span class="string">"baozijian"</span>, <span class="comment">//流名称</span></div><div class="line"><span class="string">"hub"</span>: <span class="string">"tron"</span>, <span class="comment">//直播空间名</span></div><div class="line"><span class="string">"disabled"</span>: <span class="literal">true</span>, <span class="comment">//是否禁播流</span></div><div class="line"><span class="string">"publishKey"</span>: <span class="string">"baozijian"</span>, <span class="comment">//流秘钥</span></div><div class="line"><span class="string">"publishSecurity"</span>: <span class="string">"static"</span>, <span class="comment">//鉴权方式</span></div><div class="line"><span class="string">"hosts"</span>: &#123;</div><div class="line"><span class="string">"publish"</span>: &#123;</div><div class="line"><span class="string">"rtmp"</span>: <span class="string">"pili-publish.baozijian.cc"</span> <span class="comment">//rtmp 推流域名</span></div><div class="line">&#125;,</div><div class="line"><span class="string">"live"</span>: &#123;</div><div class="line"><span class="string">"hdl"</span>: <span class="string">"pili-live-hdl.baozijian.cc"</span>, <span class="comment">//flv 播放域名</span></div><div class="line"><span class="string">"hls"</span>: <span class="string">"pili-live-hls.baozijian.cc"</span>, <span class="comment">//hls 播放域名</span></div><div class="line"><span class="string">"http"</span>: <span class="string">"pili-live-hls.baozijian.cc"</span>, <span class="comment">//hls 播放域名</span></div><div class="line"><span class="string">"rtmp"</span>: <span class="string">"pili-live-rtmp.baozijian.cc"</span>, <span class="comment">//rtmp 播放域名</span></div><div class="line"><span class="string">"snapshot"</span>: <span class="string">"pili-live-snapshot.baozijian.cc"</span> <span class="comment">//实时截图域名</span></div><div class="line">&#125;,</div><div class="line"><span class="string">"playback"</span>: &#123;</div><div class="line"><span class="string">"hls"</span>: <span class="string">"10005x3.playback1.z1.pili.qiniucdn.com"</span>, <span class="comment">//playback 回看域名</span></div><div class="line"><span class="string">"http"</span>: <span class="string">"10005x3.playback1.z1.pili.qiniucdn.com"</span> <span class="comment">//playback 回看域名</span></div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="七牛直播空间名-amp-域名管理"><a href="#七牛直播空间名-amp-域名管理" class="headerlink" title="七牛直播空间名&amp;域名管理"></a>七牛直播空间名&amp;域名管理</h3><ul>
+<h3 id="七牛直播空间名-amp-域名管理"><a href="#七牛直播空间名-amp-域名管理" class="headerlink" title="七牛直播空间名&amp;域名管理"></a>七牛直播空间名&amp;域名管理</h3><p><img src="https://upload.bz1.me/bloghub.png" alt=""></p>
+<ul>
 <li>hub：tron</li>
 <li>rtmp 推流域名：pili-publish.baozijian.cc</li>
 <li>rtmp 播放域名：pili-live-rtmp.baozijian.cc</li>
 <li>hls 播放域名：pili-live-hls.baozijian.cc</li>
 <li>ts 切片域名：pili-media.baozijian.cc</li>
 <li>flv 播放地址：pili-live-hdl.baozijian.cc</li>
-<li>直播封面：pili-live-snapshot.baozijian.cc<br><img src="https://upload.bz1.me/bloghub.png" alt=""></li>
+<li>直播封面：pili-live-snapshot.baozijian.cc</li>
 </ul>
-<h3 id="七牛直播流管理-amp-推拉流地址-amp-禁播状态-amp-时间记录"><a href="#七牛直播流管理-amp-推拉流地址-amp-禁播状态-amp-时间记录" class="headerlink" title="七牛直播流管理&amp;推拉流地址&amp;禁播状态&amp;时间记录"></a>七牛直播流管理&amp;推拉流地址&amp;禁播状态&amp;时间记录</h3><ul>
+<h3 id="七牛直播流管理-amp-推拉流地址-amp-禁播状态-amp-时间记录"><a href="#七牛直播流管理-amp-推拉流地址-amp-禁播状态-amp-时间记录" class="headerlink" title="七牛直播流管理&amp;推拉流地址&amp;禁播状态&amp;时间记录"></a>七牛直播流管理&amp;推拉流地址&amp;禁播状态&amp;时间记录</h3><p><img src="https://upload.bz1.me/bloghub2.png" alt=""></p>
+<ul>
 <li>hub：tron</li>
 <li>rtmp 推流地址：rtmp://pili-publish.baozijian.cc/tron/baozijian?key=baozijian</li>
 <li>rtmp 播放地址：rtmp://pili-live-rtmp.baozijian.cc/tron/baozijian</li>
@@ -82,9 +126,9 @@
 <li>flv 播放地址：<a href="http://pili-live-hdl.baozijian.cc/tron/baozijian.flv" target="_blank" rel="external">http://pili-live-hdl.baozijian.cc/tron/baozijian.flv</a></li>
 <li>禁播状态：true</li>
 <li>创建时间：2016-12-12 14:08:51</li>
-<li>更新时间：2016-12-12 14:21:32<br><img src="https://upload.bz1.me/bloghub2.png" alt=""></li>
+<li>更新时间：2016-12-12 14:21:32</li>
 </ul>
-<h3 id="七牛直播空间设置"><a href="#七牛直播空间设置" class="headerlink" title="七牛直播空间设置"></a>七牛直播空间设置</h3><p>七牛 portal.qiniu.com 控制台的直播空间设置中有如下属性可以设置：</p>
+<h3 id="七牛直播空间设置"><a href="#七牛直播空间设置" class="headerlink" title="七牛直播空间设置"></a>七牛直播空间设置</h3><p><img src="https://upload.bz1.me/bloghub3.png" alt=""><br>七牛 portal.qiniu.com 控制台的直播空间设置中有如下属性可以设置：</p>
 <ul>
 <li>直播空间名称：tron『这个就是 hub 名』</li>
 <li>存储空间名称：直播内容会切片落存储到该空间，直播转存，或者手动请求 snapshot() 都会保存在该空间</li>
@@ -96,13 +140,14 @@
 <li>直播状态通知：当直播的状态有变化时，发送通知到指定的 URL 地址</li>
 <li>直播中断超时：当一个流正在推的时候，status() 可以获取到流的状态为 connected,当pili持续 n 秒内没有收到推流端推送来的数据后，流会由 connected 变为 disconnected n 秒即为该 hub 的 timeout ，n 秒的值可以在此处设置。</li>
 <li>直播鉴权：此处手动设置只有三种，实际有四种直播鉴权『static、dynamic、expire、none』<a href="https://note.bz1.me/七牛直播推流鉴权.html" target="_blank" rel="external">详细参考</a></li>
-<li>删除直播空间：删除直播空间<br><img src="https://upload.bz1.me/bloghub3.png" alt=""></li>
+<li>删除直播空间：删除直播空间</li>
 </ul>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h3 id=&quot;关于七牛-streamJson-注释&quot;&gt;&lt;a href=&quot;#关于七牛-streamJson-注释&quot; class=&quot;headerlink&quot; title=&quot;关于七牛 streamJson 注释&quot;&gt;&lt;/a&gt;关于七牛 streamJson 注释&lt;/h3&gt;&lt;p&gt;七牛的 An
+      &lt;p&gt;直播空间截图和具体的设置方式细节在后面，首先先介绍一下七牛的推流地址&lt;/p&gt;
+&lt;h3 id=&quot;关于七牛-streamJson-注释&quot;&gt;&lt;a href=&quot;#关于七牛-streamJson-注释&quot; class=&quot;headerlink&quot; title=&quot;关于七牛 streamJso
     
     </summary>
     
@@ -907,47 +952,6 @@
     
     
       <category term="公众号运营" scheme="https://www.bz1.me/tags/%E5%85%AC%E4%BC%97%E5%8F%B7%E8%BF%90%E8%90%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>centos6.5-配置yum安装nginx</title>
-    <link href="https://www.bz1.me/nginx-centos6-5-yum.html"/>
-    <id>https://www.bz1.me/nginx-centos6-5-yum.html</id>
-    <published>2016-04-18T06:25:34.000Z</published>
-    <updated>2016-12-08T14:34:28.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>在<code>/etc/yum.repos.d/</code>目录下创建一个源配置文件<code>nginx.repo</code>：</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cd /etc/yum<span class="selector-class">.repos</span><span class="selector-class">.d</span>/</div><div class="line"> </div><div class="line">vim nginx.repo</div></pre></td></tr></table></figure>
-<p>填写如下内容：</p>
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="section">[nginx]</span></div><div class="line"><span class="attr">name</span>=nginx repo</div><div class="line"><span class="attr">baseurl</span>=http://nginx.org/packages/centos/<span class="variable">$releasever</span>/<span class="variable">$basearch</span>/</div><div class="line"><span class="attr">gpgcheck</span>=<span class="number">0</span></div><div class="line"><span class="attr">enabled</span>=<span class="number">1</span></div></pre></td></tr></table></figure>
-<a id="more"></a>
-<p>wq以后会产生一个文件为：/etc/yum.repos.d/nginx.repo</p>
-<p>下面直接执行如下指令即可自动安装好Nginx：</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum <span class="keyword">install</span> nginx -y</div></pre></td></tr></table></figure>
-<p>安装完成，下面直接就可以启动Nginx了：</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="regexp">/etc/i</span>nit.d<span class="regexp">/nginx start</span></div></pre></td></tr></table></figure>
-<p>现在Nginx已经启动了，直接访问服务器就能看到Nginx欢迎页面了的。</p>
-<p>如果还无法访问，则需配置一下Linux防火墙</p>
-<figure class="highlight pf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">iptables -I INPUT <span class="number">5</span> -i eth0 -p tcp --dport <span class="number">80</span> -m <span class="keyword">state</span> --state NEW,ESTABLISHED -j ACCEPT</div><div class="line"> </div><div class="line">service iptables save</div><div class="line"> </div><div class="line">service iptables restart</div></pre></td></tr></table></figure>
-<p>Nginx的命令以及配置文件位置：</p>
-<figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta-keyword">/etc/</span>init.d/nginx start	        <span class="meta"># 启动Nginx服务</span></div><div class="line"> </div><div class="line"><span class="meta-keyword">/etc/</span>init.d/nginx stop 		<span class="meta"># 停止Nginx服务</span></div><div class="line"> </div><div class="line"><span class="meta-keyword">/etc/</span>nginx/nginx.conf 		<span class="meta"># Nginx配置文件位置</span></div></pre></td></tr></table></figure>
-<p>至此，Nginx已经全部配置安装完成。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;在&lt;code&gt;/etc/yum.repos.d/&lt;/code&gt;目录下创建一个源配置文件&lt;code&gt;nginx.repo&lt;/code&gt;：&lt;/p&gt;
-&lt;figure class=&quot;highlight stylus&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;cd /etc/yum&lt;span class=&quot;selector-class&quot;&gt;.repos&lt;/span&gt;&lt;span class=&quot;selector-class&quot;&gt;.d&lt;/span&gt;/&lt;/div&gt;&lt;div class=&quot;line&quot;&gt; &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;vim nginx.repo&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;填写如下内容：&lt;/p&gt;
-&lt;figure class=&quot;highlight ini&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;section&quot;&gt;[nginx]&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;name&lt;/span&gt;=nginx repo&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;baseurl&lt;/span&gt;=http://nginx.org/packages/centos/&lt;span class=&quot;variable&quot;&gt;$releasever&lt;/span&gt;/&lt;span class=&quot;variable&quot;&gt;$basearch&lt;/span&gt;/&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;gpgcheck&lt;/span&gt;=&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;enabled&lt;/span&gt;=&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="linux" scheme="https://www.bz1.me/categories/linux/"/>
-    
-    
-      <category term="nginx" scheme="https://www.bz1.me/tags/nginx/"/>
     
   </entry>
   
