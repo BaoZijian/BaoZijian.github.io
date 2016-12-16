@@ -30,6 +30,57 @@
   </entry>
   
   <entry>
+    <title>四种平台部署hexo之『七牛云存储』</title>
+    <link href="https://www.bz1.me/%E5%B9%B3%E5%8F%B0%E9%83%A8%E7%BD%B2hexo%E4%B9%8B%E3%80%8E%E4%B8%83%E7%89%9B%E4%BA%91%E5%AD%98%E5%82%A8%E3%80%8F.html"/>
+    <id>https://www.bz1.me/平台部署hexo之『七牛云存储』.html</id>
+    <published>2016-12-15T15:05:54.000Z</published>
+    <updated>2016-12-15T15:05:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>按照道理，我先来扯一堆没用的东西</p>
+<p>最近准备开始学习写博客，写博客首先就是考虑博客的托管，是在什么地方写好呢？尝试了很多，比如 CSDN、博客园、简书等等，再早一些还玩过 wordpress，但是总觉得不够好用，也不够美观(可能是我比较挑剔，说白了就是事儿多)。后来接触到了 hexo，真心简洁美观，一眼看到就定心里去了，于是乎着手搞了起来…</p>
+<p>最开始跟着<a href="https://hexo.io/docs/" target="_blank" rel="external">官网教程</a>，读了半天也没看懂到底是怎么一个逻辑，后来 google 查了好久才知道原来是<code>本地生成静态页面，然后 push 到 github</code>，了解这个，就跟着教程和 google 来的大神一步步做，很快也就部署上去了，部署置 github 的过程我就不说了，直接贴其他博主的外链供参考吧，都是溜溜的</p>
+<ul>
+<li><a href="http://www.cylong.com/blog/2016/04/19/hexo-git/" target="_blank" rel="external">笑话人生</a></li>
+<li><a href="http://ehlxr.me/2016/07/23/%E4%BD%BF%E7%94%A8Hexo%E5%9F%BA%E4%BA%8EGitHub-Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80%EF%BC%89/" target="_blank" rel="external">Ehlxr’s Blog</a></li>
+</ul>
+<h3 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h3><p>既然是本地生成的静态页面，可以用 <code>hexo d -g</code> 部署到 github 上面，那当然可以部署到其他的云平台上了，只不过 hexo 不支持直接部署非 git 平台，那么解决方式我这边有两种：</p>
+<ul>
+<li>本地生成静态页面，push 到七牛云存储</li>
+<li>在 VPS 上搭建 git 服务器，然后将部署位置指向 vps 的 git 服务器上</li>
+</ul>
+<blockquote>
+<p>为啥选择七牛？</p>
+<ul>
+<li>七牛在功能特性上，一直在引领云存储的潮流。我们试图改变云存储，让她更加人性化，更加好用。</li>
+<li>特有的上传加速能力。其他云存储通常只加速下载（CDN）。有的号称支持上传加速，其实也就只是做了上传的代理节点。但是七牛是全球首家采用多IDC架构的分布式存储。数据就近上传到某个IDC即落地，真正加速到极致。</li>
+<li>特有的断点续上传功能。不再需要网络不行时在那一遍遍从头再来。无论网络多糟糕（尤其是3G/2G移动网络）、无论文件多大，我们都能够保证让你的数据到达服务器。这个在国内仍然没有其他云存储能够做到。</li>
+<li>CDN整合。七牛目前整合了包括蓝汛、网宿在内的 4 家 CDN，总节点数已经超过 1000 个IDC，这让自建 CDN 望尘莫及。我们不重新发明轮子。但我们要让 CDN 从高端走向平民。为什么只能大公司才能享受 CDN 带来的好处？有了七牛，你就是个博客主也可以享受高品质的快感。七牛还帮你做了智能的 CDN 品质监测。万一某家 CDN 出现局部节点问题时，七牛还能够自动帮你把该区域切换到另一家 CDN，整个过程透明，让你省时省心。</li>
+<li>独特的镜像存储，体验七牛云存储只需一键。</li>
+<li>流媒体（音视频处理）支持。这个目前国内云存储也是首家。悄悄告诉你，最近音视频支持还会重大更新哦。</li>
+<li>数据处理功能的级联（也就是管道）。图片先缩略再打水印，是管道功能的典型案例。</li>
+<li>大文件支持。七牛云存储单文件最大支持到1TB。<br>更多特性介绍，请访问 <a href="http://www.qiniu.com/" target="_blank" rel="external">http://www.qiniu.com/</a>, <a href="http://docs.qiniu.com/" target="_blank" rel="external">http://docs.qiniu.com/</a> 。也可以到 <a href="https://portal.qiniu.com/" target="_blank" rel="external">https://portal.qiniu.com/</a> 直接来体验。</li>
+</ul>
+</blockquote>
+<h3 id="配置过程"><a href="#配置过程" class="headerlink" title="配置过程"></a>配置过程</h3><h4 id="静态文件生成位置"><a href="#静态文件生成位置" class="headerlink" title="静态文件生成位置"></a>静态文件生成位置</h4><p>首先进入到我们的博客文件夹，我的是在<code>~/Document/hexo/newblog</code><br><figure class="highlight haxe"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">cd ~/Document/hexo/<span class="keyword">new</span><span class="type">blog</span></div><div class="line"></div><div class="line">hexo clean</div><div class="line"></div><div class="line">hexo d</div></pre></td></tr></table></figure></p>
+<p>执行完成之后，会在当前目录下发现一个<code>public/</code>的文件夹，这个文件夹里都是<code>.html</code>的静态博客页面</p>
+<h4 id="如何上传到七牛"><a href="#如何上传到七牛" class="headerlink" title="如何上传到七牛"></a>如何上传到七牛</h4><h5 id="首先注册七牛账号"><a href="#首先注册七牛账号" class="headerlink" title="首先注册七牛账号"></a>首先注册七牛账号</h5><p><img src="https://upload.bz1.me/portal.png" alt=""><br><a href="https://portal.qiniu.com/signup/choice" target="_blank" rel="external">七牛传送门</a><br><img src="https://upload.bz1.me/portal2.png" alt=""><br>按照填写后，需要登录自己的邮箱进行激活，如果邮箱内找不到邮件，可以去垃圾箱看看，如果垃圾箱也没有，一般可能是邮件发送你的邮箱失败，被拒绝或者其他原因，此时可以拨打 400-808-9176 激活，或者提交一个<a href="https://support.qiniu.com/question" target="_blank" rel="external">工单</a>来激活。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;按照道理，我先来扯一堆没用的东西&lt;/p&gt;
+&lt;p&gt;最近准备开始学习写博客，写博客首先就是考虑博客的托管，是在什么地方写好呢？尝试了很多，比如 
+    
+    </summary>
+    
+      <category term="qiniu" scheme="https://www.bz1.me/categories/qiniu/"/>
+    
+    
+      <category term="hexo,qshell" scheme="https://www.bz1.me/tags/hexo-qshell/"/>
+    
+  </entry>
+  
+  <entry>
     <title>关于七牛推拉流地址</title>
     <link href="https://www.bz1.me/%E5%85%B3%E4%BA%8E%E4%B8%83%E7%89%9B%E6%8E%A8%E6%8B%89%E6%B5%81%E5%9C%B0%E5%9D%80.html"/>
     <id>https://www.bz1.me/关于七牛推拉流地址.html</id>
@@ -894,34 +945,6 @@
     
     
       <category term="vim" scheme="https://www.bz1.me/tags/vim/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>cloudcomputing</title>
-    <link href="https://www.bz1.me/cloudcomputing.html"/>
-    <id>https://www.bz1.me/cloudcomputing.html</id>
-    <published>2016-04-24T08:10:43.000Z</published>
-    <updated>2016-12-12T06:24:04.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>李开复（现任 Google 全球副总裁、中国区总裁）打了一个很形象的比喻：钱庄。最早人们只是把钱放在枕头底下，后来有了钱庄，很安全，不过兑现起来比较麻烦。现在发展到银行可以到任何一个网点取钱，甚至通过 ATM，或者国外的渠道。就像用电不需要家家装备发电机，直接从电力公司购买一样。“云计算”带来的就是这样一种变革——由谷歌、IBM 这样的专业网络公司来搭建计算机存储、运算中心，用户通过一根网线借助浏览器就可以很方便的访问，把“云”做为资料存储以及应用服务的中心。</p>
-<p>GOOGLE<br>（一）原理:<br> 云计算(Cloud Computing)是分布式处理(Distributed Computing)、并行处理(Parallel Comput、ing)和网格计算(Grid Computing)的发展，或者说是这些计算机科学概念的商业实现。<br>云计算的基本原理是，通过使计算分布在大量的分布式计算机上，而非本地计算机或远程服务器中，企业数据中心的运行将更与互联网相似。这使得企业能够将资源切换到需要的应用上，根据需求访问计算机和存储系统。这可是一种革命性的举措，打个比方，这就好比是从古老的单台发电机模式转向了电厂集中供电的模式。它意味着计算能力也可以作为一种商品进行流通，就像煤气、水电一样，取用方便，费用低廉。最大的不同在于，它是通过互联网进行传输的。<br><a id="more"></a></p>
-<p>云计算的蓝图已经呼之欲出：在未来，只需要一台笔记本或者一个手机，就可以通过网络服务来实现我们需要的一切，甚至包括超级计算这样的任务。从这个角度而言，最终用户才是云计算的真正拥有者。</p>
-<p>云计算的应用包含这样的一种思想，把力量联合起来，给其中的每一个成员使用。</p>
-<p>（二）云计算有哪些好处？<br> 1、安全，云计算提供了最可靠、最安全的数据存储中心，用户不用再担心数据丢失、病毒入侵等麻烦。<br> 2、方便，它对用户端的设备要求最低，使用起来很方便。<br> 3、数据共享，它可以轻松实现不同设备间的数据与应用共享。<br> 4、无限可能，它为我们使用网络提供了几乎无限多的可能。</p>
-<p>（三）云计算最有利于中小企业？<br>云计算技术将使得中小企业的成本大大降低。如果说“云”给大型企业的 IT 部门带来了实惠，那么对于中小型企业而言，它可算得上是上天的恩赐了。过去，小公司人力资源不足，IT 预算吃紧，那种动辄数百万美元的 IT 设备所带来的生产力对它们而言真是如梦一般遥远，而如今，“云”为它们<br>送来了大企业级的技术，并且先期成本极低，升级也很方便。<br>这一新兴趋势的重要性毋庸置疑，不过，它还仅仅是一系列变革的起步阶段而已。云计算不但抹平了企业规模所导致的优劣差距，而且极有可能让优劣之势易主。简单地说，当今世上最强大最具革新意义的技术已不再为大型企业所独有。<br>“云”让每个普通人都能以极低的成本接触到顶尖的 IT技术。</p>
-<p>（四）“云”时代<br>目前，PC 依然是我们日常工作生活中的核心工具——我们用 PC 处理文档、存储资料，通过电子邮件或 U 盘与他人分享信息。如果 PC 硬盘坏了，我们会因为资料丢失而束手无策。<br>而在“云计算”时代，“云”会替我们做存储和计算的工作。“云”就是计算机群，每一群包括了几十万台、甚至上百万台计算机。“云”的好处还在于，其中的计算机可以随时更新，保证“云”长生不老。<br>Google 就有好几个这样的“云”，其他 IT 巨头，如微软、雅虎、亚马逊（Amazon）也有或正在建设这样的“云”。<br>届时，我们只需要一台能上网的电脑，不需关心存储或计算发生在哪朵“云”上，但一旦有需要，我们可以在任何地点用任何设备，如电脑、手机等，快速地计算和找到这些资料。我们再也不用担心资料丢失。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;李开复（现任 Google 全球副总裁、中国区总裁）打了一个很形象的比喻：钱庄。最早人们只是把钱放在枕头底下，后来有了钱庄，很安全，不过兑现起来比较麻烦。现在发展到银行可以到任何一个网点取钱，甚至通过 ATM，或者国外的渠道。就像用电不需要家家装备发电机，直接从电力公司购买一样。“云计算”带来的就是这样一种变革——由谷歌、IBM 这样的专业网络公司来搭建计算机存储、运算中心，用户通过一根网线借助浏览器就可以很方便的访问，把“云”做为资料存储以及应用服务的中心。&lt;/p&gt;
-&lt;p&gt;GOOGLE&lt;br&gt;（一）原理:&lt;br&gt; 云计算(Cloud Computing)是分布式处理(Distributed Computing)、并行处理(Parallel Comput、ing)和网格计算(Grid Computing)的发展，或者说是这些计算机科学概念的商业实现。&lt;br&gt;云计算的基本原理是，通过使计算分布在大量的分布式计算机上，而非本地计算机或远程服务器中，企业数据中心的运行将更与互联网相似。这使得企业能够将资源切换到需要的应用上，根据需求访问计算机和存储系统。这可是一种革命性的举措，打个比方，这就好比是从古老的单台发电机模式转向了电厂集中供电的模式。它意味着计算能力也可以作为一种商品进行流通，就像煤气、水电一样，取用方便，费用低廉。最大的不同在于，它是通过互联网进行传输的。&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="cloud" scheme="https://www.bz1.me/tags/cloud/"/>
     
   </entry>
   
