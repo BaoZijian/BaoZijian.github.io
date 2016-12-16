@@ -102,8 +102,8 @@
 <ul>
 <li>如果报错”limited mimeType”,请先实名认证，文件类型上传有限制。<br><img src="https://upload.bz1.me/portal_qupload.png" alt=""></li>
 </ul>
-<h4 id="细节修改和测试"><a href="#细节修改和测试" class="headerlink" title="细节修改和测试"></a>细节修改和测试</h4><p>然后我们需要到七牛修改一下默认首页显示，因为七牛空间允许存在无命名的空文件，一般我们都知道访问一个站点的时候，虽然输入网址是 <a href="https://www.bz1.me/，实际上访问的是">https://www.bz1.me/，实际上访问的是</a> <a href="https://www.bz1.me/index.html">https://www.bz1.me/index.html</a><br><img src="https://upload.bz1.me/portal_kjsz.png" alt=""><br><img src="https://upload.bz1.me/portal_index.png" alt=""><br>开启之后，就可以用空间自带的测试域名对博客进行访问啦，域名在这里<br><img src="https://upload.bz1.me/portal_ceshiyuming.png" alt=""><br>然后到浏览器中，直接将测试域名贴进去，访问看看<br><img src="https://upload.bz1.me/portal_blogcesh.png" alt=""></p>
-<h3 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h3><ul>
+<h3 id="细节修改和测试"><a href="#细节修改和测试" class="headerlink" title="细节修改和测试"></a>细节修改和测试</h3><p>然后我们需要到七牛修改一下默认首页显示，因为七牛空间允许存在无命名的空文件，一般我们都知道访问一个站点的时候，虽然输入网址是 <a href="https://www.bz1.me/，实际上访问的是">https://www.bz1.me/，实际上访问的是</a> <a href="https://www.bz1.me/index.html">https://www.bz1.me/index.html</a><br><img src="https://upload.bz1.me/portal_kjsz.png" alt=""><br><img src="https://upload.bz1.me/portal_index.png" alt=""><br>开启之后，就可以用空间自带的测试域名对博客进行访问啦，域名在这里<br><img src="https://upload.bz1.me/portal_ceshiyuming.png" alt=""><br>然后到浏览器中，直接将测试域名贴进去，访问看看<br><img src="https://upload.bz1.me/portal_blogcesh.png" alt=""></p>
+<h2 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h2><ul>
 <li>自定义域名，如果使用 www.bz1.me 访问</li>
 <li>https 支持</li>
 <li>阅读次数统计</li>
