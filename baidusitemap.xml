@@ -4,6 +4,41 @@
 
     
   <url>
+    <loc>https://www.bz1.me/%E5%85%B3%E4%BA%8E%E4%B8%83%E7%89%9B%E5%90%84%E7%A7%8Ddemo%E6%B1%87%E6%80%BB.html</loc>
+    <lastmod>2016-12-16T07:58:13.000Z</lastmod>
+    <data>
+        <display>
+        <title>关于七牛各种demo汇总</title>
+        <pubTime>2016-12-16T07:58:13.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.bz1.me/%E5%85%B3%E4%BA%8E%E4%B8%83%E7%89%9B%E6%8E%A8%E6%8B%89%E6%B5%81%E5%9C%B0%E5%9D%80.html</loc>
+    <lastmod>2016-12-16T07:24:27.000Z</lastmod>
+    <data>
+        <display>
+        <title>关于七牛推拉流地址</title>
+        <pubTime>2016-12-15T02:41:00.000Z</pubTime>
+        
+        <tag>pili</tag>
+         
+         
+           
+             
+              <breadCrumb title="qiniu" url="https://www.bz1.me/categories/qiniu/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://www.bz1.me/%E5%B9%B3%E5%8F%B0%E9%83%A8%E7%BD%B2hexo%E4%B9%8B%E3%80%8EVPS%E6%9C%8D%E5%8A%A1%E5%99%A8%E3%80%8F.html</loc>
     <lastmod>2016-12-15T15:07:12.000Z</lastmod>
     <data>
@@ -54,26 +89,6 @@
            
              
               <breadCrumb title="linux" url="https://www.bz1.me/categories/linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.bz1.me/%E5%85%B3%E4%BA%8E%E4%B8%83%E7%89%9B%E6%8E%A8%E6%8B%89%E6%B5%81%E5%9C%B0%E5%9D%80.html</loc>
-    <lastmod>2016-12-15T03:03:40.000Z</lastmod>
-    <data>
-        <display>
-        <title>关于七牛推拉流地址</title>
-        <pubTime>2016-12-15T02:41:00.000Z</pubTime>
-        
-        <tag>pili</tag>
-         
-         
-           
-             
-              <breadCrumb title="qiniu" url="https://www.bz1.me/categories/qiniu/"/>
           
         </display>
     </data>
@@ -295,32 +310,13 @@
     
     
   <url>
-    <loc>https://www.bz1.me/gongzhonghao.html</loc>
+    <loc>https://www.bz1.me/tlock.html</loc>
     <lastmod>2016-12-08T14:34:28.000Z</lastmod>
     <data>
         <display>
-        <title>推广策划 by LJ</title>
-        <pubTime>2016-04-20T14:32:32.000Z</pubTime>
+        <title>tlock</title>
+        <pubTime>2016-08-30T03:23:34.000Z</pubTime>
         
-        <tag>公众号运营</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.bz1.me/myfirstarticle.html</loc>
-    <lastmod>2016-12-08T14:34:28.000Z</lastmod>
-    <data>
-        <display>
-        <title>我的第一篇文章</title>
-        <pubTime>2016-04-14T08:17:45.000Z</pubTime>
-        
-        <tag>test</tag>
-         
          
            
         </display>
@@ -349,20 +345,17 @@
 
     
   <url>
-    <loc>https://www.bz1.me/videoaudio.html</loc>
+    <loc>https://www.bz1.me/gongzhonghao.html</loc>
     <lastmod>2016-12-08T14:34:28.000Z</lastmod>
     <data>
         <display>
-        <title>关于七牛多媒体处理预设格式的小节</title>
-        <pubTime>2016-07-06T01:35:00.000Z</pubTime>
+        <title>推广策划 by LJ</title>
+        <pubTime>2016-04-20T14:32:32.000Z</pubTime>
         
-        <tag>ufop</tag>
+        <tag>公众号运营</tag>
          
          
            
-             
-              <breadCrumb title="qiniu" url="https://www.bz1.me/categories/qiniu/"/>
-          
         </display>
     </data>
     </url>
@@ -429,15 +422,37 @@
 
     
   <url>
-    <loc>https://www.bz1.me/tlock.html</loc>
+    <loc>https://www.bz1.me/myfirstarticle.html</loc>
     <lastmod>2016-12-08T14:34:28.000Z</lastmod>
     <data>
         <display>
-        <title>tlock</title>
-        <pubTime>2016-08-30T03:23:34.000Z</pubTime>
+        <title>我的第一篇文章</title>
+        <pubTime>2016-04-14T08:17:45.000Z</pubTime>
         
+        <tag>test</tag>
+         
          
            
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.bz1.me/videoaudio.html</loc>
+    <lastmod>2016-12-08T14:34:28.000Z</lastmod>
+    <data>
+        <display>
+        <title>关于七牛多媒体处理预设格式的小节</title>
+        <pubTime>2016-07-06T01:35:00.000Z</pubTime>
+        
+        <tag>ufop</tag>
+         
+         
+           
+             
+              <breadCrumb title="qiniu" url="https://www.bz1.me/categories/qiniu/"/>
+          
         </display>
     </data>
     </url>
