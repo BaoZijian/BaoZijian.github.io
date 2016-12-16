@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.bz1.me/"/>
-  <updated>2016-12-15T03:03:40.000Z</updated>
+  <updated>2016-12-15T15:07:12.000Z</updated>
   <id>https://www.bz1.me/</id>
   
   <author>
@@ -14,6 +14,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>平台部署hexo之『VPS服务器』</title>
+    <link href="https://www.bz1.me/%E5%B9%B3%E5%8F%B0%E9%83%A8%E7%BD%B2hexo%E4%B9%8B%E3%80%8EVPS%E6%9C%8D%E5%8A%A1%E5%99%A8%E3%80%8F.html"/>
+    <id>https://www.bz1.me/平台部署hexo之『VPS服务器』.html</id>
+    <published>2016-12-15T15:07:12.000Z</published>
+    <updated>2016-12-15T15:07:12.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>关于七牛推拉流地址</title>
@@ -908,49 +922,6 @@
     
     
       <category term="cloud" scheme="https://www.bz1.me/tags/cloud/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>推广策划 by LJ</title>
-    <link href="https://www.bz1.me/gongzhonghao.html"/>
-    <id>https://www.bz1.me/gongzhonghao.html</id>
-    <published>2016-04-20T14:32:32.000Z</published>
-    <updated>2016-12-08T14:34:28.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="主题内容"><a href="#主题内容" class="headerlink" title="主题内容"></a>主题内容</h2><blockquote>
-<p>概述：对于当代大学生，就业以及职场一直是一个很热门的并且贯彻大学四年的一个主题。现在正值毕业季跟职场打拼相关的电影或者话题也更容易引起大学生的共鸣，这对于公众号的内容推广是一个很不错的切入点。</p>
-</blockquote>
-<h3 id="主题：职场系列"><a href="#主题：职场系列" class="headerlink" title="主题：职场系列"></a>主题：职场系列</h3><p>​    <strong>内容推广词</strong>：送给迈入社会开始职场新生涯的你。从面试到菜鸟新人，从新人到职场老鸟，一系列职场攻略。从心理角度分析面试，带你提前领略职场风采。</p>
-<p>​    <strong>电影</strong>：</p>
-<p>广告狂人 (2007)     豆瓣评分：8.6</p>
-<p>早间主播 (2010)     豆瓣评分：7.7</p>
-<p>金装律师 (2012)     豆瓣评分：8.5</p>
-<p>终极面试 (2009)     豆瓣评分：7.0</p>
-<a id="more"></a>
-<h3 id="推广方式"><a href="#推广方式" class="headerlink" title="推广方式"></a>推广方式</h3><h4 id="线上推广"><a href="#线上推广" class="headerlink" title="线上推广"></a>线上推广</h4><p><strong>微信</strong>：将分享码先发送给身边的朋友，让朋友帮助自己扫码领取电影链接，通过朋友互相传播以裂变的方式进行推广。</p>
-<p><strong>微博</strong>：在微博上贴出相关影片的简介，混话题混热门引起大家兴趣与关注，然后可以在每个简介微博下附上以下字段“如果想要影片链接请私信博主”之后若是收到私信可进行默认恢复，将公众号名字附于默认回复当中，让其关注公众号再执行相关步骤（付费或者邀请好友关注）之后给予奖励（电影链接）。</p>
-<p><strong>其他</strong>：在与电影相关的贴吧或者论坛下面创建新的评论，可以附注相关电影的简介，以及电影链接获取方式（尽量简洁）进行推广，尽量能将评论置顶以获取更多的关注量。多在提问类的文章下面进行高质量的回答，也可以采取自问自答的形式将回答置顶，在回答的最后可以粘贴上自己的公众号二维码。</p>
-<h4 id="线下推广"><a href="#线下推广" class="headerlink" title="线下推广"></a>线下推广</h4><h5 id="校园推广方案："><a href="#校园推广方案：" class="headerlink" title="校园推广方案："></a>校园推广方案：</h5><p><strong>前提</strong>：每个学校基本都设有电影协会，用以丰富学生的课余生活，通过放映电影来缓解学生日常压力。地点组织：各大高校电影协会或者是播放电影相关的组织。</p>
-<p><strong>方案</strong>：与各个学校相关电影协会联系，与他们进行协商，介绍我们公众号的功能，让他们扫码关注公众号并进行相关步骤领取资源链接，以此推广公众号。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;主题内容&quot;&gt;&lt;a href=&quot;#主题内容&quot; class=&quot;headerlink&quot; title=&quot;主题内容&quot;&gt;&lt;/a&gt;主题内容&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;概述：对于当代大学生，就业以及职场一直是一个很热门的并且贯彻大学四年的一个主题。现在正值毕业季跟职场打拼相关的电影或者话题也更容易引起大学生的共鸣，这对于公众号的内容推广是一个很不错的切入点。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&quot;主题：职场系列&quot;&gt;&lt;a href=&quot;#主题：职场系列&quot; class=&quot;headerlink&quot; title=&quot;主题：职场系列&quot;&gt;&lt;/a&gt;主题：职场系列&lt;/h3&gt;&lt;p&gt;​    &lt;strong&gt;内容推广词&lt;/strong&gt;：送给迈入社会开始职场新生涯的你。从面试到菜鸟新人，从新人到职场老鸟，一系列职场攻略。从心理角度分析面试，带你提前领略职场风采。&lt;/p&gt;
-&lt;p&gt;​    &lt;strong&gt;电影&lt;/strong&gt;：&lt;/p&gt;
-&lt;p&gt;广告狂人 (2007)     豆瓣评分：8.6&lt;/p&gt;
-&lt;p&gt;早间主播 (2010)     豆瓣评分：7.7&lt;/p&gt;
-&lt;p&gt;金装律师 (2012)     豆瓣评分：8.5&lt;/p&gt;
-&lt;p&gt;终极面试 (2009)     豆瓣评分：7.0&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="公众号运营" scheme="https://www.bz1.me/tags/%E5%85%AC%E4%BC%97%E5%8F%B7%E8%BF%90%E8%90%A5/"/>
     
   </entry>
   

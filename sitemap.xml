@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.bz1.me/%E5%B9%B3%E5%8F%B0%E9%83%A8%E7%BD%B2hexo%E4%B9%8B%E3%80%8EVPS%E6%9C%8D%E5%8A%A1%E5%99%A8%E3%80%8F.html</loc>
+    
+    <lastmod>2016-12-15T15:07:12.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.bz1.me/ss-polipo-pac.html</loc>
     
     <lastmod>2016-12-15T14:31:58.000Z</lastmod>
@@ -114,35 +121,14 @@
   </url>
   
   <url>
-    <loc>https://www.bz1.me/videoaudio.html</loc>
+    <loc>https://www.bz1.me/gongzhonghao.html</loc>
     
     <lastmod>2016-12-08T14:34:28.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.bz1.me/vim.html</loc>
-    
-    <lastmod>2016-12-08T14:34:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.bz1.me/tlock.html</loc>
-    
-    <lastmod>2016-12-08T14:34:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.bz1.me/pili%E7%9B%B4%E6%92%ADFAQ.html</loc>
-    
-    <lastmod>2016-12-08T14:34:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.bz1.me/nginx-centos6-5-yum.html</loc>
+    <loc>https://www.bz1.me/CDN%E7%AE%80%E5%8D%95%E5%8E%9F%E7%90%86.html</loc>
     
     <lastmod>2016-12-08T14:34:28.000Z</lastmod>
     
@@ -156,14 +142,35 @@
   </url>
   
   <url>
-    <loc>https://www.bz1.me/gongzhonghao.html</loc>
+    <loc>https://www.bz1.me/nginx-centos6-5-yum.html</loc>
     
     <lastmod>2016-12-08T14:34:28.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.bz1.me/CDN%E7%AE%80%E5%8D%95%E5%8E%9F%E7%90%86.html</loc>
+    <loc>https://www.bz1.me/vim.html</loc>
+    
+    <lastmod>2016-12-08T14:34:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.bz1.me/pili%E7%9B%B4%E6%92%ADFAQ.html</loc>
+    
+    <lastmod>2016-12-08T14:34:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.bz1.me/videoaudio.html</loc>
+    
+    <lastmod>2016-12-08T14:34:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.bz1.me/tlock.html</loc>
     
     <lastmod>2016-12-08T14:34:28.000Z</lastmod>
     

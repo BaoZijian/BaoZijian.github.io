@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[平台部署hexo之『VPS服务器』]]></title>
+      <url>%2F%E5%B9%B3%E5%8F%B0%E9%83%A8%E7%BD%B2hexo%E4%B9%8B%E3%80%8EVPS%E6%9C%8D%E5%8A%A1%E5%99%A8%E3%80%8F.html</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[关于七牛推拉流地址]]></title>
       <url>%2F%E5%85%B3%E4%BA%8E%E4%B8%83%E7%89%9B%E6%8E%A8%E6%8B%89%E6%B5%81%E5%9C%B0%E5%9D%80.html</url>
       <content type="text"><![CDATA[publish-domain : pili-publish.baozijian.cc rtmp-pull-domain : pili-live-rtmp.baozijian.cc hls-pull-domain : pili-live-hls.baozijian.cc flv-pull-domain : pili-live-hdl.baozijian.cc hub : tron title : baozijian key : baozijian 关于七牛的推流地址静态鉴权推流地址举例1rtmp://pili-publish.baozijian.cc/tron/baozijian?key=baozijian 其他格式鉴权播放地址格式请参考：七牛直播推流鉴权 这个推流地址是有固定的组成格式，格式如下1rtmp://&lt;publish-domain&gt;/&lt;hub&gt;/&lt;tilte&gt;?key=&lt;key&gt; 关于七牛的拉流地址播放地址举例12345678# rtmp 播放地址：rtmp://pili-live-rtmp.baozijian.cc/tron/baozijian# hls 播放地址：http://pili-live-hls.baozijian.cc/tron/baozijian.m3u8# flv 播放地址：http://pili-live-hdl.baozijian.cc/tron/baozijian.flv 对应的播放地址的格式：12345678# rtmp 播放地址：rtmp://&lt;rtmp-pull-domain&gt;/&lt;hub&gt;/&lt;tilte&gt;# hls 播放地址：http://&lt;hls-pull-domain&gt;/&lt;hub&gt;/&lt;tilte&gt;.m3u8# flv 播放地址：http://&lt;flv-pull-domain&gt;/&lt;hub&gt;/&lt;title&gt;.flv]]></content>
