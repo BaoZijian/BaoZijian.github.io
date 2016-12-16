@@ -19,6 +19,26 @@
 
     
   <url>
+    <loc>https://www.bz1.me/%E5%B9%B3%E5%8F%B0%E9%83%A8%E7%BD%B2hexo%E4%B9%8B%E3%80%8E%E4%B8%83%E7%89%9B%E4%BA%91%E5%AD%98%E5%82%A8%E3%80%8F.html</loc>
+    <lastmod>2016-12-15T15:05:54.000Z</lastmod>
+    <data>
+        <display>
+        <title>平台部署hexo之『七牛云存储』</title>
+        <pubTime>2016-12-15T15:05:54.000Z</pubTime>
+        
+        <tag>hexo; qshell</tag>
+         
+         
+           
+             
+              <breadCrumb title="qiniu" url="https://www.bz1.me/categories/qiniu/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://www.bz1.me/ss-polipo-pac.html</loc>
     <lastmod>2016-12-15T14:31:58.000Z</lastmod>
     <data>
@@ -273,26 +293,6 @@
     
     
   <url>
-    <loc>https://www.bz1.me/videoaudio.html</loc>
-    <lastmod>2016-12-08T14:34:28.000Z</lastmod>
-    <data>
-        <display>
-        <title>关于七牛多媒体处理预设格式的小节</title>
-        <pubTime>2016-07-06T01:35:00.000Z</pubTime>
-        
-        <tag>ufop</tag>
-         
-         
-           
-             
-              <breadCrumb title="qiniu" url="https://www.bz1.me/categories/qiniu/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://www.bz1.me/vim.html</loc>
     <lastmod>2016-12-08T14:34:28.000Z</lastmod>
     <data>
@@ -306,6 +306,26 @@
            
              
               <breadCrumb title="linux" url="https://www.bz1.me/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.bz1.me/videoaudio.html</loc>
+    <lastmod>2016-12-08T14:34:28.000Z</lastmod>
+    <data>
+        <display>
+        <title>关于七牛多媒体处理预设格式的小节</title>
+        <pubTime>2016-07-06T01:35:00.000Z</pubTime>
+        
+        <tag>ufop</tag>
+         
+         
+           
+             
+              <breadCrumb title="qiniu" url="https://www.bz1.me/categories/qiniu/"/>
           
         </display>
     </data>
