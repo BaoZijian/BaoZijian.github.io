@@ -329,26 +329,6 @@
 
     
   <url>
-    <loc>https://www.bz1.me/pili%E7%9B%B4%E6%92%ADFAQ.html</loc>
-    <lastmod>2016-12-08T14:34:28.000Z</lastmod>
-    <data>
-        <display>
-        <title>七牛直播云常见FAQ</title>
-        <pubTime>2016-07-13T01:09:00.000Z</pubTime>
-        
-        <tag>pili</tag>
-         
-         
-           
-             
-              <breadCrumb title="qiniu" url="https://www.bz1.me/categories/qiniu/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://www.bz1.me/nginx-centos6-5-yum.html</loc>
     <lastmod>2016-12-08T14:34:28.000Z</lastmod>
     <data>
@@ -362,6 +342,26 @@
            
              
               <breadCrumb title="linux" url="https://www.bz1.me/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.bz1.me/videoaudio.html</loc>
+    <lastmod>2016-12-08T14:34:28.000Z</lastmod>
+    <data>
+        <display>
+        <title>关于七牛多媒体处理预设格式的小节</title>
+        <pubTime>2016-07-06T01:35:00.000Z</pubTime>
+        
+        <tag>ufop</tag>
+         
+         
+           
+             
+              <breadCrumb title="qiniu" url="https://www.bz1.me/categories/qiniu/"/>
           
         </display>
     </data>
@@ -389,14 +389,14 @@
 
     
   <url>
-    <loc>https://www.bz1.me/videoaudio.html</loc>
+    <loc>https://www.bz1.me/pili%E7%9B%B4%E6%92%ADFAQ.html</loc>
     <lastmod>2016-12-08T14:34:28.000Z</lastmod>
     <data>
         <display>
-        <title>关于七牛多媒体处理预设格式的小节</title>
-        <pubTime>2016-07-06T01:35:00.000Z</pubTime>
+        <title>七牛直播云常见FAQ</title>
+        <pubTime>2016-07-13T01:09:00.000Z</pubTime>
         
-        <tag>ufop</tag>
+        <tag>pili</tag>
          
          
            
