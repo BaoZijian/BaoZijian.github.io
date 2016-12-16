@@ -573,6 +573,34 @@
 <p>执行完成之后，会在当前目录下发现一个<code>public/</code>的文件夹，这个文件夹里都是<code>.html</code>的静态博客页面</p>
 <h4 id="如何上传到七牛"><a href="#如何上传到七牛" class="headerlink" title="如何上传到七牛"></a>如何上传到七牛</h4><h5 id="首先注册七牛账号"><a href="#首先注册七牛账号" class="headerlink" title="首先注册七牛账号"></a>首先注册七牛账号</h5><p><img src="https://upload.bz1.me/portal.png" alt=""><br><a href="https://portal.qiniu.com/signup/choice" target="_blank" rel="external">七牛传送门,点我直接进入七牛注册页面</a></p>
 <p><img src="https://upload.bz1.me/portal2.png" alt=""><br>按照填写后，需要登录自己的邮箱进行激活，如果邮箱内找不到邮件，可以去垃圾箱看看，如果垃圾箱也没有，一般可能是邮件发送你的邮箱失败，被拒绝或者其他原因，此时可以拨打 400-808-9176 激活，或者提交一个<a href="https://support.qiniu.com/question" target="_blank" rel="external">工单</a>来激活。</p>
+<h5 id="创建对象存储空间"><a href="#创建对象存储空间" class="headerlink" title="创建对象存储空间"></a>创建对象存储空间</h5><p>存储空间在七牛，称为<code>bucket</code>，我们需要先新建一个<code>bucket</code><br><img src="https://upload.bz1.me/portal_create.png" alt=""></p>
+<p><img src="https://upload.bz1.me/portal_bucket1.png" alt=""><br>这里创建好之后，东西就可以往这个地方进行存储了。</p>
+<h5 id="测试一下上传"><a href="#测试一下上传" class="headerlink" title="测试一下上传"></a>测试一下上传</h5><p>点击<code>更多操作</code>–&gt;<code>内容管理</code><br><img src="https://upload.bz1.me/portal_neirong.png" alt=""></p>
+<p>点击<code>上传文件</code>随便选择本地的一个<code>小于500M</code>的文件来上传至七牛<br><img src="https://upload.bz1.me/portal_upload.png" alt=""></p>
+<p>上传一个文件到七牛<br><img src="https://upload.bz1.me/portal_upload2.png" alt=""></p>
+<p>这个时候在七牛的存储空间就看到了这个文件，点击<code>复制外链</code>，然后复制贴进浏览器访问<br><img src="https://upload.bz1.me/portal_upload3.png" alt="空间截图"><br><img src="https://upload.bz1.me/portal_upload4.png" alt="safri访问截图"></p>
+<p>如果访问成功，说明你可以正常使用七牛的云存储服务了。</p>
+<h5 id="用命令行实现批量上传"><a href="#用命令行实现批量上传" class="headerlink" title="用命令行实现批量上传"></a>用命令行实现批量上传</h5><p>那么前端这样一个一个传到七牛，或者批量全选，把<code>public/</code>文件夹的所有内容在页面上批量选中上传，是不是一点都不酷，写个博客还要手动到这里上传，不愿意这么做，那么还是有什么方式上传到七牛呢？</p>
+<ul>
+<li><a href="http://developer.qiniu.com/resource/official.html#sdk" target="_blank" rel="external">sdk上传</a></li>
+<li><a href="http://developer.qiniu.com/code/v6/tool/qshell.html" target="_blank" rel="external">工具上传</a><br>这里，我们推荐使用工具上传，第一节省了 sdk 开发时间(想搞的话也是墙裂推荐的)，第二先用的命令行工具上传，速度快而且功能强大，七牛提供各种上传工具，本人比较偏向 qshell 工具，这里推荐 qshell</li>
+</ul>
+<h6 id="qshell工具下载"><a href="#qshell工具下载" class="headerlink" title="qshell工具下载"></a>qshell工具下载</h6><ul>
+<li><a href="https://upload.bz1.me/qshell" target="_blank" rel="external">mac版本</a></li>
+<li><a href="https://upload.bz1.me/qshell-ubuntu" target="_blank" rel="external">ubuntu&amp;centos版本</a></li>
+</ul>
+<h6 id="qshell工具配置"><a href="#qshell工具配置" class="headerlink" title="qshell工具配置"></a>qshell工具配置</h6><p>先本地下载 qshell<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">wget</span> <span class="string">'https://upload.bz1.me/qshell'</span></div></pre></td></tr></table></figure></p>
+<p>修改一下工具权限<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">chmod <span class="number">755</span> qshell</div></pre></td></tr></table></figure></p>
+<p>放到环境变量中<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mv qshell <span class="regexp">/usr/</span>local<span class="regexp">/bin/</span></div></pre></td></tr></table></figure></p>
+<p>新建一个<code>terminal</code>窗口<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">qshell -h</span></div></pre></td></tr></table></figure></p>
+<p>如果看到如下界面，证明可用了<br><img src="https://upload.bz1.me/portal_qshell.png" alt=""></p>
+<p>登陆 qshell这里的 <code>AK</code> <code>SK</code> 在七牛控制台的个人面板中获取<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">qshell account <span class="tag">&lt;<span class="name">AK</span>&gt;</span> <span class="tag">&lt;<span class="name">SK</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p><code>AK</code> <code>SK</code> 位置截图如下<br><img src="https://upload.bz1.me/portal_aksk.png" alt=""><br><img src="https://upload.bz1.me/portal_aksk2.png" alt="aksk"></p>
+<p>然后查看下登陆<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">qshell account</span></div></pre></td></tr></table></figure></p>
+<p>正确的就是个效果<br><img src="https://upload.bz1.me/portal_aksk3.png" alt=""></p>
+<p>然后进入你的 <code>public/</code>的文件夹，并新建一个 qshell 上传批量上传的配置文件(用来告诉 qshell，上传哪些文件，有哪些上传策略)<br><figure class="highlight haxe"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cd ~/Document/hexo/<span class="keyword">new</span><span class="type">blog</span></div><div class="line"></div><div class="line">touch upload.txt</div></pre></td></tr></table></figure></p>
+<p>编辑<code>upload.txt</code>文件，按照我的配置来就可以基本事件覆盖重写等规则，详细的可以参考，<a href="https://github.com/qiniu/qshell/wiki/qupload" target="_blank" rel="external">qupload</a><br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">vim</span> <span class="selector-tag">upload</span><span class="selector-class">.txt</span></div></pre></td></tr></table></figure></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">   <span class="attr">"src_dir"</span>            :   <span class="string">"这里填写public在本地的绝对路径"</span>,</div><div class="line">   <span class="attr">"access_key"</span>         :   <span class="string">"这里填写AK"</span>,</div><div class="line">   <span class="attr">"secret_key"</span>         :   <span class="string">"这里填写SK"</span>,</div><div class="line">   <span class="attr">"bucket"</span>             :   <span class="string">"mweb"</span>,</div><div class="line">   <span class="attr">"zone"</span>               :   <span class="string">"nb"</span>,</div><div class="line">   <span class="attr">"ignore_dir"</span>         :   <span class="literal">false</span>,</div><div class="line">   <span class="attr">"overwrite"</span>          :   <span class="literal">true</span>,</div><div class="line">   <span class="attr">"check_exists"</span>       :   <span class="literal">false</span>,</div><div class="line">   <span class="attr">"rescan_local"</span>       :   <span class="literal">true</span>,</div><div class="line">   <span class="attr">"check_hash"</span>         :   <span class="literal">true</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
           
         
@@ -2040,7 +2068,7 @@
 </span>
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共14.0k字</span>
+  <span class="post-count">博客全站共14.6k字</span>
 </div>
 
 
