@@ -4,6 +4,21 @@
 
     
   <url>
+    <loc>https://www.bz1.me/hexo%E9%83%A8%E7%BD%B2%E8%87%B3%E4%B8%83%E7%89%9B%E4%B9%8B%E4%B8%80%E9%94%AE%E6%93%8D%E4%BD%9C.html</loc>
+    <lastmod>2016-12-16T14:14:13.000Z</lastmod>
+    <data>
+        <display>
+        <title>hexo部署至七牛之一键操作</title>
+        <pubTime>2016-12-16T14:14:13.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://www.bz1.me/%E5%85%B3%E4%BA%8E%E4%B8%83%E7%89%9B%E5%90%84%E7%A7%8Ddemo%E6%B1%87%E6%80%BB.html</loc>
     <lastmod>2016-12-16T07:58:13.000Z</lastmod>
     <data>
@@ -310,37 +325,20 @@
     
     
   <url>
-    <loc>https://www.bz1.me/nginx-centos6-5-yum.html</loc>
+    <loc>https://www.bz1.me/pili%E7%9B%B4%E6%92%ADFAQ.html</loc>
     <lastmod>2016-12-08T14:34:28.000Z</lastmod>
     <data>
         <display>
-        <title>centos6.5-配置yum安装nginx</title>
-        <pubTime>2016-04-18T06:25:34.000Z</pubTime>
+        <title>七牛直播云常见FAQ</title>
+        <pubTime>2016-07-13T01:09:00.000Z</pubTime>
         
-        <tag>nginx</tag>
+        <tag>pili</tag>
          
          
            
              
-              <breadCrumb title="linux" url="https://www.bz1.me/categories/linux/"/>
+              <breadCrumb title="qiniu" url="https://www.bz1.me/categories/qiniu/"/>
           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.bz1.me/myfirstarticle.html</loc>
-    <lastmod>2016-12-08T14:34:28.000Z</lastmod>
-    <data>
-        <display>
-        <title>我的第一篇文章</title>
-        <pubTime>2016-04-14T08:17:45.000Z</pubTime>
-        
-        <tag>test</tag>
-         
-         
-           
         </display>
     </data>
     </url>
@@ -367,19 +365,19 @@
 
     
   <url>
-    <loc>https://www.bz1.me/videoaudio.html</loc>
+    <loc>https://www.bz1.me/nginx-centos6-5-yum.html</loc>
     <lastmod>2016-12-08T14:34:28.000Z</lastmod>
     <data>
         <display>
-        <title>关于七牛多媒体处理预设格式的小节</title>
-        <pubTime>2016-07-06T01:35:00.000Z</pubTime>
+        <title>centos6.5-配置yum安装nginx</title>
+        <pubTime>2016-04-18T06:25:34.000Z</pubTime>
         
-        <tag>ufop</tag>
+        <tag>nginx</tag>
          
          
            
              
-              <breadCrumb title="qiniu" url="https://www.bz1.me/categories/qiniu/"/>
+              <breadCrumb title="linux" url="https://www.bz1.me/categories/linux/"/>
           
         </display>
     </data>
@@ -387,20 +385,49 @@
 
     
   <url>
-    <loc>https://www.bz1.me/pili%E7%9B%B4%E6%92%ADFAQ.html</loc>
+    <loc>https://www.bz1.me/tlock.html</loc>
     <lastmod>2016-12-08T14:34:28.000Z</lastmod>
     <data>
         <display>
-        <title>七牛直播云常见FAQ</title>
-        <pubTime>2016-07-13T01:09:00.000Z</pubTime>
+        <title>tlock</title>
+        <pubTime>2016-08-30T03:23:34.000Z</pubTime>
         
-        <tag>pili</tag>
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.bz1.me/myfirstarticle.html</loc>
+    <lastmod>2016-12-08T14:34:28.000Z</lastmod>
+    <data>
+        <display>
+        <title>我的第一篇文章</title>
+        <pubTime>2016-04-14T08:17:45.000Z</pubTime>
+        
+        <tag>test</tag>
          
          
            
-             
-              <breadCrumb title="qiniu" url="https://www.bz1.me/categories/qiniu/"/>
-          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.bz1.me/gongzhonghao.html</loc>
+    <lastmod>2016-12-08T14:34:28.000Z</lastmod>
+    <data>
+        <display>
+        <title>推广策划 by LJ</title>
+        <pubTime>2016-04-20T14:32:32.000Z</pubTime>
+        
+        <tag>公众号运营</tag>
+         
+         
+           
         </display>
     </data>
     </url>
@@ -427,32 +454,20 @@
 
     
   <url>
-    <loc>https://www.bz1.me/gongzhonghao.html</loc>
+    <loc>https://www.bz1.me/videoaudio.html</loc>
     <lastmod>2016-12-08T14:34:28.000Z</lastmod>
     <data>
         <display>
-        <title>推广策划 by LJ</title>
-        <pubTime>2016-04-20T14:32:32.000Z</pubTime>
+        <title>关于七牛多媒体处理预设格式的小节</title>
+        <pubTime>2016-07-06T01:35:00.000Z</pubTime>
         
-        <tag>公众号运营</tag>
+        <tag>ufop</tag>
          
          
            
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.bz1.me/tlock.html</loc>
-    <lastmod>2016-12-08T14:34:28.000Z</lastmod>
-    <data>
-        <display>
-        <title>tlock</title>
-        <pubTime>2016-08-30T03:23:34.000Z</pubTime>
-        
-         
-           
+             
+              <breadCrumb title="qiniu" url="https://www.bz1.me/categories/qiniu/"/>
+          
         </display>
     </data>
     </url>

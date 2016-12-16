@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.bz1.me/"/>
-  <updated>2016-12-16T07:58:13.000Z</updated>
+  <updated>2016-12-16T14:14:13.000Z</updated>
   <id>https://www.bz1.me/</id>
   
   <author>
@@ -14,6 +14,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo部署至七牛之一键操作</title>
+    <link href="https://www.bz1.me/hexo%E9%83%A8%E7%BD%B2%E8%87%B3%E4%B8%83%E7%89%9B%E4%B9%8B%E4%B8%80%E9%94%AE%E6%93%8D%E4%BD%9C.html"/>
+    <id>https://www.bz1.me/hexo部署至七牛之一键操作.html</id>
+    <published>2016-12-16T14:14:13.000Z</published>
+    <updated>2016-12-16T14:14:13.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>关于七牛各种demo汇总</title>
@@ -116,9 +130,10 @@
 </ul>
 <h3 id="细节修改和测试"><a href="#细节修改和测试" class="headerlink" title="细节修改和测试"></a>细节修改和测试</h3><p>然后我们需要到七牛修改一下默认首页显示，因为七牛空间允许存在无命名的空文件，一般我们都知道访问一个站点的时候，虽然输入网址是 <a href="https://www.bz1.me/，实际上访问的是">https://www.bz1.me/，实际上访问的是</a> <a href="https://www.bz1.me/index.html">https://www.bz1.me/index.html</a><br><img src="https://upload.bz1.me/portal_kjsz.png" alt=""><br><img src="https://upload.bz1.me/portal_index.png" alt=""><br>开启之后，就可以用空间自带的测试域名对博客进行访问啦，域名在这里<br><img src="https://upload.bz1.me/portal_ceshiyuming.png" alt=""><br>然后到浏览器中，直接将测试域名贴进去，访问看看<br><img src="https://upload.bz1.me/portal_blogcesh.png" alt=""></p>
 <h2 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h2><ul>
-<li>自定义域名，使用 www.bz1.me 访问</li>
-<li>https 支持</li>
-<li>阅读次数统计</li>
+<li><a href="">一键部署并刷新 CDN 缓存</a></li>
+<li>自定义域名，使用 cdn.bz1.me 访问</li>
+<li>https 支持，使用 <a href="https://www.bz1.me">https://www.bz1.me</a> 访问</li>
+<li>阅读次数统计<br><a href="https://up.bz1.me/hello3.gif" target="_blank" rel="external">ddd</a></li>
 </ul>
 ]]></content>
     
@@ -877,104 +892,6 @@
     
     
       <category term="pili" scheme="https://www.bz1.me/tags/pili/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于七牛多媒体处理预设格式的小节</title>
-    <link href="https://www.bz1.me/videoaudio.html"/>
-    <id>https://www.bz1.me/videoaudio.html</id>
-    <published>2016-07-06T01:35:00.000Z</published>
-    <updated>2016-12-08T14:34:28.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h3><p>音视频编码和容器格式的选择需要兼顾不同播放平台和播放器，同时还需要最少的资源消耗量和开发量。本文将详细分析一下七牛portal中，多媒体数据处理的预设规格。</p>
-<p>包含如下三点：</p>
-<ul>
-<li>规格的具体处理参数</li>
-<li>规格的使用场景</li>
-<li>规格的优势</li>
-</ul>
-<p>如下是支持的预设格式：</p>
-<h3 id="音频"><a href="#音频" class="headerlink" title="音频"></a>音频</h3><p>audio-AAC-64K </p>
-<p>规格参数：avthumb/mp4/ab/64k/ar/44100/acodec/libfaac</p>
-<a id="more"></a>
-<p>audio-AAC-128K </p>
-<p>规格参数：avthumb/mp4/ab/128k/ar/44100/acodec/libfaac</p>
-<p>audio-AAC-256K</p>
-<p>规格参数：avthumb/mp4/ab/256k/ar/44100/acodec/libfaac</p>
-<p>AAC的使用场景及优势：AAC在低码率下，而且硬件较差的情况下有较好播放效果，且AAC格式的文件占用存储空间小，高频丢失少；AAC是mp3的继承者</p>
-<p>audio-HLS-32K</p>
-<p>规格参数：avthumb/m3u8/segtime/10/ab/32k/ar/44100/acodec/libfaac</p>
-<p>audio-HLS-48K</p>
-<p>规格参数：avthumb/m3u8/segtime/10/ab/48k/ar/44100/acodec/libfaac</p>
-<p>audio-HLS-64K</p>
-<p>规格参数：avthumb/m3u8/segtime/10/ab/64k/ar/44100/acodec/libfaac</p>
-<p>HLS的使用场景和优势：HLS播放速度快，HLS把整个流分成一个个小的基于HTTP的文件来下载，每次只下载一些。当媒体流正在播放时，客户端可以选择从许多不同的备用源中以不同的速率下载同样的资源，允许流媒体会话适应不同的数据速率。</p>
-<p>HLS是基于HTTP的流媒体网络传输协议，HLS只请求基本的HTTP报文，与实时传输协议（RTP)不同，HLS可以穿过任何允许HTTP数据通过的防火墙或者代理服务器。它也很容易使用内容分发网络来传输媒体流</p>
-<p>audio-MP3-128K</p>
-<p>规格参数：avthumb/mp3/ab/128k/ar/44100/acodec/libmp3lame</p>
-<p>audio-MP3-160K</p>
-<p>规格参数：avthumb/mp3/ab/160k/ar/44100/acodec/libmp3lame</p>
-<p>audio-MP3-192K</p>
-<p>规格参数：avthumb/mp3/ab/192k/ar/44100/acodec/libmp3lame</p>
-<p>audio-MP3-320K</p>
-<p>规格参数：avthumb/mp3/ab/320k/ar/44100/acodec/libmp3lame</p>
-<p>MP3的使用场景和优势：MP3发展早，目前硬件设备基本都支持MP3，兼容性非常好，且编码速度要比AAC快。</p>
-<p>mp3相较AAC的优势：很多音频播放器无法播放AAC，使用AAC要大多数人换硬件设备的压力和时间，但是MP3却基本全部都能播放。</p>
-<h3 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h3><p>video-Generic-1080P</p>
-<p>规格参数：avthumb/mp4/ab/160k/ar/44100/acodec/libfaac/r/30/vb/5400k/vcodec/libx264/s/1920x1080/autoscale/1/strpmeta/0</p>
-<p>video-Generic-320x240</p>
-<p>规格参数：avthumb/mp4/ab/128k/ar/22050/acodec/libfaac/r/30/vb/300k/vcodec/libx264/s/320x240/autoscale/1/stripmeta/0</p>
-<p>video-Generic-360p-16:9</p>
-<p>规格参数：avthumb/mp4/ab/128k/ar/44100/acodec/libfaac/r/30/vb/720k/vcodec/libx264/s/640x360/autoscale/1/stripmeta/0</p>
-<p>video-Generic-360p-4:3</p>
-<p>规格参数：avthumb/mp4/ab/128k/ar/44100/acodec/libfaac/r/30/vb/600k/vcodec/libx264/s/480x360/autoscale/1/stripmeta/0</p>
-<p>video-Generic-480P-16:9</p>
-<p>规格参数：avthumb/mp4/ab/128k/ar/44100/acodec/libfaac/r/30/vb/1200k/vcodec/libx264/s/854x480/autoscale/1/stripmeta/0</p>
-<p>video-Generic-480P-4:3</p>
-<p>规格参数：avthumb/mp4/ab/128k/ar/44100/acodec/libfaac/r/30/vb/900k/vcodec/libx264/s/640x480/autoscale/1/stripmeta/0</p>
-<p>video-Generic-720P</p>
-<p>规格参数：avthumb/mp4/ab/160k/ar/44100/acodec/libfaac/r/30/vb/2400k/vcodec/libx264/s/1280x720/autoscale/1/stripmeta/0</p>
-<p>Generic使用场景及优势：该参数是转码成标准的mp4格式，mp4封装格式的音视频兼容市面上绝大多数的播放器，MPEG－4是为了播放流式媒体的高质量视频而专门设计的，以求使用最少的数据获得最佳的图像质量。建议将视频文件转码成该格式用于在网页上播放。</p>
-<p>video-HLS-1000k</p>
-<p>规格参数：avthumb/m3u8/segtime/10/ab/128k/ar/44100/acodec/libfaac/r/30/vb/1000k/vcodec/libx264/stripmeta/0</p>
-<p>video-HLS-150k</p>
-<p>规格参数：avthumb/m3u8/segtime/10/ab/128k/ar/44100/acodec/libfaac/r/30/vb/150k/vcodec/libx264/stripmeta/0</p>
-<p>video-HLS-240k</p>
-<p>规格参数：avthumb/m3u8/segtime/10/ab/128k/ar/44100/acodec/libfaac/r/30/vb/240k/vcodec/libx264/stripmeta/0</p>
-<p>video-HLS-640k</p>
-<p>规格参数：avthumb/m3u8/segtime/10/ab/128k/ar/44100/acodec/libfaac/r/30/vb/640k/vcodec/libx264/stripmeta/0</p>
-<p>HLS的使用场景及优势：HLS播放速度快，HLS把整个流分成一个个小的基于HTTP的文件来下载，每次只下载一些。当媒体流正在播放时，客户端可以选择从许多不同的备用源中以不同的速率下载同样的资源，允许流媒体会话适应不同的数据速率。</p>
-<p>video-Web</p>
-<p>规格参数：avthumb/mp4/ab/160k/ar/44100/acodec/libfaac/r/30/vb/2200k/vcodec/libx264/s/1280x720/autoscale/1/stripmeta/0</p>
-<p>Web的使用场景及优势：标准的MP4格式，这个清晰度较高，建议使用PC浏览器观看。</p>
-<p>video-iPhone4</p>
-<p>规格参数：avthumb/mp4/ab/160k/ar/48000/acodec/libfaac/r/30/vb/2200k/vcodec/libx264/s/1280x720/autoscale/1/stripmeta/0</p>
-<p>iPhone4的使用场景及优势：该格式也是标准的MP4格式，大小尺寸适用于iPhone4屏幕尺寸</p>
-<p>video-iPhone4s</p>
-<p>规格参数：avthumb/mp4/ab/160k/ar/48000/acodec/libfaac/r/30/vb/5000k/vcodec/libx264/s/1920x1080/autoscale/1/stripmeta/0</p>
-<p>iPhone4s的使用场景及优势：该格式也是标准的MP4格式，大小尺寸适用于iPhone4s屏幕尺寸</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;简述&quot;&gt;&lt;a href=&quot;#简述&quot; class=&quot;headerlink&quot; title=&quot;简述&quot;&gt;&lt;/a&gt;简述&lt;/h3&gt;&lt;p&gt;音视频编码和容器格式的选择需要兼顾不同播放平台和播放器，同时还需要最少的资源消耗量和开发量。本文将详细分析一下七牛portal中，多媒体数据处理的预设规格。&lt;/p&gt;
-&lt;p&gt;包含如下三点：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;规格的具体处理参数&lt;/li&gt;
-&lt;li&gt;规格的使用场景&lt;/li&gt;
-&lt;li&gt;规格的优势&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;如下是支持的预设格式：&lt;/p&gt;
-&lt;h3 id=&quot;音频&quot;&gt;&lt;a href=&quot;#音频&quot; class=&quot;headerlink&quot; title=&quot;音频&quot;&gt;&lt;/a&gt;音频&lt;/h3&gt;&lt;p&gt;audio-AAC-64K &lt;/p&gt;
-&lt;p&gt;规格参数：avthumb/mp4/ab/64k/ar/44100/acodec/libfaac&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="qiniu" scheme="https://www.bz1.me/categories/qiniu/"/>
-    
-    
-      <category term="ufop" scheme="https://www.bz1.me/tags/ufop/"/>
     
   </entry>
   
