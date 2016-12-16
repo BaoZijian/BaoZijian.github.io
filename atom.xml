@@ -76,10 +76,12 @@
     
     </summary>
     
+      <category term="qiniu" scheme="https://www.bz1.me/categories/qiniu/"/>
     
-      <category term="hexoqshell" scheme="https://www.bz1.me/tags/hexoqshell/"/>
     
-      <category term="[object Object]" scheme="https://www.bz1.me/tags/object-Object/"/>
+      <category term="hexo" scheme="https://www.bz1.me/tags/hexo/"/>
+    
+      <category term="qshell" scheme="https://www.bz1.me/tags/qshell/"/>
     
   </entry>
   
