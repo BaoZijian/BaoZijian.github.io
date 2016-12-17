@@ -334,17 +334,20 @@
     
     
   <url>
-    <loc>https://www.bz1.me/myfirstarticle.html</loc>
+    <loc>https://www.bz1.me/CDN%E7%AE%80%E5%8D%95%E5%8E%9F%E7%90%86.html</loc>
     <lastmod>2016-12-08T14:34:28.000Z</lastmod>
     <data>
         <display>
-        <title>我的第一篇文章</title>
-        <pubTime>2016-04-14T08:17:45.000Z</pubTime>
+        <title>配置CDN的资源访问流程</title>
+        <pubTime>2016-07-13T14:17:52.000Z</pubTime>
         
-        <tag>test</tag>
+        <tag>CDN</tag>
          
          
            
+             
+              <breadCrumb title="qiniu" url="https://www.bz1.me/categories/qiniu/"/>
+          
         </display>
     </data>
     </url>
@@ -431,26 +434,6 @@
 
     
   <url>
-    <loc>https://www.bz1.me/CDN%E7%AE%80%E5%8D%95%E5%8E%9F%E7%90%86.html</loc>
-    <lastmod>2016-12-08T14:34:28.000Z</lastmod>
-    <data>
-        <display>
-        <title>配置CDN的资源访问流程</title>
-        <pubTime>2016-07-13T14:17:52.000Z</pubTime>
-        
-        <tag>CDN</tag>
-         
-         
-           
-             
-              <breadCrumb title="qiniu" url="https://www.bz1.me/categories/qiniu/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://www.bz1.me/gongzhonghao.html</loc>
     <lastmod>2016-12-08T14:34:28.000Z</lastmod>
     <data>
@@ -459,6 +442,23 @@
         <pubTime>2016-04-20T14:32:32.000Z</pubTime>
         
         <tag>公众号运营</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.bz1.me/myfirstarticle.html</loc>
+    <lastmod>2016-12-08T14:34:28.000Z</lastmod>
+    <data>
+        <display>
+        <title>我的第一篇文章</title>
+        <pubTime>2016-04-14T08:17:45.000Z</pubTime>
+        
+        <tag>test</tag>
          
          
            
