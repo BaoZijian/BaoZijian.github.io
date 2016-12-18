@@ -142,20 +142,6 @@
   </url>
   
   <url>
-    <loc>https://www.bz1.me/CDN%E7%AE%80%E5%8D%95%E5%8E%9F%E7%90%86.html</loc>
-    
-    <lastmod>2016-12-08T14:34:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.bz1.me/nginx-centos6-5-yum.html</loc>
-    
-    <lastmod>2016-12-08T14:34:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.bz1.me/videoaudio.html</loc>
     
     <lastmod>2016-12-08T14:34:28.000Z</lastmod>
@@ -170,6 +156,13 @@
   </url>
   
   <url>
+    <loc>https://www.bz1.me/tlock.html</loc>
+    
+    <lastmod>2016-12-08T14:34:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.bz1.me/pili%E7%9B%B4%E6%92%ADFAQ.html</loc>
     
     <lastmod>2016-12-08T14:34:28.000Z</lastmod>
@@ -177,7 +170,7 @@
   </url>
   
   <url>
-    <loc>https://www.bz1.me/gongzhonghao.html</loc>
+    <loc>https://www.bz1.me/nginx-centos6-5-yum.html</loc>
     
     <lastmod>2016-12-08T14:34:28.000Z</lastmod>
     
@@ -191,7 +184,14 @@
   </url>
   
   <url>
-    <loc>https://www.bz1.me/tlock.html</loc>
+    <loc>https://www.bz1.me/gongzhonghao.html</loc>
+    
+    <lastmod>2016-12-08T14:34:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.bz1.me/CDN%E7%AE%80%E5%8D%95%E5%8E%9F%E7%90%86.html</loc>
     
     <lastmod>2016-12-08T14:34:28.000Z</lastmod>
     
