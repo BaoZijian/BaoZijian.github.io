@@ -90,7 +90,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="安全," />
+  <meta name="keywords" content="linux,notes," />
 
 
 
@@ -123,7 +123,7 @@
 <meta property="og:image" content="https://upload.bz1.me/nmapsaomiao.png?imageView/2/h/300">
 <meta property="og:image" content="https://upload.bz1.me/denydioale.png">
 <meta property="og:image" content="https://upload.bz1.me/blockded.png?imageView/2/h/300">
-<meta property="og:updated_time" content="2016-12-14T05:59:59.000Z">
+<meta property="og:updated_time" content="2016-12-18T02:48:45.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PortSentry 保护云主机禁止被恶意扫描">
 <meta name="twitter:description" content="注：本文采用的操作系统为 ubuntu14.04
@@ -430,7 +430,7 @@
 <p>解压</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">tar</span> <span class="selector-tag">zxvf</span> <span class="selector-tag">portsentry-1</span><span class="selector-class">.2</span><span class="selector-class">.tar</span><span class="selector-class">.gz</span></div></pre></td></tr></table></figure>
 <p>不能直接编译，这里有点特殊，解压完的包中，<code>portsentry.c</code>这个文件中在<code>1584</code>行有一处错误，将其改成一行</p>
-<figure class="highlight abnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">printf (<span class="string">"Copyright 1997-2003 Craig H. Rowland &lt;craigrowland at users dot sourceforget dot net&gt;\n"</span>)<span class="comment">;</span></div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">printf</span> (<span class="string">"Copyright 1997-2003 Craig H. Rowland &lt;craigrowland at users dot sourceforget dot net&gt;\n"</span>);</div></pre></td></tr></table></figure>
 <p><img src="https://upload.bz1.me/portsentry1588c.png?imageView/2/h/300" alt="portsentry"></p>
 <p>然后进行编译</p>
 <figure class="highlight gauss"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">make</span> linux&amp; <span class="built_in">make</span> install</div></pre></td></tr></table></figure>
@@ -512,7 +512,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/安全/" rel="tag"># 安全</a>
+            <a href="/tags/linux/" rel="tag"># linux</a>
+          
+            <a href="/tags/notes/" rel="tag"># notes</a>
           
         </div>
       
@@ -624,7 +626,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">26</span>
+              <span class="site-state-item-count">22</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -641,7 +643,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">17</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -752,7 +754,7 @@
 </span>
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共15.4k字</span>
+  <span class="post-count">博客全站共13.5k字</span>
 </div>
 
 

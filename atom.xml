@@ -193,7 +193,7 @@
     <link href="https://www.bz1.me/%E5%85%B3%E4%BA%8E%E4%B8%83%E7%89%9B%E6%8E%A8%E6%8B%89%E6%B5%81%E5%9C%B0%E5%9D%80.html"/>
     <id>https://www.bz1.me/关于七牛推拉流地址.html</id>
     <published>2016-12-15T02:41:00.000Z</published>
-    <updated>2016-12-16T07:24:27.000Z</updated>
+    <updated>2016-12-18T02:46:06.000Z</updated>
     
     <content type="html"><![CDATA[<ul>
 <li>publish-domain : pili-publish.baozijian.cc</li>
@@ -234,6 +234,8 @@
     
     
       <category term="pili" scheme="https://www.bz1.me/tags/pili/"/>
+    
+      <category term="docs" scheme="https://www.bz1.me/tags/docs/"/>
     
   </entry>
   
@@ -344,7 +346,7 @@
     <link href="https://www.bz1.me/%E5%85%B3%E4%BA%8E%E4%B8%83%E7%89%9B%E7%9B%B4%E6%92%AD%E6%B5%81%E7%8A%B6%E6%80%81.html"/>
     <id>https://www.bz1.me/关于七牛直播流状态.html</id>
     <published>2016-12-09T15:12:38.000Z</published>
-    <updated>2016-12-12T06:24:02.000Z</updated>
+    <updated>2016-12-18T02:46:14.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="流状态共有两种："><a href="#流状态共有两种：" class="headerlink" title="流状态共有两种："></a>流状态共有两种：</h3><ul>
 <li>connected</li>
@@ -380,6 +382,8 @@
     
       <category term="pili" scheme="https://www.bz1.me/tags/pili/"/>
     
+      <category term="docs" scheme="https://www.bz1.me/tags/docs/"/>
+    
   </entry>
   
   <entry>
@@ -387,7 +391,7 @@
     <link href="https://www.bz1.me/%E6%89%B9%E9%87%8F%E5%88%A0%E9%99%A4%E6%93%8D%E4%BD%9C.html"/>
     <id>https://www.bz1.me/批量删除操作.html</id>
     <published>2016-12-09T15:11:02.000Z</published>
-    <updated>2016-12-09T15:11:39.000Z</updated>
+    <updated>2016-12-18T02:46:46.000Z</updated>
     
     <content type="html"><![CDATA[<p>qshell 删除指定时间前的文件<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">cat</span> <span class="number">1</span>.txt | awk <span class="string">'&#123;print <span class="variable">$4</span>&#125;'</span> | cut -c <span class="number">1</span>-<span class="number">10</span> &gt;<span class="number">2</span>.txt</div><div class="line">paste <span class="number">2</span>.txt <span class="number">1</span>.txt | awk <span class="string">'&#123;print <span class="variable">$1</span>" “<span class="variable">$2</span>&#125;'</span> | awk <span class="string">'<span class="variable">$1</span>&lt;1472371200&#123;print <span class="variable">$2</span>&#125;'</span></div></pre></td></tr></table></figure></p>
 <p>qshell 删除指定时间内的文件<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cat myty-live.<span class="type">list</span>.txt | awk '&#123;print $<span class="number">4</span>&#125;' | cut -c <span class="number">1</span><span class="number">-10</span> &gt;time1.txt</div><div class="line">paste time1.txt myty-live.<span class="type">list</span>.txt | awk '$<span class="number">1</span>&gt;=<span class="number">1473650315</span> &amp;&amp; $<span class="number">1</span>&lt;=<span class="number">1473650495</span>&#123;print $<span class="number">3</span>” “$<span class="number">2</span>&#125;’</div></pre></td></tr></table></figure></p>
@@ -408,7 +412,9 @@
     </summary>
     
     
-      <category term="qiniu;shell" scheme="https://www.bz1.me/tags/qiniu-shell/"/>
+      <category term="qiniu" scheme="https://www.bz1.me/tags/qiniu/"/>
+    
+      <category term="shell" scheme="https://www.bz1.me/tags/shell/"/>
     
   </entry>
   
@@ -417,7 +423,7 @@
     <link href="https://www.bz1.me/shell-%E9%87%87%E7%94%A8%E8%A1%A8%E5%8D%95-%E5%88%86%E7%89%87%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E8%87%B3%E4%B8%83%E7%89%9B%E4%BA%91.html"/>
     <id>https://www.bz1.me/shell-采用表单-分片上传文件至七牛云.html</id>
     <published>2016-12-09T15:09:46.000Z</published>
-    <updated>2016-12-14T06:00:28.000Z</updated>
+    <updated>2016-12-18T02:48:24.000Z</updated>
     
     <content type="html"><![CDATA[<p>注意1：需要将 qshell 加入环境变量<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mv qshell <span class="regexp">/usr/</span>local<span class="regexp">/bin/</span>qshell</div></pre></td></tr></table></figure></p>
 <p><a href="http://developer.qiniu.com/code/v6/tool/qshell.html" target="_blank" rel="external">http://developer.qiniu.com/code/v6/tool/qshell.html</a></p>
@@ -439,6 +445,8 @@
     
     
       <category term="qiniu" scheme="https://www.bz1.me/tags/qiniu/"/>
+    
+      <category term="bash shell" scheme="https://www.bz1.me/tags/bash-shell/"/>
     
   </entry>
   
@@ -474,7 +482,7 @@
     <link href="https://www.bz1.me/m3u8.html"/>
     <id>https://www.bz1.me/m3u8.html</id>
     <published>2016-12-08T14:21:02.000Z</published>
-    <updated>2016-12-14T05:58:26.000Z</updated>
+    <updated>2016-12-18T02:47:51.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="关于-m3u8"><a href="#关于-m3u8" class="headerlink" title="关于 m3u8"></a>关于 m3u8</h2><p>M3U8是Unicode版本的M3U，用UTF-8编码。”M3U”和”M3U8”文件都是苹果公司使用的HTTP Live Streaming格式的基础，这种格式可以在iPhone和Macbook等设备播放。<br>m3u8 其实是一个文本文件，是一个 <code>playlist</code>，用来索引 <code>ts 文件</code>，真正的流媒体文件其实是<code>ts 文件</code><br>⭐️参考 wiki (<a href="https://zh.wikipedia.org/wiki/M3U#M3U8" target="_blank" rel="external">https://zh.wikipedia.org/wiki/M3U#M3U8</a>)</p>
 <h3 id="举个例子："><a href="#举个例子：" class="headerlink" title="举个例子："></a>举个例子：</h3><p><code>http://sc.sc.bz1.me/123123123.m3u8</code></p>
@@ -495,7 +503,9 @@
       <category term="qiniu" scheme="https://www.bz1.me/categories/qiniu/"/>
     
     
-      <category term="qiniu" scheme="https://www.bz1.me/tags/qiniu/"/>
+      <category term="pili" scheme="https://www.bz1.me/tags/pili/"/>
+    
+      <category term="docs" scheme="https://www.bz1.me/tags/docs/"/>
     
   </entry>
   
@@ -504,7 +514,7 @@
     <link href="https://www.bz1.me/portsentry.html"/>
     <id>https://www.bz1.me/portsentry.html</id>
     <published>2016-09-27T14:21:02.000Z</published>
-    <updated>2016-12-14T05:59:59.000Z</updated>
+    <updated>2016-12-18T02:48:45.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>注：本文采用的操作系统为 ubuntu14.04</p>
@@ -521,7 +531,7 @@
 <p>解压</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">tar</span> <span class="selector-tag">zxvf</span> <span class="selector-tag">portsentry-1</span><span class="selector-class">.2</span><span class="selector-class">.tar</span><span class="selector-class">.gz</span></div></pre></td></tr></table></figure>
 <p>不能直接编译，这里有点特殊，解压完的包中，<code>portsentry.c</code>这个文件中在<code>1584</code>行有一处错误，将其改成一行</p>
-<figure class="highlight abnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">printf (<span class="string">"Copyright 1997-2003 Craig H. Rowland &lt;craigrowland at users dot sourceforget dot net&gt;\n"</span>)<span class="comment">;</span></div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">printf</span> (<span class="string">"Copyright 1997-2003 Craig H. Rowland &lt;craigrowland at users dot sourceforget dot net&gt;\n"</span>);</div></pre></td></tr></table></figure>
 <p><img src="https://upload.bz1.me/portsentry1588c.png?imageView/2/h/300" alt="portsentry"></p>
 <p>然后进行编译</p>
 <figure class="highlight gauss"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">make</span> linux&amp; <span class="built_in">make</span> install</div></pre></td></tr></table></figure>
@@ -583,7 +593,7 @@
 &lt;p&gt;解压&lt;/p&gt;
 &lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;tar&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;zxvf&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;portsentry-1&lt;/span&gt;&lt;span class=&quot;selector-class&quot;&gt;.2&lt;/span&gt;&lt;span class=&quot;selector-class&quot;&gt;.tar&lt;/span&gt;&lt;span class=&quot;selector-class&quot;&gt;.gz&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;不能直接编译，这里有点特殊，解压完的包中，&lt;code&gt;portsentry.c&lt;/code&gt;这个文件中在&lt;code&gt;1584&lt;/code&gt;行有一处错误，将其改成一行&lt;/p&gt;
-&lt;figure class=&quot;highlight abnf&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;printf (&lt;span class=&quot;string&quot;&gt;&quot;Copyright 1997-2003 Craig H. Rowland &amp;lt;craigrowland at users dot sourceforget dot net&amp;gt;\n&quot;&lt;/span&gt;)&lt;span class=&quot;comment&quot;&gt;;&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt; (&lt;span class=&quot;string&quot;&gt;&quot;Copyright 1997-2003 Craig H. Rowland &amp;lt;craigrowland at users dot sourceforget dot net&amp;gt;\n&quot;&lt;/span&gt;);&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;&lt;img src=&quot;https://upload.bz1.me/portsentry1588c.png?imageView/2/h/300&quot; alt=&quot;portsentry&quot;&gt;&lt;/p&gt;
 &lt;p&gt;然后进行编译&lt;/p&gt;
 &lt;figure class=&quot;highlight gauss&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;make&lt;/span&gt; linux&amp;amp; &lt;span class=&quot;built_in&quot;&gt;make&lt;/span&gt; install&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
@@ -594,7 +604,9 @@
       <category term="linux" scheme="https://www.bz1.me/categories/linux/"/>
     
     
-      <category term="安全" scheme="https://www.bz1.me/tags/%E5%AE%89%E5%85%A8/"/>
+      <category term="linux" scheme="https://www.bz1.me/tags/linux/"/>
+    
+      <category term="notes" scheme="https://www.bz1.me/tags/notes/"/>
     
   </entry>
   
@@ -603,7 +615,7 @@
     <link href="https://www.bz1.me/ss-polipo-pac.html"/>
     <id>https://www.bz1.me/ss-polipo-pac.html</id>
     <published>2016-09-26T14:35:32.000Z</published>
-    <updated>2016-12-15T14:31:58.000Z</updated>
+    <updated>2016-12-18T02:48:15.000Z</updated>
     
     <content type="html"><![CDATA[<p>本文将从<strong>代理</strong>教会大家如何科学上网，作为笔记分享，共同学习，一起进步。</p>
 <p>涉及如下三大块内容：</p>
@@ -685,21 +697,9 @@
       <category term="linux" scheme="https://www.bz1.me/categories/linux/"/>
     
     
+      <category term="notes" scheme="https://www.bz1.me/tags/notes/"/>
+    
       <category term="proxy" scheme="https://www.bz1.me/tags/proxy/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>tlock</title>
-    <link href="https://www.bz1.me/tlock.html"/>
-    <id>https://www.bz1.me/tlock.html</id>
-    <published>2016-08-30T03:23:34.000Z</published>
-    <updated>2016-12-08T14:34:28.000Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
     
   </entry>
   
@@ -744,7 +744,7 @@
     <link href="https://www.bz1.me/%E5%9F%9F%E5%90%8Da%E8%AE%B0%E5%BD%95%E5%92%8Ccname%E5%86%B2%E7%AA%81.html"/>
     <id>https://www.bz1.me/域名a记录和cname冲突.html</id>
     <published>2016-07-25T08:45:07.000Z</published>
-    <updated>2016-12-14T05:53:21.000Z</updated>
+    <updated>2016-12-18T02:46:32.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>假如用户的主页为www.xxx.com，为了使用CDN加速，在七牛也绑定了加速域名为www.xxx.com，绑定好了之后，七牛返回给用户一个CNAME的地址，此时用户去域名提供商那边去配置CNAME，然后提示 “CNAME记录与主机记录的A记录冲突，无法保存成功”<br><img src="https://upload.bz1.me/cname冲突.png" alt=""></p>
 <h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><p>A记录就是把一个域名解析到一个IP地址（Address，特制数字IP地址），而CNAME记录就是把域名解析到另外一个域名。其功能是差不多，CNAME将几个主机名指向一个别名，其实跟指向IP地址是一样的，因为这个别名也要做一个A记录的。<br><strong>这两个都是将您的当前域名（www.xxx.com）去解析到一个IP或者一个服务器，当访问您当前域名的时候会解析过去，但是一个域名不可以解析到两个服务器。</strong><br><a id="more"></a></p>
@@ -763,7 +763,9 @@
       <category term="qiniu" scheme="https://www.bz1.me/categories/qiniu/"/>
     
     
-      <category term="portal" scheme="https://www.bz1.me/tags/portal/"/>
+      <category term="CDN" scheme="https://www.bz1.me/tags/CDN/"/>
+    
+      <category term="qiniu" scheme="https://www.bz1.me/tags/qiniu/"/>
     
   </entry>
   
@@ -772,7 +774,7 @@
     <link href="https://www.bz1.me/hlscannotplay.html"/>
     <id>https://www.bz1.me/hlscannotplay.html</id>
     <published>2016-07-14T03:32:20.000Z</published>
-    <updated>2016-12-14T05:55:04.000Z</updated>
+    <updated>2016-12-18T02:47:30.000Z</updated>
     
     <content type="html"><![CDATA[<p><strong>问题描述</strong>：在七牛云开通了直播服务，创建了直播空间，也进行了CNAME，在使用七牛的提供的rtmp推流地址推流时，在拉流播放时候，发现RTMP播放域名可以播放，但是HLS却无法播放。</p>
 <p><strong>问题原因</strong>：这样的报错原因基本为以下三种之一<br><strong>原因一：</strong>检查一下推流地址是否填写的是RTMP的播放地址，导致RTMP可以正常播放，但是HLS不能，后台也查不到有推流上来。</p>
@@ -801,7 +803,9 @@
       <category term="qiniu" scheme="https://www.bz1.me/categories/qiniu/"/>
     
     
-      <category term="PILI" scheme="https://www.bz1.me/tags/PILI/"/>
+      <category term="pili" scheme="https://www.bz1.me/tags/pili/"/>
+    
+      <category term="docs" scheme="https://www.bz1.me/tags/docs/"/>
     
   </entry>
   
@@ -810,7 +814,7 @@
     <link href="https://www.bz1.me/CDN%E7%AE%80%E5%8D%95%E5%8E%9F%E7%90%86.html"/>
     <id>https://www.bz1.me/CDN简单原理.html</id>
     <published>2016-07-13T14:17:52.000Z</published>
-    <updated>2016-12-08T14:34:28.000Z</updated>
+    <updated>2016-12-18T02:46:50.000Z</updated>
     
     <content type="html"><![CDATA[<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">用户      1     CDN            源站</div><div class="line">  |<span class="string">—-----------&gt;</span>|<span class="string">             </span>|</div><div class="line">  |<span class="string">&lt;------------</span>|<span class="string">             </span>|</div><div class="line">  |<span class="string">—-----------&gt;</span>|<span class="string">             </span>|</div><div class="line">  |<span class="string">             </span>|<span class="string">      2      </span>|</div><div class="line">  |<span class="string">             </span>|<span class="string">—-----------&gt;</span>|</div><div class="line">  |<span class="string">      3      </span>|<span class="string">&lt;------------</span>|</div><div class="line">  |<span class="string">&lt;------------</span>|<span class="string">             </span>|</div><div class="line">  |<span class="string">             </span>|<span class="string">             </span>|</div><div class="line">  |<span class="string">      4      </span>|<span class="string">             </span>|</div><div class="line">  |<span class="string">—-----------&gt;</span>|<span class="string">             </span>|</div><div class="line">  |<span class="string">&lt;------------</span>|<span class="string">             </span>|</div><div class="line">  |<span class="string">      5      </span>|<span class="string">             </span>|</div></pre></td></tr></table></figure>
 <p>1:用户第一次请求数据，与边缘CDN节点建立连接<br>2:CDN回源站请求资源，源站响应，资源被拉取到CDN节点<br>3:CDN将数据返回给用户，同时缓存在用户边缘CDN节点<br>4:用户再次请求数据<br>5:CDN服务器直接返回缓存在服务器上的数据</p>
@@ -923,6 +927,49 @@
     
     
       <category term="pili" scheme="https://www.bz1.me/tags/pili/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vim</title>
+    <link href="https://www.bz1.me/vim.html"/>
+    <id>https://www.bz1.me/vim.html</id>
+    <published>2016-06-27T14:42:00.000Z</published>
+    <updated>2016-12-18T02:49:29.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>  vim的学习笔记，这些是vim常用的一些操作按键。</p>
+<ul>
+<li>光标移动</li>
+<li>查找与替换</li>
+<li>删除、复制与粘贴</li>
+<li>其他</li>
+</ul>
+<h3 id="光标移动"><a href="#光标移动" class="headerlink" title="光标移动"></a>光标移动</h3><figure class="highlight excel"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">n</span>&lt;space&gt;：<span class="built_in">n</span>代表数字，按下光标再按空格键，光标会移动到这一行的<span class="built_in">n</span>个字符</div><div class="line"></div><div class="line"><span class="number">0</span>：移动到这一行第一个字符</div><div class="line"></div><div class="line">$：移动到这一行的最后一个字符</div><div class="line"></div><div class="line">H：移动到屏幕最上方那行</div><div class="line"></div><div class="line">L：移动到屏幕最下方那行</div><div class="line"></div><div class="line">G：移动到这个文件最后一行</div><div class="line"></div><div class="line">nG：移动到<span class="built_in">n</span>行</div><div class="line"></div><div class="line">gg：移动到文件第一行</div><div class="line"></div><div class="line"><span class="built_in">n</span>&lt;Enter&gt;：向下移动<span class="built_in">n</span>行</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="查找与替换"><a href="#查找与替换" class="headerlink" title="查找与替换"></a>查找与替换</h3><figure class="highlight gcode"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">/word：查找word</div><div class="line"></div><div class="line">:<span class="symbol">n1</span>,<span class="symbol">n2</span>s/word<span class="number">1</span>/word<span class="number">2</span>/g：<span class="symbol">n1</span>到<span class="symbol">n2</span>行之间查找word<span class="number">1</span>，全部替换为word<span class="number">2</span></div><div class="line"></div><div class="line">:<span class="number">1</span>,$s/word<span class="number">1</span>/word<span class="number">2</span>/g：从第一行到最后一行查找word<span class="number">1</span>，全部替换为word<span class="number">2</span></div><div class="line"></div><div class="line">:<span class="number">1</span>,$s/word<span class="number">1</span>/word<span class="number">2</span>/gc：从第一行到最后一行查找word<span class="number">1</span>，全部替换为word<span class="number">2</span>，替换前确认</div></pre></td></tr></table></figure>
+<h3 id="删除、复制和粘贴"><a href="#删除、复制和粘贴" class="headerlink" title="删除、复制和粘贴"></a>删除、复制和粘贴</h3><figure class="highlight tp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">x：向后删一个字符</div><div class="line"></div><div class="line"><span class="keyword">X</span>：向前删一个字符</div><div class="line"></div><div class="line">dd：删除一整行</div><div class="line"></div><div class="line">ndd：向下删除n行</div><div class="line"></div><div class="line">yy：复制光标所在那一行</div><div class="line"></div><div class="line">p：复制的数据在光标下一行粘贴</div><div class="line"></div><div class="line"><span class="keyword">P</span>：复制的数据在光标上一行粘贴</div></pre></td></tr></table></figure>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">u：复原前一个动作</div><div class="line"></div><div class="line">:!<span class="built_in">command</span>：暂时命令行模式执行<span class="built_in">command</span></div><div class="line"></div><div class="line">:<span class="built_in">set</span> nu：显示行号</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;  vim的学习笔记，这些是vim常用的一些操作按键。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;光标移动&lt;/li&gt;
+&lt;li&gt;查找与替换&lt;/li&gt;
+&lt;li&gt;删除、复制与粘贴&lt;/li&gt;
+&lt;li&gt;其他&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;光标移动&quot;&gt;&lt;a href=&quot;#光标移动&quot; class=&quot;headerlink&quot; title=&quot;光标移动&quot;&gt;&lt;/a&gt;光标移动&lt;/h3&gt;&lt;figure class=&quot;highlight excel&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;n&lt;/span&gt;&amp;lt;space&amp;gt;：&lt;span class=&quot;built_in&quot;&gt;n&lt;/span&gt;代表数字，按下光标再按空格键，光标会移动到这一行的&lt;span class=&quot;built_in&quot;&gt;n&lt;/span&gt;个字符&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;：移动到这一行第一个字符&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;$：移动到这一行的最后一个字符&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;H：移动到屏幕最上方那行&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;L：移动到屏幕最下方那行&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;G：移动到这个文件最后一行&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;nG：移动到&lt;span class=&quot;built_in&quot;&gt;n&lt;/span&gt;行&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;gg：移动到文件第一行&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;n&lt;/span&gt;&amp;lt;Enter&amp;gt;：向下移动&lt;span class=&quot;built_in&quot;&gt;n&lt;/span&gt;行&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="linux" scheme="https://www.bz1.me/categories/linux/"/>
+    
+    
+      <category term="linux" scheme="https://www.bz1.me/tags/linux/"/>
+    
+      <category term="notes" scheme="https://www.bz1.me/tags/notes/"/>
     
   </entry>
   

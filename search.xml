@@ -101,13 +101,6 @@
 
     
     <entry>
-      <title><![CDATA[tlock]]></title>
-      <url>%2Ftlock.html</url>
-      <content type="text"></content>
-    </entry>
-
-    
-    <entry>
       <title><![CDATA[七牛直播域名图解]]></title>
       <url>%2Flivedomain.html</url>
       <content type="text"><![CDATA[七牛直播域名如图所示： rtmp推流域名 rtmp播放域名 hls播放域名 flv播放域名 所对应地址及其组成格式 开通七牛云直播，欢迎访问：http://www.qiniu.com/]]></content>
@@ -143,13 +136,6 @@
 
     
     <entry>
-      <title><![CDATA[关于七牛多媒体处理预设格式的小节]]></title>
-      <url>%2Fvideoaudio.html</url>
-      <content type="text"><![CDATA[简述音视频编码和容器格式的选择需要兼顾不同播放平台和播放器，同时还需要最少的资源消耗量和开发量。本文将详细分析一下七牛portal中，多媒体数据处理的预设规格。 包含如下三点： 规格的具体处理参数 规格的使用场景 规格的优势 如下是支持的预设格式： 音频audio-AAC-64K 规格参数：avthumb/mp4/ab/64k/ar/44100/acodec/libfaac audio-AAC-128K 规格参数：avthumb/mp4/ab/128k/ar/44100/acodec/libfaac audio-AAC-256K 规格参数：avthumb/mp4/ab/256k/ar/44100/acodec/libfaac AAC的使用场景及优势：AAC在低码率下，而且硬件较差的情况下有较好播放效果，且AAC格式的文件占用存储空间小，高频丢失少；AAC是mp3的继承者 audio-HLS-32K 规格参数：avthumb/m3u8/segtime/10/ab/32k/ar/44100/acodec/libfaac audio-HLS-48K 规格参数：avthumb/m3u8/segtime/10/ab/48k/ar/44100/acodec/libfaac audio-HLS-64K 规格参数：avthumb/m3u8/segtime/10/ab/64k/ar/44100/acodec/libfaac HLS的使用场景和优势：HLS播放速度快，HLS把整个流分成一个个小的基于HTTP的文件来下载，每次只下载一些。当媒体流正在播放时，客户端可以选择从许多不同的备用源中以不同的速率下载同样的资源，允许流媒体会话适应不同的数据速率。 HLS是基于HTTP的流媒体网络传输协议，HLS只请求基本的HTTP报文，与实时传输协议（RTP)不同，HLS可以穿过任何允许HTTP数据通过的防火墙或者代理服务器。它也很容易使用内容分发网络来传输媒体流 audio-MP3-128K 规格参数：avthumb/mp3/ab/128k/ar/44100/acodec/libmp3lame audio-MP3-160K 规格参数：avthumb/mp3/ab/160k/ar/44100/acodec/libmp3lame audio-MP3-192K 规格参数：avthumb/mp3/ab/192k/ar/44100/acodec/libmp3lame audio-MP3-320K 规格参数：avthumb/mp3/ab/320k/ar/44100/acodec/libmp3lame MP3的使用场景和优势：MP3发展早，目前硬件设备基本都支持MP3，兼容性非常好，且编码速度要比AAC快。 mp3相较AAC的优势：很多音频播放器无法播放AAC，使用AAC要大多数人换硬件设备的压力和时间，但是MP3却基本全部都能播放。 视频video-Generic-1080P 规格参数：avthumb/mp4/ab/160k/ar/44100/acodec/libfaac/r/30/vb/5400k/vcodec/libx264/s/1920x1080/autoscale/1/strpmeta/0 video-Generic-320x240 规格参数：avthumb/mp4/ab/128k/ar/22050/acodec/libfaac/r/30/vb/300k/vcodec/libx264/s/320x240/autoscale/1/stripmeta/0 video-Generic-360p-16:9 规格参数：avthumb/mp4/ab/128k/ar/44100/acodec/libfaac/r/30/vb/720k/vcodec/libx264/s/640x360/autoscale/1/stripmeta/0 video-Generic-360p-4:3 规格参数：avthumb/mp4/ab/128k/ar/44100/acodec/libfaac/r/30/vb/600k/vcodec/libx264/s/480x360/autoscale/1/stripmeta/0 video-Generic-480P-16:9 规格参数：avthumb/mp4/ab/128k/ar/44100/acodec/libfaac/r/30/vb/1200k/vcodec/libx264/s/854x480/autoscale/1/stripmeta/0 video-Generic-480P-4:3 规格参数：avthumb/mp4/ab/128k/ar/44100/acodec/libfaac/r/30/vb/900k/vcodec/libx264/s/640x480/autoscale/1/stripmeta/0 video-Generic-720P 规格参数：avthumb/mp4/ab/160k/ar/44100/acodec/libfaac/r/30/vb/2400k/vcodec/libx264/s/1280x720/autoscale/1/stripmeta/0 Generic使用场景及优势：该参数是转码成标准的mp4格式，mp4封装格式的音视频兼容市面上绝大多数的播放器，MPEG－4是为了播放流式媒体的高质量视频而专门设计的，以求使用最少的数据获得最佳的图像质量。建议将视频文件转码成该格式用于在网页上播放。 video-HLS-1000k 规格参数：avthumb/m3u8/segtime/10/ab/128k/ar/44100/acodec/libfaac/r/30/vb/1000k/vcodec/libx264/stripmeta/0 video-HLS-150k 规格参数：avthumb/m3u8/segtime/10/ab/128k/ar/44100/acodec/libfaac/r/30/vb/150k/vcodec/libx264/stripmeta/0 video-HLS-240k 规格参数：avthumb/m3u8/segtime/10/ab/128k/ar/44100/acodec/libfaac/r/30/vb/240k/vcodec/libx264/stripmeta/0 video-HLS-640k 规格参数：avthumb/m3u8/segtime/10/ab/128k/ar/44100/acodec/libfaac/r/30/vb/640k/vcodec/libx264/stripmeta/0 HLS的使用场景及优势：HLS播放速度快，HLS把整个流分成一个个小的基于HTTP的文件来下载，每次只下载一些。当媒体流正在播放时，客户端可以选择从许多不同的备用源中以不同的速率下载同样的资源，允许流媒体会话适应不同的数据速率。 video-Web 规格参数：avthumb/mp4/ab/160k/ar/44100/acodec/libfaac/r/30/vb/2200k/vcodec/libx264/s/1280x720/autoscale/1/stripmeta/0 Web的使用场景及优势：标准的MP4格式，这个清晰度较高，建议使用PC浏览器观看。 video-iPhone4 规格参数：avthumb/mp4/ab/160k/ar/48000/acodec/libfaac/r/30/vb/2200k/vcodec/libx264/s/1280x720/autoscale/1/stripmeta/0 iPhone4的使用场景及优势：该格式也是标准的MP4格式，大小尺寸适用于iPhone4屏幕尺寸 video-iPhone4s 规格参数：avthumb/mp4/ab/160k/ar/48000/acodec/libfaac/r/30/vb/5000k/vcodec/libx264/s/1920x1080/autoscale/1/stripmeta/0 iPhone4s的使用场景及优势：该格式也是标准的MP4格式，大小尺寸适用于iPhone4s屏幕尺寸]]></content>
-    </entry>
-
-    
-    <entry>
       <title><![CDATA[vim]]></title>
       <url>%2Fvim.html</url>
       <content type="text"><![CDATA[vim的学习笔记，这些是vim常用的一些操作按键。 光标移动 查找与替换 删除、复制与粘贴 其他 光标移动1234567891011121314151617n&lt;space&gt;：n代表数字，按下光标再按空格键，光标会移动到这一行的n个字符0：移动到这一行第一个字符$：移动到这一行的最后一个字符H：移动到屏幕最上方那行L：移动到屏幕最下方那行G：移动到这个文件最后一行nG：移动到n行gg：移动到文件第一行n&lt;Enter&gt;：向下移动n行 查找与替换1234567/word：查找word:n1,n2s/word1/word2/g：n1到n2行之间查找word1，全部替换为word2:1,$s/word1/word2/g：从第一行到最后一行查找word1，全部替换为word2:1,$s/word1/word2/gc：从第一行到最后一行查找word1，全部替换为word2，替换前确认 删除、复制和粘贴12345678910111213x：向后删一个字符X：向前删一个字符dd：删除一整行ndd：向下删除n行yy：复制光标所在那一行p：复制的数据在光标下一行粘贴P：复制的数据在光标上一行粘贴 其他12345u：复原前一个动作:!command：暂时命令行模式执行command:set nu：显示行号]]></content>
@@ -164,23 +150,9 @@
 
     
     <entry>
-      <title><![CDATA[推广策划 by LJ]]></title>
-      <url>%2Fgongzhonghao.html</url>
-      <content type="text"><![CDATA[主题内容 概述：对于当代大学生，就业以及职场一直是一个很热门的并且贯彻大学四年的一个主题。现在正值毕业季跟职场打拼相关的电影或者话题也更容易引起大学生的共鸣，这对于公众号的内容推广是一个很不错的切入点。 主题：职场系列​ 内容推广词：送给迈入社会开始职场新生涯的你。从面试到菜鸟新人，从新人到职场老鸟，一系列职场攻略。从心理角度分析面试，带你提前领略职场风采。 ​ 电影： 广告狂人 (2007) 豆瓣评分：8.6 早间主播 (2010) 豆瓣评分：7.7 金装律师 (2012) 豆瓣评分：8.5 终极面试 (2009) 豆瓣评分：7.0 推广方式线上推广微信：将分享码先发送给身边的朋友，让朋友帮助自己扫码领取电影链接，通过朋友互相传播以裂变的方式进行推广。 微博：在微博上贴出相关影片的简介，混话题混热门引起大家兴趣与关注，然后可以在每个简介微博下附上以下字段“如果想要影片链接请私信博主”之后若是收到私信可进行默认恢复，将公众号名字附于默认回复当中，让其关注公众号再执行相关步骤（付费或者邀请好友关注）之后给予奖励（电影链接）。 其他：在与电影相关的贴吧或者论坛下面创建新的评论，可以附注相关电影的简介，以及电影链接获取方式（尽量简洁）进行推广，尽量能将评论置顶以获取更多的关注量。多在提问类的文章下面进行高质量的回答，也可以采取自问自答的形式将回答置顶，在回答的最后可以粘贴上自己的公众号二维码。 线下推广校园推广方案：前提：每个学校基本都设有电影协会，用以丰富学生的课余生活，通过放映电影来缓解学生日常压力。地点组织：各大高校电影协会或者是播放电影相关的组织。 方案：与各个学校相关电影协会联系，与他们进行协商，介绍我们公众号的功能，让他们扫码关注公众号并进行相关步骤领取资源链接，以此推广公众号。]]></content>
-    </entry>
-
-    
-    <entry>
       <title><![CDATA[centos6.5-配置yum安装nginx]]></title>
       <url>%2Fnginx-centos6-5-yum.html</url>
       <content type="text"><![CDATA[在/etc/yum.repos.d/目录下创建一个源配置文件nginx.repo： 123cd /etc/yum.repos.d/ vim nginx.repo 填写如下内容： 12345[nginx]name=nginx repobaseurl=http://nginx.org/packages/centos/$releasever/$basearch/gpgcheck=0enabled=1 wq以后会产生一个文件为：/etc/yum.repos.d/nginx.repo 下面直接执行如下指令即可自动安装好Nginx： 1yum install nginx -y 安装完成，下面直接就可以启动Nginx了： 1/etc/init.d/nginx start 现在Nginx已经启动了，直接访问服务器就能看到Nginx欢迎页面了的。 如果还无法访问，则需配置一下Linux防火墙 12345iptables -I INPUT 5 -i eth0 -p tcp --dport 80 -m state --state NEW,ESTABLISHED -j ACCEPT service iptables save service iptables restart Nginx的命令以及配置文件位置： 12345/etc/init.d/nginx start # 启动Nginx服务 /etc/init.d/nginx stop # 停止Nginx服务 /etc/nginx/nginx.conf # Nginx配置文件位置 至此，Nginx已经全部配置安装完成。]]></content>
-    </entry>
-
-    
-    <entry>
-      <title><![CDATA[我的第一篇文章]]></title>
-      <url>%2Fmyfirstarticle.html</url>
-      <content type="text"><![CDATA[我只是测试一下，看到我说明成功了]]></content>
     </entry>
 
     
