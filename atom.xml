@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.bz1.me/"/>
-  <updated>2016-12-16T14:14:13.000Z</updated>
+  <updated>2016-12-23T10:29:22.000Z</updated>
   <id>https://www.bz1.me/</id>
   
   <author>
@@ -14,6 +14,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>七牛的第一个圣诞节</title>
+    <link href="https://www.bz1.me/%E4%B8%83%E7%89%9B%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%9C%A3%E8%AF%9E%E8%8A%82.html"/>
+    <id>https://www.bz1.me/七牛的第一个圣诞节.html</id>
+    <published>2016-12-23T10:29:22.000Z</published>
+    <updated>2016-12-23T10:29:22.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="牛棚过圣诞节"><a href="#牛棚过圣诞节" class="headerlink" title="牛棚过圣诞节"></a>牛棚过圣诞节</h3><p>今天周五，忙碌的一天，但是公司氛围还是足足哒<br><img src="https://upload.bz1.me/dangao.png" alt=""></p>
+<p>晒几张图😍</p>
+<h4 id="公司-HR-给我们发的秘密报备"><a href="#公司-HR-给我们发的秘密报备" class="headerlink" title="公司 HR 给我们发的秘密报备"></a>公司 HR 给我们发的秘密报备</h4><p>看起来挺正常的<br><img src="https://upload.bz1.me/1222.png" alt=""><br>这个指的是？oppo 充电手机？<br><img src="https://upload.bz1.me/xiuxiwufenzhong.png" alt=""><br>额<br><img src="https://upload.bz1.me/baojian.png" alt=""><br>好吧，啥也不说了，公司 HR 姐姐，你变了<br><img src="https://upload.bz1.me/niuxiao7durex.png" alt=""></p>
+<h4 id="还请了美女鼓励师"><a href="#还请了美女鼓励师" class="headerlink" title="还请了美女鼓励师"></a>还请了美女鼓励师</h4><p><img src="https://upload.bz1.me/gulishi.png" alt=""></p>
+<p><img src="https://upload.bz1.me/gulishi2.png" alt=""></p>
+<p>再看看人家的鼓励师，啥也不说了<br><img src="https://upload.bz1.me/bierenjia.png" alt=""></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;牛棚过圣诞节&quot;&gt;&lt;a href=&quot;#牛棚过圣诞节&quot; class=&quot;headerlink&quot; title=&quot;牛棚过圣诞节&quot;&gt;&lt;/a&gt;牛棚过圣诞节&lt;/h3&gt;&lt;p&gt;今天周五，忙碌的一天，但是公司氛围还是足足哒&lt;br&gt;&lt;img src=&quot;https://upload.bz1
+    
+    </summary>
+    
+      <category term="qiniu" scheme="https://www.bz1.me/categories/qiniu/"/>
+    
+    
+      <category term="qiniu" scheme="https://www.bz1.me/tags/qiniu/"/>
+    
+      <category term="Christmas" scheme="https://www.bz1.me/tags/Christmas/"/>
+    
+  </entry>
   
   <entry>
     <title>hexo部署至七牛之一键操作</title>
@@ -935,49 +965,6 @@
     
     
       <category term="pili" scheme="https://www.bz1.me/tags/pili/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vim</title>
-    <link href="https://www.bz1.me/vim.html"/>
-    <id>https://www.bz1.me/vim.html</id>
-    <published>2016-06-27T14:42:00.000Z</published>
-    <updated>2016-12-18T02:49:29.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>  vim的学习笔记，这些是vim常用的一些操作按键。</p>
-<ul>
-<li>光标移动</li>
-<li>查找与替换</li>
-<li>删除、复制与粘贴</li>
-<li>其他</li>
-</ul>
-<h3 id="光标移动"><a href="#光标移动" class="headerlink" title="光标移动"></a>光标移动</h3><figure class="highlight excel"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">n</span>&lt;space&gt;：<span class="built_in">n</span>代表数字，按下光标再按空格键，光标会移动到这一行的<span class="built_in">n</span>个字符</div><div class="line"></div><div class="line"><span class="number">0</span>：移动到这一行第一个字符</div><div class="line"></div><div class="line">$：移动到这一行的最后一个字符</div><div class="line"></div><div class="line">H：移动到屏幕最上方那行</div><div class="line"></div><div class="line">L：移动到屏幕最下方那行</div><div class="line"></div><div class="line">G：移动到这个文件最后一行</div><div class="line"></div><div class="line">nG：移动到<span class="built_in">n</span>行</div><div class="line"></div><div class="line">gg：移动到文件第一行</div><div class="line"></div><div class="line"><span class="built_in">n</span>&lt;Enter&gt;：向下移动<span class="built_in">n</span>行</div></pre></td></tr></table></figure>
-<a id="more"></a>
-<h3 id="查找与替换"><a href="#查找与替换" class="headerlink" title="查找与替换"></a>查找与替换</h3><figure class="highlight gcode"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">/word：查找word</div><div class="line"></div><div class="line">:<span class="symbol">n1</span>,<span class="symbol">n2</span>s/word<span class="number">1</span>/word<span class="number">2</span>/g：<span class="symbol">n1</span>到<span class="symbol">n2</span>行之间查找word<span class="number">1</span>，全部替换为word<span class="number">2</span></div><div class="line"></div><div class="line">:<span class="number">1</span>,$s/word<span class="number">1</span>/word<span class="number">2</span>/g：从第一行到最后一行查找word<span class="number">1</span>，全部替换为word<span class="number">2</span></div><div class="line"></div><div class="line">:<span class="number">1</span>,$s/word<span class="number">1</span>/word<span class="number">2</span>/gc：从第一行到最后一行查找word<span class="number">1</span>，全部替换为word<span class="number">2</span>，替换前确认</div></pre></td></tr></table></figure>
-<h3 id="删除、复制和粘贴"><a href="#删除、复制和粘贴" class="headerlink" title="删除、复制和粘贴"></a>删除、复制和粘贴</h3><figure class="highlight tp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">x：向后删一个字符</div><div class="line"></div><div class="line"><span class="keyword">X</span>：向前删一个字符</div><div class="line"></div><div class="line">dd：删除一整行</div><div class="line"></div><div class="line">ndd：向下删除n行</div><div class="line"></div><div class="line">yy：复制光标所在那一行</div><div class="line"></div><div class="line">p：复制的数据在光标下一行粘贴</div><div class="line"></div><div class="line"><span class="keyword">P</span>：复制的数据在光标上一行粘贴</div></pre></td></tr></table></figure>
-<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">u：复原前一个动作</div><div class="line"></div><div class="line">:!<span class="built_in">command</span>：暂时命令行模式执行<span class="built_in">command</span></div><div class="line"></div><div class="line">:<span class="built_in">set</span> nu：显示行号</div></pre></td></tr></table></figure>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;  vim的学习笔记，这些是vim常用的一些操作按键。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;光标移动&lt;/li&gt;
-&lt;li&gt;查找与替换&lt;/li&gt;
-&lt;li&gt;删除、复制与粘贴&lt;/li&gt;
-&lt;li&gt;其他&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;光标移动&quot;&gt;&lt;a href=&quot;#光标移动&quot; class=&quot;headerlink&quot; title=&quot;光标移动&quot;&gt;&lt;/a&gt;光标移动&lt;/h3&gt;&lt;figure class=&quot;highlight excel&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;n&lt;/span&gt;&amp;lt;space&amp;gt;：&lt;span class=&quot;built_in&quot;&gt;n&lt;/span&gt;代表数字，按下光标再按空格键，光标会移动到这一行的&lt;span class=&quot;built_in&quot;&gt;n&lt;/span&gt;个字符&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;：移动到这一行第一个字符&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;$：移动到这一行的最后一个字符&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;H：移动到屏幕最上方那行&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;L：移动到屏幕最下方那行&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;G：移动到这个文件最后一行&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;nG：移动到&lt;span class=&quot;built_in&quot;&gt;n&lt;/span&gt;行&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;gg：移动到文件第一行&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;n&lt;/span&gt;&amp;lt;Enter&amp;gt;：向下移动&lt;span class=&quot;built_in&quot;&gt;n&lt;/span&gt;行&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="linux" scheme="https://www.bz1.me/categories/linux/"/>
-    
-    
-      <category term="linux" scheme="https://www.bz1.me/tags/linux/"/>
-    
-      <category term="notes" scheme="https://www.bz1.me/tags/notes/"/>
     
   </entry>
   
