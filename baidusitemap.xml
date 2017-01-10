@@ -136,9 +136,9 @@
         <title>实现 socks5 转换为 http 代理科学上网 (shadowsocks + polipo + pac)</title>
         <pubTime>2016-09-26T14:35:32.000Z</pubTime>
         
-        <tag>proxy</tag>
-         
         <tag>notes</tag>
+         
+        <tag>proxy</tag>
          
          
            
@@ -222,9 +222,9 @@
         <title>配置CDN加速域名时CNAME与A记录冲突原因及解决方式</title>
         <pubTime>2016-07-25T08:45:07.000Z</pubTime>
         
-        <tag>qiniu</tag>
-         
         <tag>CDN</tag>
+         
+        <tag>qiniu</tag>
          
          
            
@@ -290,9 +290,9 @@
         
         <tag>qiniu</tag>
          
-        <tag>bash shell</tag>
-         
         <tag>hexo</tag>
+         
+        <tag>bash shell</tag>
          
          
            
@@ -342,9 +342,9 @@
         <title>平台部署hexo之『七牛云存储』</title>
         <pubTime>2016-12-15T15:05:54.000Z</pubTime>
         
-        <tag>qshell</tag>
-         
         <tag>hexo</tag>
+         
+        <tag>qshell</tag>
          
          
            
