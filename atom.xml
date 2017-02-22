@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.bz1.me/"/>
-  <updated>2016-12-23T10:29:22.000Z</updated>
+  <updated>2017-02-22T02:12:15.000Z</updated>
   <id>https://www.bz1.me/</id>
   
   <author>
@@ -14,6 +14,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>七牛直播云播放鉴权-时间戳防盗链</title>
+    <link href="https://www.bz1.me/shijianchuo.html"/>
+    <id>https://www.bz1.me/shijianchuo.html</id>
+    <published>2017-02-22T02:12:15.000Z</published>
+    <updated>2017-02-22T02:12:15.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>基于时间戳防盗链的功能其实每家的 CDN 都是支持的。主要是通过使用约定的加密字符串来对具有访问有效期的资源链接进行一些加密计算的到一个 sign 值，然后访问外链里面带上这个sign和截止时间戳去访问CDN的节点，CDN的节点会用同样的算法来计算访问链接是否合法，如果不合法则返回403 Forbidden，否则返回所要访问的资源。</p>
+<h2 id="算法说明"><a href="#算法说明" class="headerlink" title="算法说明"></a>算法说明</h2><p>基于时间戳的防盗链是通过对时间有关的字符串进行签名，将时间，签名通过一定的方式传递给CDN服务器作为判定依据，CDN 边缘节点依据约定的算法判断来访的URL是否有访问权限。<br>如果通过，执行下一步；如果不通过，响应 HTTP 状态码 403。<br>⭐️ 七牛直播云支持两种时间戳防盗链：<br>①tsStartMD5<br>指定起始时间戳播放鉴权。token的生成算法是md5，有效时间从URL的时间戳(十六进制)开始到”range”秒后。<br>②tsExpireMD5<br>指定过期时间戳播放鉴权。token的生成算法是md5, 有效时间从现在开始到URL中的时间戳(十六进制)为止。</p>
+<h2 id="签名参数"><a href="#签名参数" class="headerlink" title="签名参数"></a>签名参数</h2><p>|参数|描述|<br>|T(2种)|①起始时间，把Unix以秒为单位的时间戳，用16进制的小写字母形式表示，提交 CDN 厂商固定的 range 过期时间，比如 5 分钟，那么以当前时间 T 签算，固定在 T+300s 后过期 ②URL过期的时间，把Unix以秒为单位的时间戳，用16进制的小写字母形式表示。比如 2017年 2月22日 10时07分36秒 CST 对应的时间戳是 1487729256 ，表示为16进制就是 58acf268。|<br>|key|和 CDN 约定好的加密字符串|<br>|path|访问资源外链的PATH部分，比如如果访问的外链是 <a href="http://pili-live-hls.baozijian.cc/tron/baozijian.m3u8" target="_blank" rel="external">http://pili-live-hls.baozijian.cc/tron/baozijian.m3u8</a> 那么其中 PATH 部分就是 /tron/baozijian.m3u8|</p>
+<h2 id="签名算法"><a href="#签名算法" class="headerlink" title="签名算法"></a>签名算法</h2><p>待签名的原始字符串 s=key+path+T<br>签名方式 sign=md5(s).to_lower() ，其中 to_lower() 表示生成的md5字符串用小写字母表示</p>
+<h2 id="签名参数传递方式"><a href="#签名参数传递方式" class="headerlink" title="签名参数传递方式"></a>签名参数传递方式</h2><p>例如播放地址是：<a href="http://pili-live-hls.baozijian.cc/tron/baozijian.m3u8" target="_blank" rel="external">http://pili-live-hls.baozijian.cc/tron/baozijian.m3u8</a><br>最终形成的播放地址是：<a href="http://pili-live-hls.baozijian.cc/tron/baozijian.m3u8&amp;sign=xxxx&amp;t=xxxx" target="_blank" rel="external">http://pili-live-hls.baozijian.cc/tron/baozijian.m3u8&amp;sign=xxxx&amp;t=xxxx</a></p>
+<h2 id="算法参考实现："><a href="#算法参考实现：" class="headerlink" title="算法参考实现："></a>算法参考实现：</h2><figure class="highlight processing"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> com.qiniulab.cdn;</div><div class="line"></div><div class="line"><span class="keyword">import</span> java.io.UnsupportedEncodingException;</div><div class="line"><span class="keyword">import</span> java.net.MalformedURLException;</div><div class="line"><span class="keyword">import</span> java.net.URL;</div><div class="line"><span class="keyword">import</span> java.security.MessageDigest;</div><div class="line"><span class="keyword">import</span> java.security.NoSuchAlgorithmException;</div><div class="line"></div><div class="line"><span class="keyword">import</span> org.apache.commons.codec.<span class="built_in">binary</span>.Hex;</div><div class="line"></div><div class="line"><span class="keyword">public</span> class CdnAntiLeech &#123;</div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 生成资源基于CDN时间戳防盗链的访问外链</div><div class="line">     * </div><div class="line">     * @param 资源原始外链</div><div class="line">     * @param 结果资源的有效期，单位秒</div><div class="line">     * @throws MalformedURLException</div><div class="line">     * @throws UnsupportedEncodingException</div><div class="line">     * @throws NoSuchAlgorithmException</div><div class="line">     */</div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">String</span> getAntiLeechAccessUrlBasedOnTimestamp(<span class="keyword">String</span> url, <span class="keyword">String</span> encryptKey, <span class="built_in">int</span> durationInSeconds)</div><div class="line">            <span class="keyword">throws</span> MalformedURLException, UnsupportedEncodingException, NoSuchAlgorithmException &#123;</div><div class="line">        URL urlObj = <span class="keyword">new</span> URL(url);</div><div class="line">        <span class="keyword">String</span> path = urlObj.getPath();</div><div class="line"></div><div class="line">        <span class="keyword">long</span> timestampNow = System.currentTimeMillis() / <span class="number">1000</span> + durationInSeconds;</div><div class="line">        <span class="keyword">String</span> expireHex = Long.toHexString(timestampNow);</div><div class="line"></div><div class="line">        <span class="keyword">String</span> toSignStr = <span class="keyword">String</span>.format(<span class="string">"%s%s%s"</span>, encryptKey, path, expireHex);</div><div class="line">        <span class="keyword">String</span> signedStr = md5ToLower(toSignStr);</div><div class="line"></div><div class="line">        <span class="keyword">String</span> signedUrl = <span class="keyword">null</span>;</div><div class="line">        <span class="keyword">if</span> (urlObj.getQuery() != <span class="keyword">null</span>) &#123;</div><div class="line">            signedUrl = <span class="keyword">String</span>.format(<span class="string">"%s&amp;sign=%s&amp;t=%s"</span>, url, signedStr, expireHex);</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            signedUrl = <span class="keyword">String</span>.format(<span class="string">"%s?sign=%s&amp;t=%s"</span>, url, signedStr, expireHex);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">return</span> signedUrl;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">String</span> md5ToLower(<span class="keyword">String</span> src) <span class="keyword">throws</span> UnsupportedEncodingException, NoSuchAlgorithmException &#123;</div><div class="line">        MessageDigest digest = MessageDigest.getInstance(<span class="string">"MD5"</span>);</div><div class="line">        digest.update(src.getBytes(<span class="string">"utf-8"</span>));</div><div class="line">        <span class="built_in">byte</span>[] md5Bytes = digest.digest();</div><div class="line">        <span class="keyword">return</span> Hex.encodeHexString(md5Bytes);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h2><figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// cdn 配置的基于时间戳防盗链的加密字符串，cdn 配置完成后会得到</span></div><div class="line"><span class="keyword">String</span> encryptKey = <span class="string">""</span>;</div><div class="line"><span class="comment">// 待加密链接</span></div><div class="line"><span class="keyword">String</span> fileKey = <span class="string">"xxxx.pdf"</span>;</div><div class="line"><span class="keyword">String</span> encodedFileKey;</div><div class="line"><span class="built_in">try</span> &#123;</div><div class="line">    <span class="comment">// 考虑到文件名称会有中文，所以需要做urlencode</span></div><div class="line">    encodedFileKey = URLEncoder.encode(fileKey, <span class="string">"utf-8"</span>);</div><div class="line">    <span class="keyword">String</span> urlToSign = <span class="keyword">String</span>.format(<span class="string">"http://img.abc.com/%s"</span>, encodedFileKey);</div><div class="line">    <span class="comment">// 有效期</span></div><div class="line">    <span class="keyword">int</span> duration = <span class="number">3600</span>;</div><div class="line"></div><div class="line">    <span class="keyword">String</span> signedUrl = CdnAntiLeech.getAntiLeechAccessUrlBasedOnTimestamp(urlToSign, encryptKey, duration);</div><div class="line">    System.out.<span class="built_in">println</span>(signedUrl);</div><div class="line">&#125; <span class="built_in">catch</span> (UnsupportedEncodingException e) &#123;</div><div class="line">    e.printStackTrace();</div><div class="line">&#125; <span class="built_in">catch</span> (MalformedURLException e) &#123;</div><div class="line">    e.printStackTrace();</div><div class="line">&#125; <span class="built_in">catch</span> (NoSuchAlgorithmException e) &#123;</div><div class="line">    e.printStackTrace();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;基于时间戳防盗链的功能其实每家的 CDN 都是支持的。主要是通过使用约定的加密字符串来对具有访问有效期的资源链接进行一些加密计算的到一个 sign 值，然后访问外链里面带上这个sign和截止时间戳去访问CDN的节点，CDN的节点会用同样的算法来计算访问链接是否合法，如果不合
+    
+    </summary>
+    
+      <category term="pili" scheme="https://www.bz1.me/categories/pili/"/>
+    
+    
+      <category term="qiniu" scheme="https://www.bz1.me/tags/qiniu/"/>
+    
+  </entry>
   
   <entry>
     <title>七牛的第一个圣诞节</title>
@@ -870,103 +899,6 @@
     
     
       <category term="CDN" scheme="https://www.bz1.me/tags/CDN/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>七牛直播云常见FAQ</title>
-    <link href="https://www.bz1.me/pili%E7%9B%B4%E6%92%ADFAQ.html"/>
-    <id>https://www.bz1.me/pili直播FAQ.html</id>
-    <published>2016-07-13T01:09:00.000Z</published>
-    <updated>2016-12-08T14:34:28.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="pili直播FAQ–功能"><a href="#pili直播FAQ–功能" class="headerlink" title="pili直播FAQ–功能"></a>pili直播FAQ–功能</h2><ol>
-<li><strong>直播卡顿：如何排查直播卡顿问题？</strong><br>当用户提问这种的时候，一般如果不是已知事故，或已知异常。首先需要排除用户自身的网络原因，需要用户提供：</li>
-<li>a. 用户观看卡顿的播放地址 。 一个播放地址有很多信息，包括域名、hub、流名，使用hub，可以登录 pili-admin.qiniu.com ，通过hub找到该用户，然后进入到该用户的portal平台后，通过流名找到对应的流信息，通过域名可以判断用户播放域名的线路配置。<br>如果在后台看到推流的码率和帧数信息就起伏不断，可以断定是推流端卡顿。这样就先不用去查播放端，先让用户确认推流端网络情况，并测试上行带宽</li>
-<li><p>b. 如果用户推流端正常，需要询问播放端哪里卡，并让用户提供ping播放域名的结果，并提供本地IP和DNS，以及测试上行带宽的数据。 如果用户网络正常，得到用户ping到的节点IP后，最好可以自行绑定hosts到节点上观看看下效果。<br>带宽测速工具：<a href="http://www.speed.net" target="_blank" rel="external">http://www.speed.net</a><br>IP和DNS检测工具：<a href="http://ping.huatuo.qq.com/" target="_blank" rel="external">http://ping.huatuo.qq.com/</a></p>
-</li>
-<li><p><strong>你们推流地址支持几种鉴权模式？可以详细介绍一下吗？</strong></p>
-<a id="more"></a>
-<p> publishKey详谈</p>
-</li>
-</ol>
-<ul>
-<li><p>a.静态推流地址： </p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rtmp://<span class="tag">&lt;<span class="name">push_domain</span>&gt;</span>/<span class="tag">&lt;<span class="name">hub</span>&gt;</span>/<span class="tag">&lt;<span class="name">title</span>&gt;</span>?key=<span class="tag">&lt;<span class="name">publishKey</span>&gt;</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>b.动态推流地址：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">rtmp://<span class="tag">&lt;<span class="name">push_domain</span>&gt;</span>/<span class="tag">&lt;<span class="name">hub</span>&gt;</span>/<span class="tag">&lt;<span class="name">title</span>&gt;</span>?nonce=<span class="tag">&lt;<span class="name">ANY_TIME_STAMP</span>&gt;</span>&amp;token=<span class="tag">&lt;<span class="name">token</span>&gt;</span></div><div class="line">``` </div><div class="line"></div><div class="line">动态推流地址，需要签算nonce和token</div><div class="line">推流地址格式: </div><div class="line">```  </div><div class="line">rtmp://<span class="tag">&lt;<span class="name">HubDomain</span>&gt;</span>/<span class="tag">&lt;<span class="name">HubName</span>&gt;</span>/<span class="tag">&lt;<span class="name">StreamTitle</span>&gt;</span>?nonce=<span class="tag">&lt;<span class="name">Nonce</span>&gt;</span>&amp;token=<span class="tag">&lt;<span class="name">PublishToken</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>token计算方法为：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sign:= hmac_sha1("/<span class="tag">&lt;<span class="name">HubName</span>&gt;</span>/<span class="tag">&lt;<span class="name">StreamTitle</span>&gt;</span>?nonce=<span class="tag">&lt;<span class="name">Nonce</span>&gt;</span>&amp;<span class="tag">&lt;<span class="name">OtherKey</span>&gt;</span>=<span class="tag">&lt;<span class="name">OtherValue</span>&gt;</span>", "<span class="tag">&lt;<span class="name">PublishKey</span>&gt;</span>")</div><div class="line">publishToken := url_base64(sign)</div></pre></td></tr></table></figure>
-<p>Nonce有效值为比上次推流使用的Nonce大的任意值。</p>
-</li>
-<li>c.关于publishKey，每个流都有自己的publishKey，静态地址是publishKey 加载URl后面就可以；动态是需要publishKey签算token，token加载URL后面。<br>同时每个hub也绑了一个publishKey。<br>如果你创建流的时候，没指定流的publishKey，那么流的publishKey是随机生成的一串字符串。<br>create stream 和  update stream 方法可以为一个流来专门指定一个流的publishKey</li>
-<li><p>d. 如果hub的publishKey已知且推流地址使用的是该publishKey，那么如下推流地址中，title可以在推流的时候任意枚举（即不需要先create stream即可直接推流）</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">rtmp://<span class="tag">&lt;<span class="name">push_domain</span>&gt;</span>/<span class="tag">&lt;<span class="name">hub</span>&gt;</span>/<span class="tag">&lt;<span class="name">title</span>&gt;</span>?key=<span class="tag">&lt;<span class="name">publishKey</span>&gt;</span></div><div class="line">rtmp://<span class="tag">&lt;<span class="name">push_domain</span>&gt;</span>/<span class="tag">&lt;<span class="name">hub</span>&gt;</span>/<span class="tag">&lt;<span class="name">title</span>&gt;</span>?nonce=<span class="tag">&lt;<span class="name">ANY_TIME_STAMP</span>&gt;</span>&amp;token=<span class="tag">&lt;<span class="name">token</span>&gt;</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>e. 存在另外一种鉴权，为expire，跟dynamic类似。<br>expiry 限时推流地址，首先客户估计一个推流持续有效的时间（推荐为当前时间+30s），然后使用该时间签算token。 publishUrl是 </p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">  rtmp://<span class="tag">&lt;<span class="name">HubDomain</span>&gt;</span>/<span class="tag">&lt;<span class="name">HubName</span>&gt;</span>/<span class="tag">&lt;<span class="name">StreamTitle</span>&gt;</span>?expire=<span class="tag">&lt;<span class="name">ExpireAt</span>&gt;</span>&amp;token=<span class="tag">&lt;<span class="name">PublishToken</span>&gt;</span> </div><div class="line">  ``` </div><div class="line"></div><div class="line">ExpireAt为unixstamp，单位为秒。服务器会以服务器时间为准，在此时刻之前，允许推流。超过这个时刻，拒绝推流。 token计算方法为：</div><div class="line">  ```   </div><div class="line">  sign := hmac_sha1("/<span class="tag">&lt;<span class="name">HubName</span>&gt;</span>/<span class="tag">&lt;<span class="name">StreamTitle</span>&gt;</span>?expire=<span class="tag">&lt;<span class="name">ExpireAt</span>&gt;</span>&amp;<span class="tag">&lt;<span class="name">OtherKey</span>&gt;</span>=<span class="tag">&lt;<span class="name">OtherValue</span>&gt;</span>", "<span class="tag">&lt;<span class="name">PublishKey</span>&gt;</span>")</div><div class="line">  publishToken := url_base64(sign)</div></pre></td></tr></table></figure>
-</li>
-<li><p>f.手机端会自动根据json来生成好推流地址，如果是我们的推流SDK，无需担心，只需要传入json即可。</p>
-</li>
-<li><p><strong>我的推流软件不允许我输入带?问号的推流地址，请问我该怎么办？</strong></p>
-<p>关于hub配成none鉴权<br>登录pili-admin，找到对应用户，点击左侧对应的Uid，跳转后，获得页面内的Access Token。设置none鉴权：</p>
-<figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">curl <span class="string">"http://pili.qiniuapi.com/v1/hubs/&lt;YOUR_HUB_NAME&gt;"</span> -H <span class="string">"Authorization: Bearer &lt;Access_None&gt;"</span> -d <span class="string">'&#123;"publishSecurity":"none"&#125;'</span></div><div class="line">``` </div><div class="line"></div><div class="line">none鉴权的hub推流方式：</div><div class="line">```   </div><div class="line">rtmp:<span class="comment">//&lt;push_domain&gt;/&lt;hub&gt;/&lt;title&gt;</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>  title可以不要createstream而容易枚举</p>
-<ul>
-<li><strong>当前直播域名原生配置：</strong><br>| 加速类型    | 加速域名                 | 回源域名                              | 回源协议 | 特别说明   | 参照域名      |<br>| ——- | ——————– | ——————————— | —- | —— | ——— |<br>| 直播 M3U8 | live-hls.example.com | src.live-hls.z1.pili.qiniudns.com | http | No 302 | qiniu.hls |<br>| 直播 M3U8 | playback.example.com | src.playback.z1.pili.qiniudns.com | http | No 302 | qiniu.hls |<br>| 直播 TS   | media.example.com    | src.media.z1.pili.qiniudns.com    | http | No 302 | qiniu.hls |<br>| 图片 IMG  | static.example.com   | src.static.z1.pili.qiniudns.com   | http |        | qiniu.dn  |</li>
-</ul>
-<p><strong>主动推流：</strong></p>
-<p>RTMP推流域名：<index>.pushcdn-ws.z1.pili.qiniup.com     (ws为网宿缩写，可能是其他CDN厂商，后续再说)<br>RTMP播放域名：live-rtmp.example.com<br>HDL 播放域名: live-hdl.example.com<br>index 进入到用户portal后点域名绑定，能看到cname值的第一个 字符+数字级，即是index值</index></p>
-<ol>
-<li><strong>为什么我推流结束了，流还持续了一段时间connect状态？</strong><br>timeout机制<br>当一个流正在推的时候，stream.status  可以获取到流的状态为 connected， 当pili持续30秒内没有收到推流端推送来的数据后，流会由connected变为disconnected<br>30秒即为该hub的timeout，30秒的值可以 在用户portal中的应用属性中设置。<br>实际是：<br>用户发数据包到pili的streamgate，streamgate 在发到 Zoned。<br>zoned在30秒内没有收到数据即会将流置为disconnected。<br>由于一次数据可能会延时到10秒才会发送，所以不建议timeout太小。</li>
-<li><strong>流状态变化没有回调？</strong><br>流状态回调，用户portal的应用属性可以设置流状态回调url，即用户提供一个URL，然后填入。<br>之后该hub容易流 如果有 disconnect 和connect动作都会触发回调，服务端会调用如下接口回调用户的业务服务器：<figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">POST <span class="meta-keyword">/user/</span>callback/endpoint</div><div class="line">X-PILI-MD5: <span class="params">&lt;DataSign&gt;</span></div><div class="line">&#123;</div><div class="line">    <span class="string">"message"</span>: <span class="string">"streamStatus"</span>,</div><div class="line">    <span class="string">"updatedAt"</span>: <span class="string">"&lt;UpdatedAt&gt;"</span>,</div><div class="line">    <span class="string">"data"</span>: &#123;</div><div class="line">        <span class="string">"id"</span>: <span class="string">"&lt;StreamID&gt;"</span>,</div><div class="line">        <span class="string">"url"</span>: <span class="string">"&lt;PublishUrl&gt;"</span>,</div><div class="line">        <span class="string">"status"</span>: <span class="string">"&lt;StreamStatus&gt;"</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>2xx // 通知成功<br>4xx 5xx // 通知失败，之后重试一次，重试后再不成功，放弃通知<br><strong>DataSign 算法</strong>：<br>sign := md5(request.Body) // 原始16字符二进制格式, 而非32字符十六进制数<br>DataSign := urlsafe_base64_encode(sign)<br>PHP:<br>\$dataSign = str<em>replace(array(‘+’, ‘/‘), array(‘-‘, ‘</em>‘), base64_encode(md5($reqBody, true)));<br>Go:<br>hash := md5.New()<br>hash.Write([]byte(request.Body))<br>dataSign := base64.URLEncoding.EncodeToString(hash.Sum(nil))<br>登录跳板机，qlogview，根据流id 过滤BC目录下的  APP_ZONED日志，可以过滤历史回调记录</p>
-<blockquote>
-<p>注：目前如果在推流过程中调用stream.disabled，streamgate会中断与zoned的任何通信， Zoned是不会将流置为disconnect，且不会触发回调，除非streamgate再与zoned通信，例如用户再触发推流的操作</p>
-</blockquote>
-<ol>
-<li><p><strong>实时截图功能是干什么用的?</strong><br>自动抽帧，可以在portal的应用空间开启，开启后，可以选择生成的图片的名字key的规则<br>当没有设置notifyUrl 和 pipeline的时候，实际调用的是vframe的即时抽帧。抽帧的图片存在直播绑定的空间内。<br>通过 http://<domain>/<key> 就可以访问<br>截图是每个切片产生后就会生成调用一次vframe</key></domain></p>
-</li>
-<li><p><strong>直播如何实现鉴黄（版本：不得不做 1.0）？</strong><br>① 登录 <a href="https://portal.qiniu.com（新版）" target="_blank" rel="external">https://portal.qiniu.com（新版）</a>  新建一个对象存储空间bucket<br>② 进入到这个对象存储空间内，点击页面上方的更多操作，选择 “镜像存储”,  在镜像源这一行 填入 绑定域名<br>③ 第二步的”绑定域名” 从哪来？ ，登录   <a href="https://pili.qiniu.com" target="_blank" rel="external">https://pili.qiniu.com</a> , 进入hub后， 点击“应用属性”  ， 复制里面的 “截图访问域名”  下对应的域名，填入到第二步里面的 “镜像存储”  中  需要填入的域名<br>④ 通过 <a href="https://pili.qiniu.com" target="_blank" rel="external">https://pili.qiniu.com</a> 里面的实时截图，或者 stream.snapshot(）后，得到截图的链接，假设链接是  <a href="http://pili-img.example.com/hub/test.jpg" target="_blank" rel="external">http://pili-img.example.com/hub/test.jpg</a><br>⑤ 返回<a href="https://portal.qiniu.com，" target="_blank" rel="external">https://portal.qiniu.com，</a> 这个对象存储空间内 ，在域名设置中随便使用一个域名，替换掉 pili-img.example.com<br>⑥  get请求    <a href="http://替换后的域名/hub/test.jpg?nrop" target="_blank" rel="external">http://替换后的域名/hub/test.jpg?nrop</a>  ， 返回的结果详情查看：<a href="http://developer.qiniu.com/code/v6/api/dora-api/third-party/nrop.html" target="_blank" rel="external">http://developer.qiniu.com/code/v6/api/dora-api/third-party/nrop.html</a></p>
-</li>
-</ol>
-<h2 id="pili直播FAQ–服务端"><a href="#pili直播FAQ–服务端" class="headerlink" title="pili直播FAQ–服务端"></a>pili直播FAQ–服务端</h2><ol>
-<li><strong>我调用saveas有问题，请问如何可以回播？</strong><br>关于回放另存为</li>
-<li>a. 建议用户使用stream.saveas ,stream.playbackUrls 方法已经打算废弃，部分SDK已经实现stream.playbackUrls 内嵌 stream.saveas()。</li>
-<li>b. 如果stream.saveas  的 format参数传空值，那么会即时返回m3u8回放地址；  如果format 参数传 非 空值，那么会调用 fop 的avthumb进行转码；（这就需要客户考虑pipeline和notifyUrl等参数了）</li>
-<li><p>c. 转码失败情况，可能失败原因：<br>① 传空值失败， 该流没有推流  或 id有误  或  saveas指定 的start 和end 时间段内没有ts内容<br>② 传非空值失败，已经调用过，且第二次调用重名<br>③ 传非空失败，推流分为很多次，且每次推流参数（譬如码率，分辨率，帧数）变化很大</p>
-</li>
-<li><p><strong>SDK 是否支持水印、数据预处理?</strong><br><strong>iOS 实现</strong><br>两个办法：<br>使用 PLStreamingKit, <a href="https://github.com/pili-engineering/PLStreamingKit" target="_blank" rel="external">https://github.com/pili-engineering/PLStreamingKit</a> 这个 SDK，数据采集都有开发者自己来做；<br>使用 PLCameraStreamingKit，使用 PLCameraStreamingSession 的下面这个回调：<br>/// @abstract 获取到摄像头原数据时的回调, 便于开发者做滤镜、水印等处理<br>(CMSampleBufferRef)cameraStreamingSession:(PLCameraStreamingSession *)session cameraSourceDidGetSampleBuffer:(CMSampleBufferRef)sampleBuffer;<br>PLStreamingKit 与 PLCameraStreamingKit 的差别<br>现在 iOS 推流 SDK 分为 PLStreamingKit 与 PLCameraStreamingKit, 关系和差别：<br>PLStreamingKit 只处理音视频编码和推流<br>PLCameraStreamingKit 依赖 PLStreamingKit<br>PLCameraStreamingKit 比 PLStreamingKit 多了摄像头和麦克风数据采集并且采集部分开源<br>PLCameraStreamingKit 对接比较快，但是不适合做采集部分处理（比如滤镜、降噪等）<br>有采集定制需求推荐用 PLStreamingKit，可以更快的做出需求调整</p>
-<p><strong>安卓实现</strong><br>现在仅支持软编版本。数据分为两路，一路用来做显示，一路用来做编码。<br>显示：请实现 SurfaceTextureCallback 该数据源为 SurfaceTexture 的纹理 ID。<br>编码：请实现 StreamingPreviewCallback 该数据源为 NV21 类型的 YUV 数据，你只需要处理 onPreviewFrame 中的 datas 数据即可。<br>详细信息请查看 README 。<br>具体的水印、滤镜效果，需要客户自己实现。</p>
-</li>
-<li><p><strong>弹幕，字幕，聊天如何在直播里实现?</strong><br>这属于业务需求，Pili 目前没有实现这样的接口<br>最简单的实现方式是浮动一个透明的窗口，上面把字幕信息显示在上面，目前也有很不错的开源解决方案，比如：<br>聊天服务器可以使用 leancloud 的 实时通信服务总览(<a href="https://leancloud.cn/docs/realtime_v2.html" target="_blank" rel="external">https://leancloud.cn/docs/realtime_v2.html</a>)<br>弹幕可以使用 Bilibili/DanmakuFlameMaster(<a href="https://github.com/Bilibili/DanmakuFlameMaster" target="_blank" rel="external">https://github.com/Bilibili/DanmakuFlameMaster</a>)</p>
-</li>
-</ol>
-<h2 id="pili直播FAQ–客户端"><a href="#pili直播FAQ–客户端" class="headerlink" title="pili直播FAQ–客户端"></a>pili直播FAQ–客户端</h2><ol>
-<li><strong>为什么我rtmp 和 hdl可以播放， hls不能?</strong><br>a.当用户推送的流不是h264 + acc/mp3 的视频 + 音频编码格式的时候，rtmp/hdl可能会可以播放，但是hls播放不了<br>因为不是h264 + acc/mp3  的话，不会触发切片，即没有ts文件生成，所以hls 和 回放点播都用不了<br>可以调用 ffplay来播放 rtmp/hdl 来观看视频的编码格式<br>b.检查hls域名以及ts文件的media域名的配置</li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;pili直播FAQ–功能&quot;&gt;&lt;a href=&quot;#pili直播FAQ–功能&quot; class=&quot;headerlink&quot; title=&quot;pili直播FAQ–功能&quot;&gt;&lt;/a&gt;pili直播FAQ–功能&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;直播卡顿：如何排查直播卡顿问题？&lt;/strong&gt;&lt;br&gt;当用户提问这种的时候，一般如果不是已知事故，或已知异常。首先需要排除用户自身的网络原因，需要用户提供：&lt;/li&gt;
-&lt;li&gt;a. 用户观看卡顿的播放地址 。 一个播放地址有很多信息，包括域名、hub、流名，使用hub，可以登录 pili-admin.qiniu.com ，通过hub找到该用户，然后进入到该用户的portal平台后，通过流名找到对应的流信息，通过域名可以判断用户播放域名的线路配置。&lt;br&gt;如果在后台看到推流的码率和帧数信息就起伏不断，可以断定是推流端卡顿。这样就先不用去查播放端，先让用户确认推流端网络情况，并测试上行带宽&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;b. 如果用户推流端正常，需要询问播放端哪里卡，并让用户提供ping播放域名的结果，并提供本地IP和DNS，以及测试上行带宽的数据。 如果用户网络正常，得到用户ping到的节点IP后，最好可以自行绑定hosts到节点上观看看下效果。&lt;br&gt;带宽测速工具：&lt;a href=&quot;http://www.speed.net&quot;&gt;http://www.speed.net&lt;/a&gt;&lt;br&gt;IP和DNS检测工具：&lt;a href=&quot;http://ping.huatuo.qq.com/&quot;&gt;http://ping.huatuo.qq.com/&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;你们推流地址支持几种鉴权模式？可以详细介绍一下吗？&lt;/strong&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="qiniu" scheme="https://www.bz1.me/categories/qiniu/"/>
-    
-    
-      <category term="pili" scheme="https://www.bz1.me/tags/pili/"/>
     
   </entry>
   
