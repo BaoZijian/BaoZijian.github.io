@@ -23,7 +23,7 @@
     <updated>2017-02-22T02:12:15.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
-<p>当前直播播放鉴权配置，需要提供如下信息，提交工单或者邮件至 support@qiniu.com  </p>
+<p>当前直播播放鉴权配置，需要提供如下信息，提交工单或者邮件至 support@qiniu.com</p>
 <ul>
 <li>直播空间名称  </li>
 <li>key  </li>
@@ -63,11 +63,11 @@
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;当前直播播放鉴权配置，需要提供如下信息，提交工单或者邮件至 support@qiniu.com  &lt;/p&gt;
+&lt;p&gt;当前直播播放鉴权配置，需要提供如下信息，提交工单或者邮件至 support@qiniu.com&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;直播空间名称  &lt;/li&gt;
 &lt;li&gt;key  &lt;/li&gt;
-&lt;li&gt;种类 [tsStartMD5 or tsExpireMD
+&lt;li&gt;种类 [tsStartMD5 or tsExpireMD5]
     
     </summary>
     
