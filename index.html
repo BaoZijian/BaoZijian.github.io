@@ -409,7 +409,15 @@
       
         
           
-            <p>基于时间戳防盗链的功能其实每家的 CDN 都是支持的。主要是通过使用约定的加密字符串来对具有访问有效期的资源链接进行一些加密计算的到一个 sign 值，然后访问外链里面带上这个sign和截止时间戳去访问CDN的节点，CDN的节点会用同样的算法来计算访问链接是否合法，如果不合法则返回403 Forbidden，否则返回所要访问的资源。</p>
+            <blockquote>
+<p>当前直播播放鉴权配置，需要提供如下信息，提交工单或者邮件至 support@qiniu.com  </p>
+<ul>
+<li>直播空间名称  </li>
+<li>key  </li>
+<li>种类 [tsStartMD5 or tsExpireMD5]，如果是第一种，需要提交具体过期时间，例如 5 分钟 </li>
+</ul>
+</blockquote>
+<p>基于时间戳防盗链的功能其实每家的 CDN 都是支持的。主要是通过使用约定的加密字符串来对具有访问有效期的资源链接进行一些加密计算的到一个 sign 值，然后访问外链里面带上这个sign和截止时间戳去访问CDN的节点，CDN的节点会用同样的算法来计算访问链接是否合法，如果不合法则返回403 Forbidden，否则返回所要访问的资源。</p>
 <h2 id="算法说明"><a href="#算法说明" class="headerlink" title="算法说明"></a>算法说明</h2><p>基于时间戳的防盗链是通过对时间有关的字符串进行签名，将时间，签名通过一定的方式传递给CDN服务器作为判定依据，CDN 边缘节点依据约定的算法判断来访的URL是否有访问权限。<br>如果通过，执行下一步；如果不通过，响应 HTTP 状态码 403。<br>⭐️ 七牛直播云支持两种时间戳防盗链：<br>①tsStartMD5<br>指定起始时间戳播放鉴权。token的生成算法是md5，有效时间从URL的时间戳(十六进制)开始到”range”秒后。<br>②tsExpireMD5<br>指定过期时间戳播放鉴权。token的生成算法是md5, 有效时间从现在开始到URL中的时间戳(十六进制)为止。</p>
 <h2 id="签名参数"><a href="#签名参数" class="headerlink" title="签名参数"></a>签名参数</h2><table>
 <thead>
@@ -1228,7 +1236,7 @@
 </span>
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共14.5k字</span>
+  <span class="post-count">博客全站共14.6k字</span>
 </div>
 
 
