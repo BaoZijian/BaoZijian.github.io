@@ -24,62 +24,62 @@
     
     <content type="html"><![CDATA[<h1 id="直播云价格问题"><a href="#直播云价格问题" class="headerlink" title="直播云价格问题"></a>直播云价格问题</h1><p>拨打 400-808-9176 转 2 号线</p>
 <h1 id="直播云使用问题"><a href="#直播云使用问题" class="headerlink" title="直播云使用问题"></a>直播云使用问题</h1><h2 id="server端"><a href="#server端" class="headerlink" title="server端"></a>server端</h2><ul>
-<li>推流鉴权 <a href="https://developer.qiniu.com/pili/kb/seven-cows-live-push-flow-authentication-md" target="_blank" rel="external">https://developer.qiniu.com/pili/kb/seven-cows-live-push-flow-authentication-md</a></li>
-<li>录制转存设置生命周期 <a href="https://developer.qiniu.com/pili/kb/saveas-call-save-and-set-m3u8-expiration-time" target="_blank" rel="external">https://developer.qiniu.com/pili/kb/saveas-call-save-and-set-m3u8-expiration-time</a></li>
-<li>直播流删除 <a href="https://developer.qiniu.com/pili/kb/live-streaming" target="_blank" rel="external">https://developer.qiniu.com/pili/kb/live-streaming</a></li>
-<li>V1版本API <a href="https://developer.qiniu.com/pili/kb/api-interface-documents-v1" target="_blank" rel="external">https://developer.qiniu.com/pili/kb/api-interface-documents-v1</a></li>
-<li>查询推流历史 <a href="https://developer.qiniu.com/pili/kb/server-on-live-playback-history-query" target="_blank" rel="external">https://developer.qiniu.com/pili/kb/server-on-live-playback-history-query</a></li>
-<li>关于streamJson <a href="https://developer.qiniu.com/pili/kb/mix-about-streamjson" target="_blank" rel="external">https://developer.qiniu.com/pili/kb/mix-about-streamjson</a></li>
+<li><a href="https://developer.qiniu.com/pili/kb/seven-cows-live-push-flow-authentication-md" target="_blank" rel="external">推流鉴权</a></li>
+<li><a href="https://developer.qiniu.com/pili/kb/saveas-call-save-and-set-m3u8-expiration-time" target="_blank" rel="external">录制转存设置生命周期</a></li>
+<li><a href="https://developer.qiniu.com/pili/kb/live-streaming" target="_blank" rel="external">直播流删除</a></li>
+<li><a href="https://developer.qiniu.com/pili/kb/api-interface-documents-v1" target="_blank" rel="external">V1版本API</a></li>
+<li><a href="https://developer.qiniu.com/pili/kb/server-on-live-playback-history-query" target="_blank" rel="external">查询推流历史</a></li>
+<li><a href="https://developer.qiniu.com/pili/kb/mix-about-streamjson" target="_blank" rel="external">关于streamJson</a></li>
 </ul>
 <h2 id="client端"><a href="#client端" class="headerlink" title="client端"></a>client端</h2><ul>
-<li>demo <a href="https://developer.qiniu.com/pili/kb/the-client-ios-and-android-end-flow-and-play-the-demo" target="_blank" rel="external">https://developer.qiniu.com/pili/kb/the-client-ios-and-android-end-flow-and-play-the-demo</a><a id="more"></a>
+<li><a href="https://developer.qiniu.com/pili/kb/the-client-ios-and-android-end-flow-and-play-the-demo" target="_blank" rel="external">demo</a><a id="more"></a>
 </li>
 </ul>
 <h3 id="IOS"><a href="#IOS" class="headerlink" title="IOS"></a>IOS</h3><ul>
-<li>https问题FAQ <a href="https://developer.qiniu.com/pili/kb/client-ios-sdk-support-for-https" target="_blank" rel="external">https://developer.qiniu.com/pili/kb/client-ios-sdk-support-for-https</a></li>
-<li>IOS接入 <a href="https://developer.qiniu.com/pili/kb/basic-knowledge-of-client-ios-access" target="_blank" rel="external">https://developer.qiniu.com/pili/kb/basic-knowledge-of-client-ios-access</a></li>
+<li><a href="https://developer.qiniu.com/pili/kb/client-ios-sdk-support-for-https" target="_blank" rel="external">https问题FAQ</a></li>
+<li><a href="https://developer.qiniu.com/pili/kb/basic-knowledge-of-client-ios-access" target="_blank" rel="external">IOS接入</a></li>
 </ul>
 <h3 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h3><ul>
-<li>Android接入 <a href="https://developer.qiniu.com/pili/kb/basic-knowledge-of-android-access-pili-client" target="_blank" rel="external">https://developer.qiniu.com/pili/kb/basic-knowledge-of-android-access-pili-client</a></li>
+<li><a href="https://developer.qiniu.com/pili/kb/basic-knowledge-of-android-access-pili-client" target="_blank" rel="external">Android接入</a></li>
 </ul>
 <h2 id="直播云特殊配置问题"><a href="#直播云特殊配置问题" class="headerlink" title="直播云特殊配置问题"></a>直播云特殊配置问题</h2><ul>
-<li>播放鉴权(防盗链) <a href="https://developer.qiniu.com/pili/kb/seven-cattle-live-broadcast-authentication-of-cloud-a-timestamp-hotlinking-prevention" target="_blank" rel="external">https://developer.qiniu.com/pili/kb/seven-cattle-live-broadcast-authentication-of-cloud-a-timestamp-hotlinking-prevention</a></li>
-<li>主动回源 <a href="https://developer.qiniu.com/pili/kb/seven-cattle" target="_blank" rel="external">https://developer.qiniu.com/pili/kb/seven-cattle</a></li>
-<li>VR 播放器支持</li>
-<li>多码率支持&amp;服务端水印 <a href="https://developer.qiniu.com/pili/kb/on-live-streaming-real-time-transcoding-control-multi-rate-service-side-watermark" target="_blank" rel="external">https://developer.qiniu.com/pili/kb/on-live-streaming-real-time-transcoding-control-multi-rate-service-side-watermark</a></li>
+<li><a href="https://developer.qiniu.com/pili/kb/seven-cattle-live-broadcast-authentication-of-cloud-a-timestamp-hotlinking-prevention" target="_blank" rel="external">播放鉴权(防盗链)</a></li>
+<li><a href="https://developer.qiniu.com/pili/kb/seven-cattle" target="_blank" rel="external">主动回源</a></li>
+<li>[VR 播放器支持](</li>
+<li><a href="https://developer.qiniu.com/pili/kb/on-live-streaming-real-time-transcoding-control-multi-rate-service-side-watermark" target="_blank" rel="external">多码率支持&amp;服务端水印</a></li>
 </ul>
 <h2 id="其他常见问题"><a href="#其他常见问题" class="headerlink" title="其他常见问题"></a>其他常见问题</h2><ul>
-<li>点播空间配置加速域名 <a href="https://developer.qiniu.com/pili/kb/set-on-demand-to-live-space-domain-acceleration" target="_blank" rel="external">https://developer.qiniu.com/pili/kb/set-on-demand-to-live-space-domain-acceleration</a></li>
-<li>推流不成功的原因 <a href="https://developer.qiniu.com/pili/kb/push-flow-not-successful-reason-and-solution" target="_blank" rel="external">https://developer.qiniu.com/pili/kb/push-flow-not-successful-reason-and-solution</a></li>
-<li>直播流状态 <a href="https://developer.qiniu.com/pili/kb/live-on-flow-state" target="_blank" rel="external">https://developer.qiniu.com/pili/kb/live-on-flow-state</a></li>
+<li><a href="https://developer.qiniu.com/pili/kb/set-on-demand-to-live-space-domain-acceleration" target="_blank" rel="external">点播空间配置加速域名</a></li>
+<li><a href="https://developer.qiniu.com/pili/kb/push-flow-not-successful-reason-and-solution" target="_blank" rel="external">推流不成功的原因</a></li>
+<li><a href="https://developer.qiniu.com/pili/kb/live-on-flow-state" target="_blank" rel="external">直播流状态</a></li>
 <li>直播设置延迟播放<ul>
-<li>直播延迟FAQ <a href="https://developer.qiniu.com/pili/kb/server-live-on-delay" target="_blank" rel="external">https://developer.qiniu.com/pili/kb/server-live-on-delay</a></li>
-<li>主动延迟 <a href="https://developer.qiniu.com/pili/kb/live-time-delay-test" target="_blank" rel="external">https://developer.qiniu.com/pili/kb/live-time-delay-test</a></li>
+<li><a href="https://developer.qiniu.com/pili/kb/server-live-on-delay" target="_blank" rel="external">直播延迟FAQ</a></li>
+<li><a href="https://developer.qiniu.com/pili/kb/live-time-delay-test" target="_blank" rel="external">主动延迟</a></li>
 <li>消除延迟 <ul>
-<li>延迟测试方案 <a href="https://developer.qiniu.com/pili/kb/live-time-delay-test" target="_blank" rel="external">https://developer.qiniu.com/pili/kb/live-time-delay-test</a></li>
-<li>OBS延迟 <a href="https://developer.qiniu.com/pili/kb/obs-push-flow-time-delay-is-bigger-to-do-more-than-3-seconds" target="_blank" rel="external">https://developer.qiniu.com/pili/kb/obs-push-flow-time-delay-is-bigger-to-do-more-than-3-seconds</a></li>
+<li><a href="https://developer.qiniu.com/pili/kb/live-time-delay-test" target="_blank" rel="external">延迟测试方案</a></li>
+<li><a href="https://developer.qiniu.com/pili/kb/obs-push-flow-time-delay-is-bigger-to-do-more-than-3-seconds" target="_blank" rel="external">OBS延迟</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li>直播状态回调 <a href="https://developer.qiniu.com/pili/kb/server-about-the-live-status-callback" target="_blank" rel="external">https://developer.qiniu.com/pili/kb/server-about-the-live-status-callback</a></li>
-<li>直播推流方式 <a href="https://developer.qiniu.com/pili/kb/live-type" target="_blank" rel="external">https://developer.qiniu.com/pili/kb/live-type</a></li>
-<li>直播码率建议 <a href="https://developer.qiniu.com/pili/kb/rate-of-the-recommended" target="_blank" rel="external">https://developer.qiniu.com/pili/kb/rate-of-the-recommended</a></li>
+<li><a href="https://developer.qiniu.com/pili/kb/server-about-the-live-status-callback" target="_blank" rel="external">直播状态回调</a></li>
+<li><a href="https://developer.qiniu.com/pili/kb/live-type" target="_blank" rel="external">直播推流方式</a></li>
+<li><a href="https://developer.qiniu.com/pili/kb/rate-of-the-recommended" target="_blank" rel="external">直播码率建议</a></li>
 <li>直播内容如何点播&amp;FAQ <ul>
-<li>控制台操作&amp;sdk <a href="https://developer.qiniu.com/pili/kb/how-do-i-live-video-on-demand-history" target="_blank" rel="external">https://developer.qiniu.com/pili/kb/how-do-i-live-video-on-demand-history</a></li>
-<li>FAQ <a href="https://developer.qiniu.com/pili/kb/the-preservation-of-the-server-about-live-streaming-data" target="_blank" rel="external">https://developer.qiniu.com/pili/kb/the-preservation-of-the-server-about-live-streaming-data</a></li>
+<li><a href="https://developer.qiniu.com/pili/kb/how-do-i-live-video-on-demand-history" target="_blank" rel="external">控制台操作&amp;sdk</a></li>
+<li><a href="https://developer.qiniu.com/pili/kb/the-preservation-of-the-server-about-live-streaming-data" target="_blank" rel="external">FAQ</a></li>
 </ul>
 </li>
-<li>web端播放直播 <a href="https://developer.qiniu.com/pili/kb/client-format-from-web-side-support" target="_blank" rel="external">https://developer.qiniu.com/pili/kb/client-format-from-web-side-support</a></li>
-<li>获取在线人数 <a href="https://developer.qiniu.com/pili/kb/the-number-of-live-online-statistics-useful" target="_blank" rel="external">https://developer.qiniu.com/pili/kb/the-number-of-live-online-statistics-useful</a></li>
-<li>截图域名转https <a href="https://developer.qiniu.com/pili/kb/how-the-hls-flv-video-playback-and-capture-domain-from-http-to-https" target="_blank" rel="external">https://developer.qiniu.com/pili/kb/how-the-hls-flv-video-playback-and-capture-domain-from-http-to-https</a></li>
-<li>视频帧率低的原因 <a href="https://developer.qiniu.com/pili/kb/the-cause-of-the-video-frame-rate-low" target="_blank" rel="external">https://developer.qiniu.com/pili/kb/the-cause-of-the-video-frame-rate-low</a></li>
+<li><a href="https://developer.qiniu.com/pili/kb/client-format-from-web-side-support" target="_blank" rel="external">web端播放直播</a></li>
+<li><a href="https://developer.qiniu.com/pili/kb/the-number-of-live-online-statistics-useful" target="_blank" rel="external">获取在线人数</a></li>
+<li><a href="https://developer.qiniu.com/pili/kb/how-the-hls-flv-video-playback-and-capture-domain-from-http-to-https" target="_blank" rel="external">截图域名转https</a></li>
+<li><a href="https://developer.qiniu.com/pili/kb/the-cause-of-the-video-frame-rate-low" target="_blank" rel="external">视频帧率低的原因</a></li>
 </ul>
 <h1 id="技能提升"><a href="#技能提升" class="headerlink" title="技能提升"></a>技能提升</h1><ul>
-<li>FFmpeg 使用 <a href="https://developer.qiniu.com/pili/kb/ffmpeg-use-skills" target="_blank" rel="external">https://developer.qiniu.com/pili/kb/ffmpeg-use-skills</a></li>
-<li>如何测试回调 <a href="https://developer.qiniu.com/pili/kb/live-status-notification" target="_blank" rel="external">https://developer.qiniu.com/pili/kb/live-status-notification</a></li>
-<li>视频通过直播的形式转推并分发 <a href="https://developer.qiniu.com/pili/kb/how-to-transfer-existing-video-with-a-live-push-and-distributed" target="_blank" rel="external">https://developer.qiniu.com/pili/kb/how-to-transfer-existing-video-with-a-live-push-and-distributed</a></li>
-<li>pts&amp;dts <a href="https://developer.qiniu.com/pili/kb/server-pts-dts" target="_blank" rel="external">https://developer.qiniu.com/pili/kb/server-pts-dts</a></li>
+<li><a href="https://developer.qiniu.com/pili/kb/ffmpeg-use-skills" target="_blank" rel="external">FFmpeg 使用</a></li>
+<li><a href="https://developer.qiniu.com/pili/kb/live-status-notification" target="_blank" rel="external">如何测试回调</a></li>
+<li><a href="https://developer.qiniu.com/pili/kb/how-to-transfer-existing-video-with-a-live-push-and-distributed" target="_blank" rel="external">视频通过直播的形式转推并分发</a></li>
+<li><a href="https://developer.qiniu.com/pili/kb/server-pts-dts" target="_blank" rel="external">pts&amp;dts</a></li>
 </ul>
 <blockquote>
 <p>更多问题可以发送邮件至 support@qiniu.com</p>
@@ -90,15 +90,15 @@
     
       &lt;h1 id=&quot;直播云价格问题&quot;&gt;&lt;a href=&quot;#直播云价格问题&quot; class=&quot;headerlink&quot; title=&quot;直播云价格问题&quot;&gt;&lt;/a&gt;直播云价格问题&lt;/h1&gt;&lt;p&gt;拨打 400-808-9176 转 2 号线&lt;/p&gt;
 &lt;h1 id=&quot;直播云使用问题&quot;&gt;&lt;a href=&quot;#直播云使用问题&quot; class=&quot;headerlink&quot; title=&quot;直播云使用问题&quot;&gt;&lt;/a&gt;直播云使用问题&lt;/h1&gt;&lt;h2 id=&quot;server端&quot;&gt;&lt;a href=&quot;#server端&quot; class=&quot;headerlink&quot; title=&quot;server端&quot;&gt;&lt;/a&gt;server端&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;推流鉴权 &lt;a href=&quot;https://developer.qiniu.com/pili/kb/seven-cows-live-push-flow-authentication-md&quot;&gt;https://developer.qiniu.com/pili/kb/seven-cows-live-push-flow-authentication-md&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;录制转存设置生命周期 &lt;a href=&quot;https://developer.qiniu.com/pili/kb/saveas-call-save-and-set-m3u8-expiration-time&quot;&gt;https://developer.qiniu.com/pili/kb/saveas-call-save-and-set-m3u8-expiration-time&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;直播流删除 &lt;a href=&quot;https://developer.qiniu.com/pili/kb/live-streaming&quot;&gt;https://developer.qiniu.com/pili/kb/live-streaming&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;V1版本API &lt;a href=&quot;https://developer.qiniu.com/pili/kb/api-interface-documents-v1&quot;&gt;https://developer.qiniu.com/pili/kb/api-interface-documents-v1&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;查询推流历史 &lt;a href=&quot;https://developer.qiniu.com/pili/kb/server-on-live-playback-history-query&quot;&gt;https://developer.qiniu.com/pili/kb/server-on-live-playback-history-query&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;关于streamJson &lt;a href=&quot;https://developer.qiniu.com/pili/kb/mix-about-streamjson&quot;&gt;https://developer.qiniu.com/pili/kb/mix-about-streamjson&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.qiniu.com/pili/kb/seven-cows-live-push-flow-authentication-md&quot;&gt;推流鉴权&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.qiniu.com/pili/kb/saveas-call-save-and-set-m3u8-expiration-time&quot;&gt;录制转存设置生命周期&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.qiniu.com/pili/kb/live-streaming&quot;&gt;直播流删除&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.qiniu.com/pili/kb/api-interface-documents-v1&quot;&gt;V1版本API&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.qiniu.com/pili/kb/server-on-live-playback-history-query&quot;&gt;查询推流历史&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.qiniu.com/pili/kb/mix-about-streamjson&quot;&gt;关于streamJson&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;client端&quot;&gt;&lt;a href=&quot;#client端&quot; class=&quot;headerlink&quot; title=&quot;client端&quot;&gt;&lt;/a&gt;client端&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;demo &lt;a href=&quot;https://developer.qiniu.com/pili/kb/the-client-ios-and-android-end-flow-and-play-the-demo&quot;&gt;https://developer.qiniu.com/pili/kb/the-client-ios-and-android-end-flow-and-play-the-demo&lt;/a&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.qiniu.com/pili/kb/the-client-ios-and-android-end-flow-and-play-the-demo&quot;&gt;demo&lt;/a&gt;
     
     </summary>
     
@@ -801,9 +801,9 @@
       <category term="linux" scheme="https://www.bz1.me/categories/linux/"/>
     
     
-      <category term="notes" scheme="https://www.bz1.me/tags/notes/"/>
-    
       <category term="linux" scheme="https://www.bz1.me/tags/linux/"/>
+    
+      <category term="notes" scheme="https://www.bz1.me/tags/notes/"/>
     
   </entry>
   
