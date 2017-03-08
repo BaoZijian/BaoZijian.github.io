@@ -33,14 +33,22 @@
 </ul>
 <h2 id="client端"><a href="#client端" class="headerlink" title="client端"></a>client端</h2><ul>
 <li>demo <a href="https://developer.qiniu.com/pili/kb/the-client-ios-and-android-end-flow-and-play-the-demo" target="_blank" rel="external">https://developer.qiniu.com/pili/kb/the-client-ios-and-android-end-flow-and-play-the-demo</a><a id="more"></a>
-<h3 id="IOS"><a href="#IOS" class="headerlink" title="IOS"></a>IOS</h3></li>
+</li>
+</ul>
+<h3 id="IOS"><a href="#IOS" class="headerlink" title="IOS"></a>IOS</h3><ul>
 <li>https问题FAQ <a href="https://developer.qiniu.com/pili/kb/client-ios-sdk-support-for-https" target="_blank" rel="external">https://developer.qiniu.com/pili/kb/client-ios-sdk-support-for-https</a></li>
-<li>IOS接入 <a href="https://developer.qiniu.com/pili/kb/basic-knowledge-of-client-ios-access" target="_blank" rel="external">https://developer.qiniu.com/pili/kb/basic-knowledge-of-client-ios-access</a><h3 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h3></li>
-<li>Android接入 <a href="https://developer.qiniu.com/pili/kb/basic-knowledge-of-android-access-pili-client" target="_blank" rel="external">https://developer.qiniu.com/pili/kb/basic-knowledge-of-android-access-pili-client</a><h2 id="直播云特殊配置问题"><a href="#直播云特殊配置问题" class="headerlink" title="直播云特殊配置问题"></a>直播云特殊配置问题</h2></li>
+<li>IOS接入 <a href="https://developer.qiniu.com/pili/kb/basic-knowledge-of-client-ios-access" target="_blank" rel="external">https://developer.qiniu.com/pili/kb/basic-knowledge-of-client-ios-access</a></li>
+</ul>
+<h3 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h3><ul>
+<li>Android接入 <a href="https://developer.qiniu.com/pili/kb/basic-knowledge-of-android-access-pili-client" target="_blank" rel="external">https://developer.qiniu.com/pili/kb/basic-knowledge-of-android-access-pili-client</a></li>
+</ul>
+<h2 id="直播云特殊配置问题"><a href="#直播云特殊配置问题" class="headerlink" title="直播云特殊配置问题"></a>直播云特殊配置问题</h2><ul>
 <li>播放鉴权(防盗链) <a href="https://developer.qiniu.com/pili/kb/seven-cattle-live-broadcast-authentication-of-cloud-a-timestamp-hotlinking-prevention" target="_blank" rel="external">https://developer.qiniu.com/pili/kb/seven-cattle-live-broadcast-authentication-of-cloud-a-timestamp-hotlinking-prevention</a></li>
 <li>主动回源 <a href="https://developer.qiniu.com/pili/kb/seven-cattle" target="_blank" rel="external">https://developer.qiniu.com/pili/kb/seven-cattle</a></li>
 <li>VR 播放器支持</li>
-<li>多码率支持&amp;服务端水印 <a href="https://developer.qiniu.com/pili/kb/on-live-streaming-real-time-transcoding-control-multi-rate-service-side-watermark" target="_blank" rel="external">https://developer.qiniu.com/pili/kb/on-live-streaming-real-time-transcoding-control-multi-rate-service-side-watermark</a><h2 id="其他常见问题"><a href="#其他常见问题" class="headerlink" title="其他常见问题"></a>其他常见问题</h2></li>
+<li>多码率支持&amp;服务端水印 <a href="https://developer.qiniu.com/pili/kb/on-live-streaming-real-time-transcoding-control-multi-rate-service-side-watermark" target="_blank" rel="external">https://developer.qiniu.com/pili/kb/on-live-streaming-real-time-transcoding-control-multi-rate-service-side-watermark</a></li>
+</ul>
+<h2 id="其他常见问题"><a href="#其他常见问题" class="headerlink" title="其他常见问题"></a>其他常见问题</h2><ul>
 <li>点播空间配置加速域名 <a href="https://developer.qiniu.com/pili/kb/set-on-demand-to-live-space-domain-acceleration" target="_blank" rel="external">https://developer.qiniu.com/pili/kb/set-on-demand-to-live-space-domain-acceleration</a></li>
 <li>推流不成功的原因 <a href="https://developer.qiniu.com/pili/kb/push-flow-not-successful-reason-and-solution" target="_blank" rel="external">https://developer.qiniu.com/pili/kb/push-flow-not-successful-reason-and-solution</a></li>
 <li>直播流状态 <a href="https://developer.qiniu.com/pili/kb/live-on-flow-state" target="_blank" rel="external">https://developer.qiniu.com/pili/kb/live-on-flow-state</a></li>
@@ -65,7 +73,9 @@
 <li>web端播放直播 <a href="https://developer.qiniu.com/pili/kb/client-format-from-web-side-support" target="_blank" rel="external">https://developer.qiniu.com/pili/kb/client-format-from-web-side-support</a></li>
 <li>获取在线人数 <a href="https://developer.qiniu.com/pili/kb/the-number-of-live-online-statistics-useful" target="_blank" rel="external">https://developer.qiniu.com/pili/kb/the-number-of-live-online-statistics-useful</a></li>
 <li>截图域名转https <a href="https://developer.qiniu.com/pili/kb/how-the-hls-flv-video-playback-and-capture-domain-from-http-to-https" target="_blank" rel="external">https://developer.qiniu.com/pili/kb/how-the-hls-flv-video-playback-and-capture-domain-from-http-to-https</a></li>
-<li>视频帧率低的原因 <a href="https://developer.qiniu.com/pili/kb/the-cause-of-the-video-frame-rate-low" target="_blank" rel="external">https://developer.qiniu.com/pili/kb/the-cause-of-the-video-frame-rate-low</a><h1 id="技能提升"><a href="#技能提升" class="headerlink" title="技能提升"></a>技能提升</h1></li>
+<li>视频帧率低的原因 <a href="https://developer.qiniu.com/pili/kb/the-cause-of-the-video-frame-rate-low" target="_blank" rel="external">https://developer.qiniu.com/pili/kb/the-cause-of-the-video-frame-rate-low</a></li>
+</ul>
+<h1 id="技能提升"><a href="#技能提升" class="headerlink" title="技能提升"></a>技能提升</h1><ul>
 <li>FFmpeg 使用 <a href="https://developer.qiniu.com/pili/kb/ffmpeg-use-skills" target="_blank" rel="external">https://developer.qiniu.com/pili/kb/ffmpeg-use-skills</a></li>
 <li>如何测试回调 <a href="https://developer.qiniu.com/pili/kb/live-status-notification" target="_blank" rel="external">https://developer.qiniu.com/pili/kb/live-status-notification</a></li>
 <li>视频通过直播的形式转推并分发 <a href="https://developer.qiniu.com/pili/kb/how-to-transfer-existing-video-with-a-live-push-and-distributed" target="_blank" rel="external">https://developer.qiniu.com/pili/kb/how-to-transfer-existing-video-with-a-live-push-and-distributed</a></li>
@@ -791,9 +801,9 @@
       <category term="linux" scheme="https://www.bz1.me/categories/linux/"/>
     
     
-      <category term="linux" scheme="https://www.bz1.me/tags/linux/"/>
-    
       <category term="notes" scheme="https://www.bz1.me/tags/notes/"/>
+    
+      <category term="linux" scheme="https://www.bz1.me/tags/linux/"/>
     
   </entry>
   
