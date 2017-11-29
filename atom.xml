@@ -22,16 +22,20 @@
     <published>2017-11-29T15:58:57.000Z</published>
     <updated>2017-11-29T15:58:57.000Z</updated>
     
-    <content type="html"><![CDATA[<p>整好了，我回归了，下班！<br>又可以开始愉快的写博客了~</p>
+    <content type="html"><![CDATA[<p>博客挂了半年，今天无聊又修了下，记录一下<br>又可以开始愉快的写博客了~</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;整好了，我回归了，下班！&lt;br&gt;又可以开始愉快的写博客了~&lt;/p&gt;
+      &lt;p&gt;博客挂了半年，今天无聊又修了下，记录一下&lt;br&gt;又可以开始愉快的写博客了~&lt;/p&gt;
 
     
     </summary>
     
+      <category term="complain" scheme="https://www.bz1.me/categories/complain/"/>
+    
+    
+      <category term="/dev/null" scheme="https://www.bz1.me/tags/dev-null/"/>
     
   </entry>
   
