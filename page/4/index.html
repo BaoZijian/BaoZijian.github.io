@@ -423,7 +423,7 @@
 <p>解压</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">tar</span> <span class="selector-tag">zxvf</span> <span class="selector-tag">portsentry-1</span><span class="selector-class">.2</span><span class="selector-class">.tar</span><span class="selector-class">.gz</span></div></pre></td></tr></table></figure>
 <p>不能直接编译，这里有点特殊，解压完的包中，<code>portsentry.c</code>这个文件中在<code>1584</code>行有一处错误，将其改成一行</p>
-<figure class="highlight abnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">printf (<span class="string">"Copyright 1997-2003 Craig H. Rowland &lt;craigrowland at users dot sourceforget dot net&gt;\n"</span>)<span class="comment">;</span></div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">printf</span> (<span class="string">"Copyright 1997-2003 Craig H. Rowland &lt;craigrowland at users dot sourceforget dot net&gt;\n"</span>);</div></pre></td></tr></table></figure>
 <p><img src="https://upload.bz1.me/portsentry1588c.png?imageView/2/h/300" alt="portsentry"></p>
 <p>然后进行编译</p>
 <figure class="highlight gauss"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">make</span> linux&amp; <span class="built_in">make</span> install</div></pre></td></tr></table></figure>
