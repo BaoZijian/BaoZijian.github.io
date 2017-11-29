@@ -251,9 +251,9 @@
     
       <category term="qiniu" scheme="https://www.bz1.me/tags/qiniu/"/>
     
-      <category term="bash shell" scheme="https://www.bz1.me/tags/bash-shell/"/>
-    
       <category term="hexo" scheme="https://www.bz1.me/tags/hexo/"/>
+    
+      <category term="bash shell" scheme="https://www.bz1.me/tags/bash-shell/"/>
     
   </entry>
   
@@ -728,7 +728,7 @@
 <p>解压</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">tar</span> <span class="selector-tag">zxvf</span> <span class="selector-tag">portsentry-1</span><span class="selector-class">.2</span><span class="selector-class">.tar</span><span class="selector-class">.gz</span></div></pre></td></tr></table></figure>
 <p>不能直接编译，这里有点特殊，解压完的包中，<code>portsentry.c</code>这个文件中在<code>1584</code>行有一处错误，将其改成一行</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">printf</span> (<span class="string">"Copyright 1997-2003 Craig H. Rowland &lt;craigrowland at users dot sourceforget dot net&gt;\n"</span>);</div></pre></td></tr></table></figure>
+<figure class="highlight abnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">printf (<span class="string">"Copyright 1997-2003 Craig H. Rowland &lt;craigrowland at users dot sourceforget dot net&gt;\n"</span>)<span class="comment">;</span></div></pre></td></tr></table></figure>
 <p><img src="https://upload.bz1.me/portsentry1588c.png?imageView/2/h/300" alt="portsentry"></p>
 <p>然后进行编译</p>
 <figure class="highlight gauss"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">make</span> linux&amp; <span class="built_in">make</span> install</div></pre></td></tr></table></figure>
@@ -790,7 +790,7 @@
 &lt;p&gt;解压&lt;/p&gt;
 &lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;tar&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;zxvf&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;portsentry-1&lt;/span&gt;&lt;span class=&quot;selector-class&quot;&gt;.2&lt;/span&gt;&lt;span class=&quot;selector-class&quot;&gt;.tar&lt;/span&gt;&lt;span class=&quot;selector-class&quot;&gt;.gz&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;不能直接编译，这里有点特殊，解压完的包中，&lt;code&gt;portsentry.c&lt;/code&gt;这个文件中在&lt;code&gt;1584&lt;/code&gt;行有一处错误，将其改成一行&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt; (&lt;span class=&quot;string&quot;&gt;&quot;Copyright 1997-2003 Craig H. Rowland &amp;lt;craigrowland at users dot sourceforget dot net&amp;gt;\n&quot;&lt;/span&gt;);&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight abnf&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;printf (&lt;span class=&quot;string&quot;&gt;&quot;Copyright 1997-2003 Craig H. Rowland &amp;lt;craigrowland at users dot sourceforget dot net&amp;gt;\n&quot;&lt;/span&gt;)&lt;span class=&quot;comment&quot;&gt;;&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;&lt;img src=&quot;https://upload.bz1.me/portsentry1588c.png?imageView/2/h/300&quot; alt=&quot;portsentry&quot;&gt;&lt;/p&gt;
 &lt;p&gt;然后进行编译&lt;/p&gt;
 &lt;figure class=&quot;highlight gauss&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;make&lt;/span&gt; linux&amp;amp; &lt;span class=&quot;built_in&quot;&gt;make&lt;/span&gt; install&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
