@@ -283,6 +283,200 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.bz1.me/七牛直播空间详解.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tecooler">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://upload.bz1.me/IMG_0332.JPG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tecooler's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/七牛直播空间详解.html" itemprop="url">七牛控制台直播空间详解</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-12-12T14:19:47+08:00">
+                2016-12-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/qiniu/" itemprop="url" rel="index">
+                    <span itemprop="name">qiniu</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/七牛直播空间详解.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="七牛直播空间详解.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>直播空间截图和具体的设置方式细节在后面，首先先介绍一下七牛的推流地址</p>
+<h3 id="关于七牛-streamJson-注释"><a href="#关于七牛-streamJson-注释" class="headerlink" title="关于七牛 streamJson 注释"></a>关于七牛 streamJson 注释</h3><p>七牛的 Android 和 ios 推流可以使用<code>streamJson</code>或者<code>七牛推流地址(url)</code>进行推流。</p>
+<ul>
+<li>服务端 V1 版本的 sdk 同时支持生成 url 和 streamJson</li>
+<li>服务端 V2 版本的 sdk 不支持生成 streamJson<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line"><span class="string">"id"</span>: <span class="string">"z1.tron.baozijian"</span>, <span class="comment">//流 id</span></div><div class="line"><span class="string">"createdAt"</span>: <span class="string">"2016-12-12T06:08:51.365Z"</span>, <span class="comment">//创建时间</span></div><div class="line"><span class="string">"updatedAt"</span>: <span class="string">"2016-12-12T06:08:51.365Z"</span>, <span class="comment">//更新时间</span></div><div class="line"><span class="string">"title"</span>: <span class="string">"baozijian"</span>, <span class="comment">//流名称</span></div><div class="line"><span class="string">"hub"</span>: <span class="string">"tron"</span>, <span class="comment">//直播空间名</span></div><div class="line"><span class="string">"disabled"</span>: <span class="literal">true</span>, <span class="comment">//是否禁播流</span></div><div class="line"><span class="string">"publishKey"</span>: <span class="string">"baozijian"</span>, <span class="comment">//流秘钥</span></div><div class="line"><span class="string">"publishSecurity"</span>: <span class="string">"static"</span>, <span class="comment">//鉴权方式</span></div><div class="line"><span class="string">"hosts"</span>: &#123;</div><div class="line"><span class="string">"publish"</span>: &#123;</div><div class="line"><span class="string">"rtmp"</span>: <span class="string">"pili-publish.baozijian.cc"</span> <span class="comment">//rtmp 推流域名</span></div><div class="line">&#125;,</div><div class="line"><span class="string">"live"</span>: &#123;</div><div class="line"><span class="string">"hdl"</span>: <span class="string">"pili-live-hdl.baozijian.cc"</span>, <span class="comment">//flv 播放域名</span></div><div class="line"><span class="string">"hls"</span>: <span class="string">"pili-live-hls.baozijian.cc"</span>, <span class="comment">//hls 播放域名</span></div><div class="line"><span class="string">"http"</span>: <span class="string">"pili-live-hls.baozijian.cc"</span>, <span class="comment">//hls 播放域名</span></div><div class="line"><span class="string">"rtmp"</span>: <span class="string">"pili-live-rtmp.baozijian.cc"</span>, <span class="comment">//rtmp 播放域名</span></div><div class="line"><span class="string">"snapshot"</span>: <span class="string">"pili-live-snapshot.baozijian.cc"</span> <span class="comment">//实时截图域名</span></div><div class="line">&#125;,</div><div class="line"><span class="string">"playback"</span>: &#123;</div><div class="line"><span class="string">"hls"</span>: <span class="string">"10005x3.playback1.z1.pili.qiniucdn.com"</span>, <span class="comment">//playback 回看域名</span></div><div class="line"><span class="string">"http"</span>: <span class="string">"10005x3.playback1.z1.pili.qiniucdn.com"</span> <span class="comment">//playback 回看域名</span></div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="七牛直播空间名-amp-域名管理"><a href="#七牛直播空间名-amp-域名管理" class="headerlink" title="七牛直播空间名&amp;域名管理"></a>七牛直播空间名&amp;域名管理</h3><p><img src="https://upload.bz1.me/bloghub.png" alt=""></p>
+<ul>
+<li>hub：tron</li>
+<li>rtmp 推流域名：pili-publish.baozijian.cc</li>
+<li>rtmp 播放域名：pili-live-rtmp.baozijian.cc</li>
+<li>hls 播放域名：pili-live-hls.baozijian.cc</li>
+<li>ts 切片域名：pili-media.baozijian.cc</li>
+<li>flv 播放地址：pili-live-hdl.baozijian.cc</li>
+<li>直播封面：pili-live-snapshot.baozijian.cc</li>
+</ul>
+<h3 id="七牛直播流管理-amp-推拉流地址-amp-禁播状态-amp-时间记录"><a href="#七牛直播流管理-amp-推拉流地址-amp-禁播状态-amp-时间记录" class="headerlink" title="七牛直播流管理&amp;推拉流地址&amp;禁播状态&amp;时间记录"></a>七牛直播流管理&amp;推拉流地址&amp;禁播状态&amp;时间记录</h3><p><img src="https://upload.bz1.me/bloghub2.png" alt=""></p>
+<ul>
+<li>hub：tron</li>
+<li>rtmp 推流地址：rtmp://pili-publish.baozijian.cc/tron/baozijian?key=baozijian</li>
+<li>rtmp 播放地址：rtmp://pili-live-rtmp.baozijian.cc/tron/baozijian</li>
+<li>hls 播放地址：<a href="http://pili-live-hls.baozijian.cc/tron/baozijian.m3u8" target="_blank" rel="external">http://pili-live-hls.baozijian.cc/tron/baozijian.m3u8</a></li>
+<li>flv 播放地址：<a href="http://pili-live-hdl.baozijian.cc/tron/baozijian.flv" target="_blank" rel="external">http://pili-live-hdl.baozijian.cc/tron/baozijian.flv</a></li>
+<li>禁播状态：true</li>
+<li>创建时间：2016-12-12 14:08:51</li>
+<li>更新时间：2016-12-12 14:21:32</li>
+</ul>
+<h3 id="七牛直播空间设置"><a href="#七牛直播空间设置" class="headerlink" title="七牛直播空间设置"></a>七牛直播空间设置</h3><p><img src="https://upload.bz1.me/bloghub3.png" alt=""><br>七牛 portal.qiniu.com 控制台的直播空间设置中有如下属性可以设置：</p>
+<ul>
+<li>直播空间名称：tron『这个就是 hub 名』</li>
+<li>存储空间名称：直播内容会切片落存储到该空间，直播转存，或者手动请求 snapshot() 都会保存在该空间</li>
+<li>存储过期时间：直播内容会在直播后指定的时间内被自动删除，如果希望永久存储，需要调用 saveas() 接口进行转存</li>
+<li>直播封面：开启后，可以根据<code>http://&lt;domain&gt;/&lt;hub&gt;/&lt;title&gt;.jpg</code>，进行访问，会实时刷新<ul>
+<li>e.g. <a href="http://pili-live-snapshot.baozijian.cc/tron/baozijian.jpg" target="_blank" rel="external">http://pili-live-snapshot.baozijian.cc/tron/baozijian.jpg</a></li>
+</ul>
+</li>
+<li>直播状态通知：当直播的状态有变化时，发送通知到指定的 URL 地址</li>
+<li>直播中断超时：当一个流正在推的时候，status() 可以获取到流的状态为 connected,当pili持续 n 秒内没有收到推流端推送来的数据后，流会由 connected 变为 disconnected n 秒即为该 hub 的 timeout ，n 秒的值可以在此处设置。</li>
+<li>直播鉴权：此处手动设置只有三种，实际有四种直播鉴权『static、dynamic、expire、none』<a href="https://note.bz1.me/七牛直播推流鉴权.html" target="_blank" rel="external">详细参考</a></li>
+<li>删除直播空间：删除直播空间</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.bz1.me/关于七牛直播流状态.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -859,171 +1053,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.bz1.me/m3u8.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Tecooler">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://upload.bz1.me/IMG_0332.JPG">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tecooler's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/m3u8.html" itemprop="url">关于 m3u8</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-12-08T22:21:02+08:00">
-                2016-12-08
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/qiniu/" itemprop="url" rel="index">
-                    <span itemprop="name">qiniu</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/m3u8.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="m3u8.html" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="关于-m3u8"><a href="#关于-m3u8" class="headerlink" title="关于 m3u8"></a>关于 m3u8</h2><p>M3U8是Unicode版本的M3U，用UTF-8编码。”M3U”和”M3U8”文件都是苹果公司使用的HTTP Live Streaming格式的基础，这种格式可以在iPhone和Macbook等设备播放。<br>m3u8 其实是一个文本文件，是一个 <code>playlist</code>，用来索引 <code>ts 文件</code>，真正的流媒体文件其实是<code>ts 文件</code><br>⭐️参考 wiki (<a href="https://zh.wikipedia.org/wiki/M3U#M3U8" target="_blank" rel="external">https://zh.wikipedia.org/wiki/M3U#M3U8</a>)</p>
-<h3 id="举个例子："><a href="#举个例子：" class="headerlink" title="举个例子："></a>举个例子：</h3><p><code>http://sc.sc.bz1.me/123123123.m3u8</code></p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="selector-id">#EXTM3U</span></div><div class="line"><span class="selector-id">#EXT-X-VERSION</span>:<span class="number">3</span></div><div class="line"><span class="selector-id">#EXT-X-ALLOW-CACHE</span>:NO</div><div class="line"><span class="selector-id">#EXT-X-TARGETDURATION</span>:<span class="number">10</span></div><div class="line"><span class="selector-id">#EXT-X-MEDIA-SEQUENCE</span>:<span class="number">1</span></div><div class="line"><span class="selector-id">#EXT-X-DISCONTINUITY</span></div><div class="line"><span class="selector-id">#EXTINF</span>:<span class="number">5.133</span>,</div><div class="line">/fragments/z1<span class="selector-class">.Newhub</span>.<span class="number">5784</span>a9645e77b0372002e792/<span class="number">1468570587846</span>-<span class="number">1468570592979</span><span class="selector-class">.ts</span></div><div class="line"><span class="selector-id">#EXTINF</span>:<span class="number">5.333</span>,</div><div class="line">/fragments/z1<span class="selector-class">.Newhub</span>.<span class="number">5784</span>a9645e77b0372002e792/<span class="number">1468570592238</span>-<span class="number">1468570597571</span><span class="selector-class">.ts</span></div><div class="line"><span class="selector-id">#EXTINF</span>:<span class="number">5.334</span>,</div><div class="line">/fragments/z1<span class="selector-class">.Newhub</span>.<span class="number">5784</span>a9645e77b0372002e792/<span class="number">1468570597278</span>-<span class="number">1468570602612</span><span class="selector-class">.ts</span></div><div class="line">&lt;此处省略部分&gt;</div><div class="line">#EXT-X-ENDLIST</div></pre></td></tr></table></figure>
-<p>七牛的<code>avthumb 切片</code>或者直播的<code>转码</code>服务，生成的 m3u8 文件格式大体如上，有的 m3u8 文件可能是在文本中是 <code>http://domain/key.ts</code> 的格式。</p>
-<p>标准的 m3u8 文件遵循了 apple 公司的官方标准，可以用官方工具(     <code>mediastreamvalidator</code> )检测看下，此处不赘述。<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$ </span>mediastreamvalidator <span class="symbol">http:</span>/<span class="regexp">/sc.sc.bz1.me/</span><span class="number">123123123</span>.m3u8</div></pre></td></tr></table></figure></p>
-<p>有一些可能就不是很标准，本文脚本可以拆分出每个 ts 的物理时间戳，走北京时间，并且计算出每个 ts 的时长和视频总时长，简单实用。<br>实用脚本前需要先在本地下载七牛的 <code>qshell 工具</code>(<a href="http://developer.qiniu.com/code/v6/tool/qshell.html)，并且加入环境变量(全局可以运行" target="_blank" rel="external">http://developer.qiniu.com/code/v6/tool/qshell.html)，并且加入环境变量(全局可以运行</a> qshell)</p>
-<h3 id="脚本如下："><a href="#脚本如下：" class="headerlink" title="脚本如下："></a>脚本如下：</h3><figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">curl <span class="variable">$1</span> | grep ts | awk -F '/z1.' '&#123;<span class="keyword">print</span> <span class="variable">$2&#125;</span>' | awk -F '/' '&#123;<span class="keyword">print</span> <span class="variable">$2&#125;</span>' | awk -F <span class="string">"."</span> '&#123;<span class="keyword">print</span> <span class="variable">$1&#125;</span>' | awk -F '-' '&#123;<span class="string">"qshell tms2d "</span><span class="variable">$1</span>|getline a; <span class="keyword">close</span>(<span class="string">"qshell tms2d "</span><span class="variable">$1</span>);<span class="string">"qshell tms2d "</span><span class="variable">$2</span>|getline b;<span class="keyword">close</span>(<span class="string">"qshell tms2d "</span><span class="variable">$2</span>);<span class="keyword">print</span> a,<span class="string">" "</span>,b;&#125;' &gt;test11</div><div class="line"></div><div class="line">curl <span class="variable">$1</span> | grep ts | awk -F '/z1.' '&#123;<span class="keyword">print</span> <span class="variable">$2&#125;</span>' | awk -F '/' '&#123;<span class="keyword">print</span> <span class="variable">$2&#125;</span>' | awk -F <span class="string">"."</span> '&#123;<span class="keyword">print</span> <span class="variable">$1&#125;</span>' | awk -F <span class="string">"-"</span> '&#123;<span class="keyword">print</span> (<span class="variable">$2</span> - <span class="variable">$1</span>)/1000 <span class="string">" s"</span>&#125;' &gt;test22</div><div class="line"></div><div class="line"><span class="keyword">cat</span> test22 | awk '&#123;<span class="keyword">sum</span>+=<span class="variable">$1&#125;</span> END &#123;<span class="keyword">print</span> <span class="string">"Total = "</span>, <span class="keyword">sum</span>&#125;' &gt;test33</div><div class="line"></div><div class="line">paste test11 test22</div><div class="line">echo <span class="string">""</span></div><div class="line">echo <span class="string">"m3u8中的ts文件总时长(分钟为单位)"</span></div><div class="line"><span class="keyword">cat</span> test33 | awk '&#123;<span class="keyword">print</span> <span class="variable">$3</span>/60 <span class="string">" min"</span>&#125;'</div><div class="line"></div><div class="line"><span class="keyword">rm</span> test11</div><div class="line"><span class="keyword">rm</span> test22</div><div class="line"><span class="keyword">rm</span> test33</div></pre></td></tr></table></figure>
-<h3 id="测试输出如下："><a href="#测试输出如下：" class="headerlink" title="测试输出如下："></a>测试输出如下：</h3><p><img src="https://upload.bz1.me/tssssh.png" alt="tsss.sh"></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1073,7 +1107,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

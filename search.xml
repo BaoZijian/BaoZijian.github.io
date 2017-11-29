@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[2017-11-29_newBlog]]></title>
+      <url>%2F2017-11-29-newBlog.html</url>
+      <content type="text"><![CDATA[整好了，我回归了，下班！又可以开始愉快的写博客了~]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[直播文档汇总]]></title>
       <url>%2Fwendang.html</url>
       <content type="text"><![CDATA[直播云价格问题拨打 400-808-9176 转 2 号线 直播云使用问题server端 推流鉴权 录制转存设置生命周期 直播流删除 V1版本API 查询推流历史 关于streamJson client端 demo IOS https问题FAQ IOS接入 Android Android接入 直播云特殊配置问题 播放鉴权(防盗链) 主动回源 [VR 播放器支持]( 多码率支持&amp;服务端水印 其他常见问题 点播空间配置加速域名 推流不成功的原因 直播流状态 直播设置延迟播放 直播延迟FAQ 主动延迟 消除延迟 延迟测试方案 OBS延迟 直播状态回调 直播推流方式 直播码率建议 直播内容如何点播&amp;FAQ 控制台操作&amp;sdk FAQ web端播放直播 获取在线人数 截图域名转https 视频帧率低的原因 技能提升 FFmpeg 使用 如何测试回调 视频通过直播的形式转推并分发 pts&amp;dts 更多问题可以发送邮件至 support@qiniu.com]]></content>

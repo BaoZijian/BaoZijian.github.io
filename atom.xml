@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.bz1.me/"/>
-  <updated>2017-03-08T06:44:38.000Z</updated>
+  <updated>2017-11-29T15:58:57.000Z</updated>
   <id>https://www.bz1.me/</id>
   
   <author>
@@ -14,6 +14,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2017-11-29_newBlog</title>
+    <link href="https://www.bz1.me/2017-11-29-newBlog.html"/>
+    <id>https://www.bz1.me/2017-11-29-newBlog.html</id>
+    <published>2017-11-29T15:58:57.000Z</published>
+    <updated>2017-11-29T15:58:57.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>整好了，我回归了，下班！<br>又可以开始愉快的写博客了~</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;整好了，我回归了，下班！&lt;br&gt;又可以开始愉快的写博客了~&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>直播文档汇总</title>
@@ -963,46 +983,6 @@
       <category term="CDN" scheme="https://www.bz1.me/tags/CDN/"/>
     
       <category term="qiniu" scheme="https://www.bz1.me/tags/qiniu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>RTMP可以播放，但是HLS不可以播放</title>
-    <link href="https://www.bz1.me/hlscannotplay.html"/>
-    <id>https://www.bz1.me/hlscannotplay.html</id>
-    <published>2016-07-14T03:32:20.000Z</published>
-    <updated>2016-12-18T02:47:30.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>问题描述</strong>：在七牛云开通了直播服务，创建了直播空间，也进行了CNAME，在使用七牛的提供的rtmp推流地址推流时，在拉流播放时候，发现RTMP播放域名可以播放，但是HLS却无法播放。</p>
-<p><strong>问题原因</strong>：这样的报错原因基本为以下三种之一<br><strong>原因一：</strong>检查一下推流地址是否填写的是RTMP的播放地址，导致RTMP可以正常播放，但是HLS不能，后台也查不到有推流上来。</p>
-<a id="more"></a>
-<p><strong>原因二：</strong>编码原因，当用户推送的流不是h264 + acc/mp3 的视频 + 音频编码格式的时候，rtmp/hdl可能会可以播放，但是hls播放不了因为不是h264 + acc/mp3 的话，不会触发切片，即没有ts文件生成，所以hls 和回放点播都用不了可以调用 ffplay来播放 rtmp/hdl 来观看视频的编码格式</p>
-<p><strong>原因三：</strong>查看一下media域名的CNAME配置，看下是否配置错误或者没有配置。切片服务有问题。</p>
-<p><strong>原因四：</strong>crossdomain.xml 缺失在直播对应空间里面</p>
-<p><strong>原因五：</strong> ts文件对应域名没有取消302跳转</p>
-<p><strong>解决方法</strong>：<br><strong>一：</strong>使用该地址进行推流。</p>
-<p><img src="https://upload.bz1.me/blob.png" alt=""></p>
-<p>二：对视频进行转码，转成h264 + acc/mp3 的视频 + 音频编码格式然后再推，转码接口参考：<a href="http://developer.qiniu.com/code/v6/api/dora-api/av/avthumb.html" target="_blank" rel="external">http://developer.qiniu.com/code/v6/api/dora-api/av/avthumb.html</a></p>
-<p><strong>三：</strong>dig一下media的域名CNAME，检查到该域名是否进行了正确的CNAME。</p>
-<p><img src="https://upload.bz1.me/media.png" alt="dd"></p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">~ » dig +short pili-media<span class="selector-class">.live</span><span class="selector-class">.bz1</span><span class="selector-class">.me</span>                           </div><div class="line"><span class="number">1000117</span><span class="selector-class">.media</span><span class="selector-class">.z1</span><span class="selector-class">.pili</span><span class="selector-class">.qiniudns</span><span class="selector-class">.com</span>.</div><div class="line">wsall<span class="selector-class">.qiniu</span><span class="selector-class">.hls</span><span class="selector-class">.wscdns</span><span class="selector-class">.com</span>.</div><div class="line">qiniu<span class="selector-class">.livevideo</span><span class="selector-class">.ourwebat</span><span class="selector-class">.com</span>.</div><div class="line"><span class="number">118.212</span>.<span class="number">138.191</span></div></pre></td></tr></table></figure>
-<p><strong>四：</strong>上传该crossdomain.xml 放入直播空间 <a href="http://kb-static.qiniucdn.com/crossdomain.xml?attname=" target="_blank" rel="external">点我下载</a> </p>
-<p><strong>五：</strong>提交工单提供一下media的域名，取消302</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;问题描述&lt;/strong&gt;：在七牛云开通了直播服务，创建了直播空间，也进行了CNAME，在使用七牛的提供的rtmp推流地址推流时，在拉流播放时候，发现RTMP播放域名可以播放，但是HLS却无法播放。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;问题原因&lt;/strong&gt;：这样的报错原因基本为以下三种之一&lt;br&gt;&lt;strong&gt;原因一：&lt;/strong&gt;检查一下推流地址是否填写的是RTMP的播放地址，导致RTMP可以正常播放，但是HLS不能，后台也查不到有推流上来。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="qiniu" scheme="https://www.bz1.me/categories/qiniu/"/>
-    
-    
-      <category term="pili" scheme="https://www.bz1.me/tags/pili/"/>
-    
-      <category term="docs" scheme="https://www.bz1.me/tags/docs/"/>
     
   </entry>
   
