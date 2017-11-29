@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.bz1.me/about/index.html</loc>
+    
+    <lastmod>2017-11-29T16:37:55.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.bz1.me/2017-11-29-newBlog.html</loc>
     
     <lastmod>2017-11-29T15:58:57.000Z</lastmod>
@@ -180,13 +187,6 @@
     <loc>https://www.bz1.me/cloudcomputing.html</loc>
     
     <lastmod>2016-12-12T06:24:04.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.bz1.me/about/index.html</loc>
-    
-    <lastmod>2016-12-11T15:58:07.000Z</lastmod>
     
   </url>
   
